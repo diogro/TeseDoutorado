@@ -1,4 +1,4 @@
-FILE = mestrado
+FILE = doutorado
 
 all :
 	pdflatex $(FILE).tex
