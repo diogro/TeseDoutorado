@@ -1,2 +1,3 @@
-# TeseDoutorado
-Repo for may Doctoral Thesis
+# SHIT JUST GOT REAL
+
+![](https://imgs.xkcd.com/comics/thesis_defense.png)
