@@ -62,6 +62,19 @@
 %% Elementos Gráficos
 % Para incluir figuras (pacote extendido)
 \usepackage[]{graphicx}
+\usepackage{ccaption}
+
+% Prevent figures from leaving their subsection
+\usepackage{placeins}
+
+\let\Oldsection\section
+\renewcommand{\section}{\FloatBarrier\Oldsection}
+
+\let\Oldsubsection\subsection
+\renewcommand{\subsection}{\FloatBarrier\Oldsubsection}
+
+\let\Oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}{\FloatBarrier\Oldsubsubsection}
 
 %% Suporte a cores
 \usepackage{color}
@@ -313,7 +326,7 @@ backrefpages={cited on pp\adddot}
 
 % Dados do projeto
 \newcommand{\nomedoaluno}{Diogo Amaral R Melo}
-\newcommand{\titulo}{Título original do projeto}
+\newcommand{\titulo}{Evolução do mapa genótipo-fenótipo e da covariação genética}
 
 %% Links dinâmicos
 % Suporte para hipertexto, links para referências e figuras
