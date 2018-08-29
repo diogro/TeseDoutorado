@@ -194,7 +194,7 @@ increased in the direction of selection. This experimental approach
 allows us to understand the maintenance and reorganization of variation
 in a complex system and its consequences to evolution.
 
-\section{Materials and Methods}
+\section{Methods}
 
 \subsection{Experimental selection lines}
 
@@ -762,28 +762,29 @@ draft. AP, DM, MO and GM reviewed and edited the final manuscript.
 
 \printbibliography
 
-\newpage
-
 \section*{Supporting Information} % (fold)
 
 \makeatletter
-\renewcommand{\thefigure}{S\@arabic\c@figure}
+\renewcommand{\thefigure}{S\arabic{chapter}.\arabic{figure}}
 \makeatother
 
 \makeatletter
 \renewcommand{\thetable}{S\@arabic\c@table}
 \makeatother
 
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
 \begin{figure}
     \centering
     \includegraphics[width=12cm]{chapter_ratones/media/SI/figureS1.png}
-    \caption{Scheme of relationship between mice lines used in the study. Selection regime for body weight at 49 days was conducted in s and h lines for reduction, in s' and h' lines for increase, and a control line was maintained with random mating along generations, but avoiding full-sib matings. In downwards s and upwards s' lines inbreeding was performed by limiting population size and in downwards h and upwards h' full-sib mating was performed only during first generations.}
+    \caption[Experimental scheme]{Scheme of relationship between mice lines used in the study. Selection regime for body weight at 49 days was conducted in s and h lines for reduction, in s' and h' lines for increase, and a control line was maintained with random mating along generations, but avoiding full-sib matings. In downwards s and upwards s' lines inbreeding was performed by limiting population size and in downwards h and upwards h' full-sib mating was performed only during first generations.}
     \label{figsup:experiment}
 \end{figure}
 
 \begin{table}
 \centering
-\caption{Number of animals per generation, inbreeding coefficients and selection differentials by line.
+\caption[Sample sizes per generation]{Number of animals per generation, inbreeding coefficients and selection differentials by line.
 N average number of weighted individuals per generation. Ne effective population size. \%d percentage of animals that left descendants. $F_{50}$ increase in inbreeding coefficients for each line since the foundation, calculated as $F_{G}=\frac{1}{2N} + (1-\frac{1}{2N})F_{G-1}$.
 Standard cumulative selection differential (SD) at $50^{th}$ generation per sex for each line, calculated as the sum of selection differential over 50 generations divided by the standard deviation.
 }
@@ -821,19 +822,19 @@ Selection     & Line  & Generations           & Females & Males & Total \\
 \begin{figure}
 \centering
 \includegraphics[width = 12cm]{chapter_ratones/media/SI/figureS2.png}
-\caption{Number of weighted animals per generation by line and sex. Grey circles highlight the generations used in this study.}
+\caption[Samples per generation]{Number of weighted animals per generation by line and sex. Grey circles highlight the generations used in this study.}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width = 12cm]{chapter_ratones/media/SI/figureS3.png}
-\caption{Average weight at 49 days per generation by line and sex, for the full experiment. Grey circles highlight the generations used in this study. We can see that after around the first 15 generations, besides some fluctuations, all selected lines consistently responded to directional selection, being the upward selected line heavier than control t line and downward selected lines lighter than the control t line. After the 56th generation, the mean weight of control t line was similar to that of the previous generations.}
+\caption[Evolution of body weight]{Average weight at 49 days per generation by line and sex, for the full experiment. Grey circles highlight the generations used in this study. We can see that after around the first 15 generations, besides some fluctuations, all selected lines consistently responded to directional selection, being the upward selected line heavier than control t line and downward selected lines lighter than the control t line. After the 56th generation, the mean weight of control t line was similar to that of the previous generations.}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{chapter_ratones/media/SI/figureS4.png}
-    \caption{Cranial anatomical landmarks used in this study and
+    \caption[Cranial distances]{Cranial anatomical landmarks used in this study and
         set of euclidean distances calculated between them, following
     Cheverud (1995). Illustrations by Julia Laterza Barbosa.}
     \label{figsup:landmarks}
@@ -842,7 +843,7 @@ Selection     & Line  & Generations           & Females & Males & Total \\
 \begin{figure}
     \centering
     \includegraphics[width=15 cm]{chapter_ratones/media/SI/figureS5.png}
-    \caption{Distribution of weight by line and sex. Selected lines
+    \caption[Weight distribution per line]{Distribution of weight by line and sex. Selected lines
         have much lower variation, and upwards lines are larger than downwards
     lines, while control line has very large variance.}
     \label{figsup:weightchange}
@@ -851,7 +852,7 @@ Selection     & Line  & Generations           & Females & Males & Total \\
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{chapter_ratones/media/SI/figureS6.png}
-    \caption{Distribution of all inter-landmark distances used in this
+    \caption[Distributions of cranial distances]{Distribution of all inter-landmark distances used in this
         study. In most cases, upwards lines are larger than downwards lines, but
         there are exceptions in the h line measurements, probably due to
         drift.}
@@ -861,12 +862,12 @@ Selection     & Line  & Generations           & Females & Males & Total \\
 \begin{figure}
 \centering
 \includegraphics[width = \linewidth]{chapter_ratones/media/SI/figureS7.png}
-\caption{Bayesian Random Skewers results for all 35 dimensions.}
+\caption[Full matrix comparisons]{Bayesian Random Skewers results for all 35 dimensions.}
 \end{figure}
 
 \begin{table}
 \centering
-\caption{Comparison between the posterior mean G-matrix and all posterior median P-matrices and within groups P-matrix.}
+\caption[G-matrix comparisons]{Comparison between the posterior mean G-matrix and all posterior median P-matrices and within groups P-matrix.}
 \begin{tabular}{rccc}
   \hline
  Selection& Line & Random Skewers & Krzanowski \\
@@ -885,12 +886,12 @@ Selection     & Line  & Generations           & Females & Males & Total \\
 \begin{figure}
 \centering
 \includegraphics[width = \linewidth]{chapter_ratones/media/SI/figureS8_Fig2Gversion.png}
-\caption{(A) Krzanowski shared subspace; (B) Bayesian Random Skewers. Results obtained using the sample of G-matrices from the BSFG model.}
+\caption[G matrix shared subspace]{(A) Krzanowski shared subspace; (B) Bayesian Random Skewers. Results obtained using the sample of G-matrices from the BSFG model.}
 \end{figure}
 
 \begin{table}
     \centering
-    \caption{First eigenvectors (E1) for the posterior median P-matrix for each line, and correlation of the E1s with an isometric size vector (a vector with equal loadings in all traits). Most loadings are positive or small,and correlation with isometric size vector is high (above 0.78) for all strains, indicating that all E1 are size related.}
+    \caption[First eigenvectors per line]{First eigenvectors (E1) for the posterior median P-matrix for each line, and correlation of the E1s with an isometric size vector (a vector with equal loadings in all traits). Most loadings are positive or small,and correlation with isometric size vector is high (above 0.78) for all strains, indicating that all E1 are size related.}
     \begin{tabular}{rccccc}
         \hline
       & Control & Upwards  & Upwards & Downwards & Downwards  \\
@@ -939,7 +940,7 @@ Selection     & Line  & Generations           & Females & Males & Total \\
 
 \begin{table}
 \centering
-\caption{95\% confidance interval and mean of the curves of posterior distributions obtained using the sample of P-matrices from the BSFG model from Figure 3.}
+\caption[Matrix statistics confidence intervals]{95\% confidance interval and mean of the curves of posterior distributions obtained using the sample of P-matrices from the BSFG model from Figure 3.}
 \begin{tabular}{rllccc}
   \hline
 variable & selection & line & ic.min & mean & ic.max \\
@@ -973,12 +974,12 @@ variable & selection & line & ic.min & mean & ic.max \\
 \begin{figure}
 \centering
 \includegraphics[width = 12cm]{chapter_ratones/media/SI/figureS9_Fig3Gversion.png}
-\caption{Comparison of covariation patterns between control and selected lines using evolutionary statistics (A) Overall integration measured as mean square correlation between all traits; (B) Proportion of variation associated with the first eigenvector, which is related to size variation; (C) Mean flexibility; (D) Mean evolvability. Curves represent posterior distributions obtained using the sample of G-matrices from the BSFG model.}
+\caption[G-matrix evolutionary statistics]{Comparison of covariation patterns between control and selected lines using evolutionary statistics (A) Overall integration measured as mean square correlation between all traits; (B) Proportion of variation associated with the first eigenvector, which is related to size variation; (C) Mean flexibility; (D) Mean evolvability. Curves represent posterior distributions obtained using the sample of G-matrices from the BSFG model.}
 \end{figure}
 
 \begin{table}
 \centering
-\caption{95\% confidance interval and mean of the curves of posterior distributions obtained using the sample of P-matrices from the BSFG model from Figure 4.}
+\caption[Directional matrix statistics confidence intervals]{95\% confidance interval and mean of the curves of posterior distributions obtained using the sample of P-matrices from the BSFG model from Figure 4.}
 \begin{tabular}{rllccc}
   \hline
 variable & selection & line & ic.min & mean & ic.max \\
@@ -1005,7 +1006,7 @@ variable & selection & line & ic.min & mean & ic.max \\
 \begin{figure}
 \centering
 \includegraphics[width = 12cm]{chapter_ratones/media/SI/figureS10_Fig4Gversion.png}
-\caption{(A) Scaled direction evolvability, the ratio of evolvability in the direction of $\delta z$ and the mean evolvability for each line; (B) Scaled direction conditional evolvability, the ratio of conditional evolvability in the direction of $\delta z$ and the mean conditional evolvability for each line; (C) the vector correlation between $\delta z$ and first eigenvector for each line. Curves represent posterior distributions obtained using the sample of G-matrices from the BSFG model.}
+\caption[Directional evolutionary statistics in the G-matrix]{(A) Scaled direction evolvability, the ratio of evolvability in the direction of $\delta z$ and the mean evolvability for each line; (B) Scaled direction conditional evolvability, the ratio of conditional evolvability in the direction of $\delta z$ and the mean conditional evolvability for each line; (C) the vector correlation between $\delta z$ and first eigenvector for each line. Curves represent posterior distributions obtained using the sample of G-matrices from the BSFG model.}
 \end{figure}
 % section supporting_information (end)
 

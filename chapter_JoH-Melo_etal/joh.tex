@@ -1070,31 +1070,44 @@ Bath through the Future Research Leaders Incubator Scheme to D.M.
 
 \section*{Supporting Information}
 
-\includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_LG_SM_DZ2.png}
+\makeatletter
+\renewcommand{\thefigure}{S\arabic{chapter}.\arabic{figure}}
+\makeatother
 
-\textbf{Figure S1.} Observed and expected phenotypic divergence in the
+\makeatletter
+\renewcommand{\thetable}{S\@arabic\c@table}
+\makeatother
+
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_LG_SM_DZ2.png}
+`	\caption[Phenotypic divergence in growth]{Observed and expected phenotypic divergence in the
 parental lines. Expected divergence is estimated using the
 F\textsubscript{3} generation to estimate a selection gradient on growth
 due to selection on week 9 weight, and the expected divergence is
 estimated by multiplying this selection gradient by the growth full-sib
 genetic matrix. The resulting expected divergence is scaled to have the same
-magnitude as the observed divergence.
+magnitude as the observed divergence.}
+\end{figure}
 
+\begin{figure}
 \includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_per_marker_additive_dominance_vectors_QTL.png}
+\caption[Mapped pleiotropic effects]{Pleiotropic effects of all significant loci in the QTL
+mapping model.}
+\end{figure}
 
-\textbf{Figure S2.} Pleiotropic effects of all significant loci in the QTL
-mapping model.
-
-
-\includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_cov_prediction_composite_GP.png}
-
-\textbf{Figure S3. Additive, dominance and genetic matrices.} Estimated
-correlation matrices from genome prediction marker effects. (A)
+\begin{figure}
+	\includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_cov_prediction_composite_GP.png}
+	\caption[Additive, dominance and genetic matrices]{Additive, dominance and genetic matrices. 
+	Estimated correlation matrices from genome prediction marker effects. (A)
 additive, (B) dominance (C) Genetic, ½ additive + ¼ dominance . (D)
 Regression of genetic variances and covariances estimated from full-sib
 mixed model and estimated from markers. Error bars represent 95\%
 posterior credibility intervals. All estimated variances are essentially
 zero, and correlation matrices are different from the population
-full-sib genetic matrix.
+full-sib genetic matrix.}
+\end{figure}
 
 \end{refsection}
