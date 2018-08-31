@@ -94,14 +94,14 @@ relation to multivariate selection \parencite{Arnold2008-pc,Futuyma2010-jl}.
 While the effect of covariation in constraining short
 term evolution is well established \parencite{Lande1979-by,Grant1995-er,Schluter1996-gw}
 , we have only recently begun to
-understand the effects of covariation on macro evolution. Comparisons of
+understand the effects of covariation on macroevolution. Comparisons of
 directions of diversifications in several study systems have shown a
 remarkable pattern of alignment between within population covariation
 and macro-evolutionary divergence, with divergence being greater in
 directions of high genetic variation, both in patterns of phenotypic
 \parencite{Marroig2005-ce,Punzalan2016-lb,Simon2016-ed} and genetic
 covariation \parencite{Houle2017-ph,McGlothlin2018-hm}. Whether this alignment between
-divergence and covariation is a result of macro evolutionary constraints
+divergence and covariation is a result of macroevolutionary constraints
 limiting possible directions of evolutionary change, or due to selection
 actively changing constraints using the available genetic variation in
 patterns of covariation \parencite{Arnold2001-lz,Pavlicev2011-xm,Pavlicev2015-up,Walter2018-dw},
@@ -234,7 +234,7 @@ Details of the genotyping are provided by Wolf et al. (2008) and are
 only briefly outlined here. Each individual was genotyped at 353 SNP
 loci distributed across the 19 autosomes. Genotypes at each locus
 (\emph{LL}, \emph{LS} and \emph{SS}, with the `\emph{L}' allele coming
-from LG/J and the `\emph{S}' allele coming from SM/J) were assigned
+from Large and the `\emph{S}' allele coming from Small) were assigned
 additive (\emph{X\textsubscript{a}}) and dominance
 (\emph{X\textsubscript{d}}) genotypic index values, where the values of
 \emph{X\textsubscript{a}} are \emph{LL} = +1, \emph{LS} and \emph{SL} =
@@ -422,10 +422,10 @@ refer to this as the `full-sib' genetic variance-covariance matrix.
 As a test of the quality of the pleiotropic genetic effect we estimated
 in the QTL mapping and genome prediction model, we used the estimated
 pleiotropic vectors to predict the phenotype in the ancestral founder
-populations of the LG/J and SM/J mice. We can predict the phenotype of
+populations of the Large and Small mice. We can predict the phenotype of
 the ancestral lines by asking what the phenotype of an individual of the
-F\textsubscript{3} generation would be if this individual had only SM/J
-or LG/J alleles. Both the QTL mapping and genome prediction models
+F\textsubscript{3} generation would be if this individual had only Small
+or Large alleles. Both the QTL mapping and genome prediction models
 provide estimates of vector of additive effects of all loci on all
 traits. Each additive effect corresponds to half the difference between
 the average phenotypes of the alternative homozygotes. Therefore, the
@@ -454,7 +454,7 @@ variation we first define the average effect of an allele substitution
 (\(\alpha_{j}\)), which corresponds to the expected change in the value
 of each of the \emph{t} traits resulting from replacing an \emph{S}
 allele with an \emph{L} allele. The vector \(\alpha_{j}\) therefore
-summarises the heritable (pleiotropic) effect of a locus since it
+summarizes the heritable (pleiotropic) effect of a locus since it
 reflects how changing an allele at a locus would, on average, change the
 phenotype of an individual. While the genetic effects (\(a_{j}\) and
 \(d_{j}\)) are a property of the locus, the average effect of an allele
@@ -464,7 +464,7 @@ substitution depends on the frequencies of alleles in a population:
 \alpha_{j} = \textbf{a}_{j} + \left\lbrack q_{j} - p_{j} \right\rbrack \circ \textbf{d}_{j}
 \end{equation}
 
-Where \(\circ\) indicates the Hadamard (elementwise) product, which
+Where \(\circ\) indicates the Hadamard (element wise) product, which
 yields
 
 \begin{equation}
@@ -568,7 +568,7 @@ effects to zero.
 We compare the estimated covariance matrices using three complementary
 methods, which focus on different aspects of matrix structure. The
 Random Skewers method \parencite{Cheverud2007-yp} summarizes the extent to which matrices are
-similar in their expected response to selection. This is done by
+similar in the direction of their expected response to selection. This is done by
 multiplying the two matrices being compared by the same set of random
 selection gradients and taking the average of the vector correlations
 between the resulting expected response vectors. Significance of the
@@ -592,23 +592,23 @@ Growth curves for the parental and F\textsubscript{3} generation suggest
 an almost completely additive behavior of the weekly growths, with the
 F\textsubscript{3} generation being intermediate between the two
 founders for most traits, except for the first week, in which the
-F\textsubscript{3} generation is smaller than both founders (Fig. 1A).
+F\textsubscript{3} generation is smaller than both founders (Fig.~\ref{fig:joh:growth}A).
 Genetic correlations between growth periods are generally positive,
 except for a negative correlation of -0.36 between growth in weeks 2 and
 4. Larger correlations are present in later growth (around 0.3 to 0.4 in
 adjacent weeks and between weeks 4 and 6). Early growth shows a positive
 correlation between weeks 2 and 3. Most correlations between early and
 late growth are small, except for a .34 correlation between weeks 1 and
-5. There is also a small negative correlation between weeks 2 and 6 (Fig
-1B). In summary, during early growth week 1 is mostly
+5. There is also a small negative correlation between weeks 2 and 6 (Fig.~\ref{fig:joh:growth}B).
+In summary, during early growth week 1 is mostly
 independent, weeks 2 and 3 are positively correlated; and during late
 growth and weeks 4-7 are positively correlated and somewhat independent
 of early growth.
 
 \begin{figure}
 \includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_LG_SM_F3_covF3.eps}
-\caption[Growth curves]{Growth curves. (A) Weekly growth for the founders (LG/J
-shown in the top line (green), and SM/J in the lower line (blue)) and the
+\caption[Growth curves]{Growth curves. (A) Weekly growth for the founders (Large
+shown in the top line (green), and Small in the lower line (blue)) and the
 F\textsubscript{3} generations (middle line, red). In most growth periods,
 the F\textsubscript{3} generation is between the two founders. (B)
 Genetic correlations from the full-sib genetic matrix in the
@@ -616,13 +616,14 @@ F\textsubscript{3} generation. Smaller correlations are more transparent
 and related ellipses less eccentric, larger correlations are more opaque
 and ellipses more eccentric. Positive correlations in blue and negative
 correlations in red.}
+\label{fig:joh:growth}
 \end{figure}
 
 \subsection{Selection and divergence}
 
 The observed phenotypic divergence, the estimated selection gradient and
 the expected phenotypic divergence given this gradient are shown in
-Table 1 and Figure S1. Vector correlation between observed and expected
+Table~\ref{joh:vectors} and Fig.~\ref{fig:joh:divergence}. Vector correlation between observed and expected
 phenotypic divergence is high (\emph{r} = 0.93), indicating that the observed
 divergence is compatible with the expected from selection and
 covariation in the F\textsubscript{3}.
@@ -646,16 +647,17 @@ covariation in the F\textsubscript{3}.
 		Week 7 - 8 & 1.575 & 4.323 & 1.494 \\
 		\bottomrule
 	\end{tabular}
+	\label{joh:vectors}
 \end{table}
 
 \subsection{QTL mapping}
 
 We identified 32 putative QTL loci using our multivariate regression
 model with flanking markers. Position of the chosen markers is shown in
-Figure 2. Pleiotropic effect vectors were simultaneously estimated for
-all chosen markers and are shown in Figure 3. All markers show some
+Fig.~\ref{fig:joh:manhatan}. Pleiotropic effect vectors were simultaneously estimated for
+all chosen markers and are shown in Fig.~\ref{fig:joh:pleiopart}. All markers show some
 degree of pleiotropy, affecting as few as two and as many as all 7
-traits (Fig. S2). Additive effects are, in general, larger than
+traits (Fig.~\ref{fig:joh:pleiovectors}). Additive effects are, in general, larger than
 dominance effects, and the total size of the effect vector was not
 related to the level of pleiotropy. A principal component analysis (PCA) of
 the marker effects reveals that the first two principal components of
@@ -663,7 +665,7 @@ the additive effects (responsible for 71\% of the variation) correspond
 to the early and late growth phase, suggesting two somewhat independent
 directions of variation in genetic effects. No such separation is
 visible in the dominance effects, but we can see a split in the loadings
-of PC1, with early and late traits taking on opposite signs (Fig. 3C and
+of PC1, with early and late traits taking on opposite signs (Fig.~\ref{fig:joh:pleiopart}C and
 D). In the dominance effects, the first two PCs account for 56\% of the
 variation. When comparing the direction of the pleiotropic vectors with
 the direction of phenotypic divergence, the mean additive vector is very
@@ -673,10 +675,10 @@ Additionally, we see a significant relation between the norm of the
 individual additive vectors and their alignment with divergence and the
 selection gradient: larger pleiotropic vectors being more aligned with
 both (alignment with divergence, slope = 1.73, p = 0.002; alignment with
-selection gradient, slope = 1.69, p = 0.005, Fig. 4A and C). No such
+selection gradient, slope = 1.69, p = 0.005, Fig.~\ref{fig:joh:alignment}A and C). No such
 relation is present in the dominance vectors (alignment with divergence,
 slope = -0.40, p = 0.67; Alignment with selection gradient, slope =
--0.36, p = 0.66, Fig. 4B and D).
+-0.36, p = 0.66, Fig.~\ref{fig:joh:alignment}B and D).
 
 \begin{figure}
 \includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_manhattan.png}
@@ -687,6 +689,7 @@ color, non significant markers at the chromosome level are translucent,
 the dashed line marks the whole genome significance threshold.
 Chromosomes are shown in alternating
 colors.}
+\label{fig:joh:manhatan}
 \end{figure}
 
 \begin{figure}
@@ -699,6 +702,7 @@ trait standard deviation and are comparable. (C) additive and (D)
 PC 1 and 2, marker IDs in grey are marker scores in PC 1 and 2. Markers
 are coded as chromosome and marker within chromosome, see SI for genomic
 position.}
+\label{fig:joh:pleiopart}
 \end{figure}
 
 \begin{figure}
@@ -709,12 +713,13 @@ Panels A and B show the relation between pleiotropic effect vector norm and alig
 to estimated selection gradient ($\beta$), while panels C and D show the relation between
 pleiotropic effect vector norm and alignment to phenotypic divergence. A)
 and C) additive effects; B) and D) dominance effects.}
+\label{fig:joh:alignment}
 \end{figure}
 
 \subsection{Genome Prediction}
 
 Genome prediction produces pleiotropic effect vectors for all markers
-(Fig. 5). We again see a widespread pattern of pleiotropy, but less so
+(Fig.~\ref{fig:joh:pleiopartGP}). We again see a widespread pattern of pleiotropy, but less so
 than in the mapped effects, as several of the large effect vectors have
 effects in only one or two traits. This is especially evident in the
 dominance effects. The PCA plot of marker effects confirms this, as the
@@ -731,10 +736,10 @@ shrunken toward zero by the horseshoe prior, are essentially pointing in
 random directions, while larger additive vectors are more aligned with
 divergence and selection (alignment with divergence, slope = 2.42,
 \emph{p} \textless{} 0.001; alignment with selection gradient, slope =
-1.75, \emph{p} \textless{} 0.001, Fig. 6A and C). Dominance vectors
+1.75, \emph{p} \textless{} 0.001, Fig.~\ref{fig:joh:alignmentGP}A and C). Dominance vectors
 again don't have any pattern between magnitude and alignment (alignment
 with divergence, slope = -2.01, \emph{p} = 0.09; alignment with
-selection gradient, slope = -2.14, \emph{p} = 0.08, Fig. 6B and D).
+selection gradient, slope = -2.14, \emph{p} = 0.08, Fig.~\ref{fig:joh:alignmentGP}B and D).
 
 \begin{figure}
 \includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_pleiotropic_partition_ad_dm_GP.png}
@@ -745,6 +750,7 @@ the red dots. All trait contributions are scaled to trait standard
 deviation and are comparable. (C) additive and (D) dominance PCA of marker effects, arrows
 represent trait loadings in PC1 and PC2, marker IDs in gray are marker
 scores in PC 1 and 2.}
+\label{fig:joh:pleiopartGP}
 \end{figure}
 
 \begin{figure}
@@ -753,23 +759,24 @@ scores in PC 1 and 2.}
 gradient and divergence between founders. Panels A and B show the relation between regularized pleiotropic effect vector norm and alignment to estimated selection gradient ($\beta$), while panels C and D show the relation between
 pleiotropic effect vector norm and alignment to phenotypic divergence. A)
 and C) additive effects; B) and D) dominance effects.}
+\label{fig:joh:alignmentGP}
 \end{figure}
 
 \subsection{Ancestral predictions}
 
 Both regression models do well at predicting the phenotypes of the
 founder strains using only genetic effects estimated from the
-F\textsubscript{3} generation (Fig. 7). The genome prediction method is
+F\textsubscript{3} generation (Fig.~\ref{fig:joh:ancestral}). The genome prediction method is
 slightly better on the average prediction, but most ancestral growth
 periods are inside the posterior distribution (grey lines) for both
 models. First week of growth is somewhat anomalous in that the
 F\textsubscript{3} generation is not intermediate to the two founders,
 possibly due to environmental effects, and so the prediction is poor.
-Growth in week 4 in the LG/J strain is larger than predicted from the
+Growth in week 4 in the Large strain is larger than predicted from the
 F\textsubscript{3} genetic effects, suggesting either non-detected
 effects in the F\textsubscript{3} or some other non-additive genetic or
 environmental effects. The same applies to the week 7 growth, where both
-LG/J and SM/J strains are more different from the F\textsubscript{3}
+Large and Small strains are more different from the F\textsubscript{3}
 then expected from the F\textsubscript{3} additive effects.
 
 \begin{figure}
@@ -782,6 +789,7 @@ the two models. (A) QTL mapping of significant markers, (B) Genome
 prediction using all markers. Grey lines represent the posterior
 distribution of ancestral predictions derived from the Bayesian effect
 estimates.}
+\label{fig:joh:ancestral}
 \end{figure}
 
 \subsection{Covariance matrix predictions}
@@ -804,7 +812,7 @@ observed variance in week 4. This is not surprising, since the full-sib
 genetic includes other sources of covariation, like maternal and common
 environmental effects. The genome prediction fared much worse,
 predicting variances and covariances close to zero for almost all traits
-(see Fig. S3). Matrix comparisons can be seen in Table 2. The most
+(see Fig.~\ref{fig:joh:covGP}). Matrix comparisons can be seen in Table~\ref{joh:matcompare}. The most
 similar matrices are the QTL mapping maker genetic matrix, followed by
 the QTL mapping marker additive genetic matrix. Both show high
 similarities in Random Skewers, Mantel matrix correlation, and a high
@@ -827,6 +835,7 @@ genetic variances and covariances estimated from full-sib mixed model
 and estimated from markers. Error bars represent 95\% posterior
 credibility intervals. Marker covariances are about half of observed
 covariances.}
+\label{fig:joh:cov}
 \end{figure}
 
 \begin{table}[htbp]
@@ -863,6 +872,7 @@ Genome prediction marker & \multirow{2}{*}{0.83 (p = 0.002)} & \multirow{2}{*}{0
 genetic matrix (½ G + ¼ D)  & & & \\
 \bottomrule
 	\end{tabular}
+	\label{joh:matcompare}
 \end{table}
 
 \section{Discussion}
@@ -923,10 +933,10 @@ heritability problem \parencite{Bloom2013-xc}, and modern sparse regression and 
 methods provide a promising framework for working with high density
 marker data sets \parencite{Pong-Wong2014-vj}. Indeed, the sparse regression produces very good out-of-sample
 predictive performance when used to predict the phenotypes of the
-founder lines (Fig. 7). Mapping could also be done in this sparse
+founder lines (Fig.~\ref{fig:joh:ancestral}). Mapping could also be done in this sparse
 regression framework using variable selection, and the model displays
 reasonable agreement with the QTL mapping, producing large effect
-estimates that are close to the detected QTL (Fig. 5). Furthermore, our
+estimates that are close to the detected QTL (Fig.~\ref{fig:joh:pleiopartGP}). Furthermore, our
 analysis was done in standard generic Bayesian model fitting software
 (admittedly this was only possible since our maker data set is
 relatively low density, but further advances in general statistical
@@ -968,7 +978,7 @@ B regardless of the effects being additive or dominant). The genetic
 matrix, composed of a one half the additive matrix plus one fourth the
 dominance matrix is similar to the full-sib matrix, but with smaller
 variances throughout. The negative correlations between weeks 2 and 4 is
-present, but not significant, in the marker estimated matrix (Fig. 8C).
+present, but not significant, in the marker estimated matrix (Fig.~\ref{fig:joh:cov}C).
 Given that our maker based estimates does not include several components
 that are expected to contribute to the genetic matrix, like shared
 environment and maternal effects, it is not surprising that the marker
@@ -979,7 +989,7 @@ the direct genetic effects, since only loci with larger effects are
 used. Nevertheless, the general structure of the full-sib genetic matrix
 is captured by the expected covariance due to pleiotropy and linkage of
 the mapped loci, as we can see in the high values of matrix similarity
-and in Fig. 8. The success in predicting the pattern covariation
+and in Fig.~\ref{fig:joh:cov}. The success in predicting the pattern covariation
 directly from pleiotropic effects underscores the importance of
 pleiotropy in determining genetic covariation, and suggests that a
 relatively small number of medium and large effect loci can be
@@ -996,7 +1006,7 @@ see that the full distribution of additive pleiotropic effects spans a
 modular variational space, with independent principal components aligned
 with the two stages of growth, early and late. This is somewhat
 unexpected given that the vector of selection on growth was in the
-direction of coordinated change in all phases of growth (Table 1),
+direction of coordinated change in all phases of growth (Table~\ref{joh:vectors}),
 either increasing or decreasing the target of selection, week 9 weight.
 Given this target of selection, we would expect the distribution of the
 additive effects responsible for the divergence between large and small
@@ -1006,7 +1016,7 @@ average, the additive effects are aligned with divergence, and large
 effects more so, but we still maintain a number of pleiotropic vectors
 with antagonistic effects in both phases, either increasing early traits
 and decreasing late traits or vice-versa (markers on the top-left and
-bottom-right quadrant of Fig. 3C). The maintenance of this modular
+bottom-right quadrant of Fig.~\ref{fig:joh:pleiopart}C). The maintenance of this modular
 variation in pleiotropic effects could be associated with developmental
 or mutational constraints on the additive genetic effects. But, if this
 were the case, we might expect the dominance effects, which are not
@@ -1020,9 +1030,9 @@ aspect of the genetic effects can manifest in different ways.
 Additionally, the variational modularity between early and late growth
 that we see in the G-matrix is not only due to markers having modular
 effects, restricted to one stage of growth or another (markers close to
-the x and y axis in Fig. 3C), but is also due to a combination of
+the x and y axis in Fig.~\ref{fig:joh:pleiopart}C), but is also due to a combination of
 markers that have general effects in both stages (markers along the main
-diagonal, in top-right and bottom-left quadrants in Fig. 3C) or the
+diagonal, in top-right and bottom-left quadrants in Fig.~\ref{fig:joh:pleiopart}C) or the
 previously mentioned markers with antagonist effect in both stages. This
 reinforces the idea that there are several genotype-phenotype maps that
 can generate a modular covariance matrix \parencite{Pavlicev2011-xm}.
@@ -1050,6 +1060,7 @@ markers in a sparse genome prediction model.
 
 
 \section{Acknowledgments}
+
 We thank Jim Cheverud for insightful discussions that contributed to the
 development of this work and Steve Chenoweth for discussions that were
 critical for the development of the analytical framework.
@@ -1075,7 +1086,7 @@ Bath through the Future Research Leaders Incubator Scheme to D.M.
 \makeatother
 
 \makeatletter
-\renewcommand{\thetable}{S\@arabic\c@table}
+\renewcommand{\thetable}{S\arabic{chapter}.\@arabic\c@table}
 \makeatother
 
 \setcounter{figure}{0}
@@ -1090,17 +1101,19 @@ due to selection on week 9 weight, and the expected divergence is
 estimated by multiplying this selection gradient by the growth full-sib
 genetic matrix. The resulting expected divergence is scaled to have the same
 magnitude as the observed divergence.}
+\label{fig:joh:divergence}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_per_marker_additive_dominance_vectors_QTL.png}
 \caption[Mapped pleiotropic effects]{Pleiotropic effects of all significant loci in the QTL
 mapping model.}
+\label{fig:joh:pleiovectors}
 \end{figure}
 
 \begin{figure}
 	\includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_cov_prediction_composite_GP.png}
-	\caption[Additive, dominance and genetic matrices]{Additive, dominance and genetic matrices. 
+	\caption[Additive, dominance and genetic matrices]{Additive, dominance and genetic matrices.
 	Estimated correlation matrices from genome prediction marker effects. (A)
 additive, (B) dominance (C) Genetic, ½ additive + ¼ dominance . (D)
 Regression of genetic variances and covariances estimated from full-sib
@@ -1108,6 +1121,7 @@ mixed model and estimated from markers. Error bars represent 95\%
 posterior credibility intervals. All estimated variances are essentially
 zero, and correlation matrices are different from the population
 full-sib genetic matrix.}
+\label{fig:joh:covGP}
 \end{figure}
 
 \end{refsection}

@@ -158,7 +158,7 @@ Heritable genetic covariation is determined by aspects of the genetic
 architecture like pleiotropy and linkage disequilibrium. Complex
 multivariate phenotypes like skeletal traits are influenced by a large
 number of loci, and covariation among these traits can be reasonably
-predicted from the pattern of shared pleiotropy (\emph{i.e.}/ traits
+predicted from the pattern of shared pleiotropy (\emph{i.e.} traits
 that have more loci affecting them simultaneously tend to be more
 correlated~\parencite{Kenney-Hunt2008-bd}).~\textcite{Porto2016-qc} tested this hypothesis
 directly, comparing the level of pleiotropy between two species with
@@ -209,7 +209,7 @@ Nacional de Rosario, Argentina). Then, two line-pairs of two-way
 individual selection for body weight at 49 days of age (s and h:
 downwards selected lines; s' and h': upwards selected lines) were
 founded from control line t, with mice drawn from generation three for s
-and s' and from generation eight for h and h' (Fig.~S1, ~\textcite{Oyarzabal2011-uk},
+and s' and from generation eight for h and h' (Fig.~\ref{figsup:experiment}, ~\textcite{Oyarzabal2011-uk},
 \textcite{Renny2014-on}).
 
 For control t line, effective population size was maintained by randomly
@@ -227,25 +227,25 @@ exposed to males in the ratio of 1:1. All the animals were chosen
 regardless of their inbreeding coefficients and the selection
 differentials. After \(\approx 50\) generations the increase in
 inbreeding coefficients and the standard cumulative selection
-differentials were similar for selected lines (Table~S1). See supporting
+differentials were similar for selected lines (Table~\ref{table:linesdetailed}). See supporting
 information for additional information on number of weighted animals per
-generation (Fig.~S2) and on average weight per generation (Fig.~S3) for
+generation (Fig.~\ref{figsup:numpgen}) and on average weight per generation (Fig.~\ref{figsup:weights}) for
 the full experiment.
 
 \subsection{Samples}
 
 We had access to \(\approx 65\) individuals from around the 50th
 generation of each line (for a total sample of 329), with well balanced
-sex ratios (see supporting information Table S2 for details). Mice were
+sex ratios (see supporting information, Table~\ref{table:samplesizes} for details). Mice were
 euthanized by cervical dislocation according to the American Veterinary
 Medical Association 2007 Guidelines on Euthanasia. We prepared all
 specimens in a dermestarium and removed their cranium and mandible. We
 collected 32 homologous anatomical landmarks in both sides of their
-cranium (Fig.~S4, but see \textcite{Cheverud1995-fd} and \textcite{Garcia2014-oj} for more
+cranium (Fig.~\ref{figsup:landmarks}, but see \textcite{Cheverud1995-fd} and \textcite{Garcia2014-oj} for more
 details and the rationale for choosing these landmarks). In order to
 reduce measurement error, each anatomical marker was captured twice
 using a Microscribe MX 3D digitizer (Immersion Corporation --- San Jose,
-California). We calculated a set of 35 euclidean distances (Fig.~S4)
+California). We calculated a set of 35 euclidean distances (Fig.~\ref{figsup:landmarks})
 between the landmarks using the average between both sides of the
 cranium for symmetrical distances, and the average between replicas of
 each individual. We opted for linear distances instead of following the
@@ -280,7 +280,7 @@ correlated with the centroid size of cranial landmarks.
 
 Phenotypic and additive genetic covariance matrices (P- and G-matrices)
 for cranial traits of each line were obtained using a Bayesian sparse
-factor mixed model (BSFG). This is a robust method for estimating high
+factor mixed model (\textsc{bsfg}). This is a robust method for estimating high
 dimensional G- and P-matrices from limited samples proposed by
 \textcite{Runcie2013-nr} and implemented in \textcite{Matlab2013-sd} by the authors. We removed
 differences due to age, generation and sex by using these groups as
@@ -304,20 +304,20 @@ at very low effective samples: around one sibpair for each individual
 line and around ten sibpairs for the full pedigree. This means that the
 pedigree for the sample we measured is such that G-matrices for each
 line are estimated with far too much uncertainty to be useful (even when
-using the BSFG model). Fortunately, P-matrices are probably a better
+using the \textsc{bsfg} model). Fortunately, P-matrices are probably a better
 estimate of the underlying genetic covariance
 pattern~\parencite{Roff1995-ws, Marroig2012-jd} and are informative on the
 underlying pleiotropic structure of genetic
 effects~\parencite{Kenney-Hunt2008-bd, Porto2016-qc}. To test the validity of this
 approximation, we calculated a pooled within-group P-matrix and a pooled
-within-group G-matrix estimated by the BSFG model using all of the
+within-group G-matrix estimated by the \textsc{bsfg} model using all of the
 individuals and controlling for differences in means between the lines.
 We then compare these matrices to confirm that the P- and G-matrices are
 similar. Matrix correlation between the pooled-within P- and
 pooled-within G-matrices was 0.95 for Random Skewers method
-(\textcite{Cheverud2007-yp}, see supporting information, Table S3). Matrix
+(\textcite{Cheverud2007-yp}, see supporting information, Table~\ref{sub:gcomp}). Matrix
 correlation between the posterior mean P-matrices of each line and the
-pooled-within G-matrix were all above 0.86 (Table S3), supporting the
+pooled-within G-matrix were all above 0.86 (Table~\ref{sub:gcomp}), supporting the
 idea that G and P are similar. This hypothesis of similarity between P
 and G has been tested several times for this set of traits, and has been
 shown to be quite accurate in rodents~\parencite{Garcia2014-oj}, and in mammals
@@ -341,9 +341,10 @@ explore differences in the distribution of variation in multiple
 directions of the phenotype space. The Krzanowski
 method~\parencite{Krzanowski1979-gj} measures how similar the spaces spanned by
 the first several eigenvectors of the matrices being compared. For two
+
 matrices, the Krzanowski correlation is the mean of the squared vector
 correlations between all pairs of the first eigenvectors, usually the
-first \(n/2 - 1\), where \(n\) is the dimensionality of the matrices. A
+first \(\frac{n}{2} - 1\), where \(n\) is the dimensionality of the matrices. A
 Krzanowski correlation of \(1\) means the spanned spaces are exactly
 congruent, and a correlation of zero means the spaces are orthogonal. We
 can expand this method to several matrices by defining the \textbf{H}
@@ -381,7 +382,7 @@ evolutionarily informative statistics. In the following, \(\mathbf{G}\)
 is an arbitrary covariance matrix, \(\mathbf{G}^{-1}\) is the inverse of
 \(\mathbf{G}\), \(tr(\mathbf{G})\) is the trace of \(\mathbf{G}\),
 \(\lambda_i^\mathbf{G}\) is the \emph{i}-th eigenvalue of
-\(\mathbf{G}\), \(<\cdot, \cdot>\) represents the dot product between
+\(\mathbf{G}\), \(<\cdot, \cdot>\) represents the dot-product between
 two vectors, \(cos(\cdot, \cdot)\) is the cosine of the angle between
 two vectors (or their vector correlation), and \(E[\cdot]_\beta\)
 represents the expected value over random \(\beta\) vectors with unit
@@ -390,12 +391,12 @@ squared correlations between all traits. (B) The proportion of variation
 associated with the leading eigenvalue
 (\(E1\% = \lambda_1^{\mathbf{G}} / tr(\mathbf{G})\)). (C) The ability of
 the populations to respond in the direction of selection, calculated as
-the \textbf{mean flexibility} (\emph{sensu} \textcite{Marroig2009-gf}), which is
+the \textsc{mean flexibility} (\emph{sensu} \textcite{Marroig2009-gf}), which is
 given by the mean vector correlation between random selection gradients
 and their respective expected response to selection given the Lande
 equation~(\(\bar{f} = E[cos(\mathbf{G}\beta,\beta)]_\beta\)). (D) The
 available variation for directional selection, calculated as the
-\textbf{mean evolvability} \parencite{Hansen2008-kz}, which is given by the mean
+\textsc{mean evolvability} \parencite{Hansen2008-kz}, which is given by the mean
 projection of the responses to the random selection gradients on these
 same selection gradient
 (\(\bar{e} = E[<\mathbf{G}\beta,\beta>]_\beta\)). The mean evolvability
@@ -424,7 +425,7 @@ three directional metrics, (1) we calculated the ratio of the
 evolvability in the direction of the mean phenotypic divergence (with
 \(\delta \hat z\) being the unit vector in the direction of divergence)
 and the mean evolvability along random phenotypic directions
-(\textbf{scaled directional evolvability}) as a measure of how biased
+(\textsc{scaled directional evolvability}) as a measure of how biased
 the variation is in the direction of phenotypic divergence
 (\(<\mathbf{G}\delta \hat z ,\delta \hat z > / \bar{e}\)); (2)
 similarly, we also measured the change in conditional evolvability,
@@ -434,7 +435,7 @@ given \(\beta\) when other directions are under stabilizing selection
 \(\bar{c} = E[(<\mathbf{G}^{-1}\beta, \beta>)^{-1}]_\beta\), and we
 define the ratio between conditional evolvability in the direction of
 phenotypic divergence and mean conditional evolvability along random
-phenotypic directions as the \textbf{scaled directional conditional
+phenotypic directions as the \textsc{scaled directional conditional
 evolvability}
 (\(<\mathbf{G}^{-1}\delta \hat z, \delta \hat z>)^{-1}] / \bar{c}\)) (3)
 we compared the alignment between \(\delta z\) and the first eigenvector
@@ -466,7 +467,8 @@ using the EvolQG package~\parencite{Melo2015-kf}~(version 0.2-5).
 
 Both the upwards and the downwards selection resulted in changes
 in the weight of the corresponding s\textbar{}s' and h\textbar{}h' lines
-(Fig.~S3 and S5). Both directional selection induced lower variation in
+(Fig.~\ref{figsup:weightsperline} and~\ref{figsup:traits}). 
+Both directional selection induced lower variation in
 weight, with the animals from the downwards selection showing smaller
 weights than those from the upwards selection, regardless of gender. In
 contrast, the control t line exhibited a large weight variation, which
@@ -474,7 +476,7 @@ spanned the full variation range presented by the selected animals. The
 cranial traits also showed divergence between all four selected lines,
 with downwards selection showing smaller cranial size than those from
 the upwards selection, and the control t line being somewhat
-superimposed with the upwards lines (Fig. \ref{#fig-gmchange} and~S6
+superimposed with the upwards lines (Fig.~\ref{fig-gmchange} and~\ref{figsup:traits}
 for the complete set of cranial traits). The vector of phenotypic
 divergence (\(\delta z\)) had a correlation of \(0.82\) with the
 isometric vector, indicating that divergence in cranial traits was
@@ -500,13 +502,13 @@ significantly different between the observed and randomized matrix
 comparisons (Fig. \ref{fig-comparisons}A). As for the the Bayesian
 Random Skewers projection, we identified several directions with
 different amounts of phenotypic variation in each line (first few
-directions in Fig. \ref{fig-comparisons}B and full results in Fig.
-S7). In most directions, the control line has significantly more
+directions in Fig. \ref{fig-comparisons}B and full results in Fig.~\ref{BRSG}). 
+In most directions, the control line has significantly more
 variation than the selected lines. But this reduction is not uniform in
 all directions, and in several directions the selected lines have
 variation that is comparable to the control line. We provide in the
 supporting information the same set of results using G-matrices
-(Fig.~S8). These results are considerably more noisy in several cases,
+(Fig.~\ref{figsup:krzG}). These results are considerably more noisy in several cases,
 but consistent with the results obtained using the P-matrices.
 
 \begin{figure}
@@ -518,12 +520,12 @@ different in the randomized and observed matrices, indicating a shared
 subspace and a stable set of eigenvectors in all the lines. (B) Bayesian
 Random Skewers Projection. Here we only show the first eight
 eigenvectors of the decomposition, which are representative of the full
-set of eigenvectors (Fig. S7). In most directions the control line has
+set of eigenvectors (Fig.~\ref{BRSG})). In most directions the control line has
 higher variation than the selected lines, but in several directions the
 control and selected lines show comparable levels of variation,
 indicating that the loss of variation in the selected lines was not
 uniform in all directions. A version of this figure using the G-matrices
-is available in the Supporting Information (Fig. S8)}
+is available in the Supporting Information (Fig.~\ref{figsup:krzG})}
     \label{fig-comparisons}
 \end{figure}
 
@@ -535,7 +537,7 @@ first eigenvector when compared to the control t line (Fig.
 \ref{fig-stats}A and B). All selected lines also showed a decline in
 evolvability and flexibility when compared to the control (Fig.
 \ref{fig-stats}C and D). First eigenvectors for each line are given in
-table~S4, along with correlations between the first eigenvector and an
+Table~\ref{sup:isocomp}, along with correlations between the first eigenvector and an
 isometric size vector. All correlations between E1s and the isometric
 vector were higher than \(0.71\), indicating that all first eigenvectors
 are related with cranial size.
@@ -549,9 +551,9 @@ statistics (A) Magnitude of integration measured as mean squared correlation
 between all traits; (B) Proportion of variation associated with the first
 eigenvector, which is related to size variation; (C) Mean flexibility; (D) Mean
 evolvability. Curves represent posterior distributions obtained using the sample
-of P-matrices from the BSFG model. Confidence interval and mean for all curves
-can be found in Table S5. The same set of results using G-matrices are available
-in Fig.~S9. G-matrix results are noisier, but consistent with the results
+of P-matrices from the \textsc{bsfg} model. Confidence interval and mean for all curves
+can be found in Table~\ref{sup:matstatconf}. The same set of results using G-matrices are available
+in Fig.~\ref{figsup:matstatG}. G-matrix results are noisier, but consistent with the results
 obtained using the P-matrices, suggesting the changes we observed indeed
 occurred in the G-matrices.}     
 	\label{fig-stats} 
@@ -578,9 +580,9 @@ evolvability, the ratio of conditional evolvability in the direction of
 \(\delta z\) and the mean conditional evolvability for each line; (C)
 the vector correlation between \(\delta z\) and first eigenvector for
 each line. Curves represent posterior distributions obtained using the
-sample of P-matrices from the BSFG model. Confidence interval and mean
-for all curves can be found in Table S6. The same set of results using
-G-matrices are available in Fig.~S10. G-matrix results are noisier, but
+sample of P-matrices from the \textsc{bsfg} model. Confidence interval and mean
+for all curves can be found in Table~\ref{sup:directmatstatconf}. The same set of results using
+G-matrices are available in Fig.~\ref{figsup:direcmatstatG}. G-matrix results are noisier, but
 consistent with the results obtained using the P-matrices, suggesting
 the changes we observed indeed occurred in the G-matrices.}
     \label{fig-dzpc1}
@@ -611,7 +613,7 @@ comparable levels of variation. Taken together, these matrix comparison
 results indicate a stable set of eigenvectors, spanning a similar space
 in all the lines, and a non-isotropic reduction in variation in the
 selected lines, that is, some directions lost more variation than others
-(Figs. \ref{fig-comparisons} and S7).
+(Figs. \ref{fig-comparisons} and~\ref{BRSG})).
 
 As for integration, all selected lines increased their magnitude of
 association between traits. The maximum observed difference in mean
@@ -644,7 +646,7 @@ also changing. Although total variation in all directions is smaller in
 the selected lines (Fig. \ref{fig-stats}, panel D), the increase in
 the proportion of variation associated with the first eigenvector (Fig.
 \ref{fig-stats}, panel B) (which is highly related to cranial size,
-Table S4) means the proportion of variation in the direction of
+Table~\ref{sup:isocomp}) means the proportion of variation in the direction of
 evolutionary divergence is in fact increasing in the selected lines
 (Fig. \ref{fig-stats}, panels A and B), and the first eigenvector is
 also more aligned with the direction of divergence in the selected lines
@@ -663,7 +665,7 @@ fixation, they could increase genetic variation for size in the process
 directional selection can be maintained by new mutations that arise and
 sweep to fixation. In principle we can't rule out this possibility, but
 we are observing this effect after about 50 generations of strong
-directional selection (Table~S1), after which we would expect the
+directional selection (Table~\ref{table:linesdetailed}), after which we would expect the
 initial increase of variation to have disappeared as those initially
 rare alleles become fixed, and, because of our low effective population
 sizes, the influx of new mutations should be negligible. Also, increase
@@ -692,7 +694,7 @@ additive model, with a loss of variation in the direction of selection
 and a plateau in the response to selection after a few generations. In
 our experiment, as expected by the additive model, we also see a loss of
 total variation in the selected lines, but this reduction is
-non-isotropic. Some directions lost more variation than others, and the
+anisotropic. Some directions lost more variation than others, and the
 direction of selection ended up with proportionally more variation in
 the selected lines, suggesting the influence of epistasis and a more
 complex genetic architecture underlying the covariation of cranial
@@ -769,7 +771,7 @@ draft. AP, DM, MO and GM reviewed and edited the final manuscript.
 \makeatother
 
 \makeatletter
-\renewcommand{\thetable}{S\@arabic\c@table}
+\renewcommand{\thetable}{S\arabic{chapter}.\arabic{table}}
 \makeatother
 
 \setcounter{figure}{0}
@@ -800,7 +802,8 @@ Standard cumulative selection differential (SD) at $50^{th}$ generation per sex 
  		Upwards   & s'   &  74 &  8 & 14 & 0.93 &  45.8 &  46.8 \\
    \hline
 \end{tabular}
-\end{table}\label{table:linesdetailed}
+\label{table:linesdetailed}
+\end{table}
 
 \begin{table}
 \centering
@@ -817,18 +820,21 @@ Selection     & Line  & Generations           & Females & Males & Total \\
 
    \hline
 \end{tabular}
-\end{table} \label{table:samplesizes}
+ \label{table:samplesizes}
+\end{table}
 
 \begin{figure}
 \centering
 \includegraphics[width = 12cm]{chapter_ratones/media/SI/figureS2.png}
 \caption[Samples per generation]{Number of weighted animals per generation by line and sex. Grey circles highlight the generations used in this study.}
+\label{figsup:numpgen}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width = 12cm]{chapter_ratones/media/SI/figureS3.png}
 \caption[Evolution of body weight]{Average weight at 49 days per generation by line and sex, for the full experiment. Grey circles highlight the generations used in this study. We can see that after around the first 15 generations, besides some fluctuations, all selected lines consistently responded to directional selection, being the upward selected line heavier than control t line and downward selected lines lighter than the control t line. After the 56th generation, the mean weight of control t line was similar to that of the previous generations.}
+\label{figsup:weights}
 \end{figure}
 
 \begin{figure}
@@ -846,7 +852,7 @@ Selection     & Line  & Generations           & Females & Males & Total \\
     \caption[Weight distribution per line]{Distribution of weight by line and sex. Selected lines
         have much lower variation, and upwards lines are larger than downwards
     lines, while control line has very large variance.}
-    \label{figsup:weightchange}
+    \label{figsup:weightsperline}
 \end{figure}
 
 \begin{figure}
@@ -863,6 +869,7 @@ Selection     & Line  & Generations           & Females & Males & Total \\
 \centering
 \includegraphics[width = \linewidth]{chapter_ratones/media/SI/figureS7.png}
 \caption[Full matrix comparisons]{Bayesian Random Skewers results for all 35 dimensions.}
+\label{BRSG}
 \end{figure}
 
 \begin{table}
@@ -881,12 +888,14 @@ Selection     & Line  & Generations           & Females & Males & Total \\
  Within Groups P-matrix & all & 0.95 & 0.86 \\
    \hline
 \end{tabular}
+\label{sub:gcomp}
 \end{table}
 
 \begin{figure}
 \centering
 \includegraphics[width = \linewidth]{chapter_ratones/media/SI/figureS8_Fig2Gversion.png}
-\caption[G matrix shared subspace]{(A) Krzanowski shared subspace; (B) Bayesian Random Skewers. Results obtained using the sample of G-matrices from the BSFG model.}
+\caption[G matrix shared subspace]{(A) Krzanowski shared subspace; (B) Bayesian Random Skewers. Results obtained using the sample of G-matrices from the \textsc{bsfg} model.}
+\label{figsup:krzG}
 \end{figure}
 
 \begin{table}
@@ -936,11 +945,12 @@ Selection     & Line  & Generations           & Females & Males & Total \\
         \hline
         Correlation with \\ isometric vector & 0.71 & 0.80 &  0.72 &  0.85 & 0.85 \\
     \end{tabular}
+    \label{sup:isocomp}
 \end{table}
 
 \begin{table}
 \centering
-\caption[Matrix statistics confidence intervals]{95\% confidance interval and mean of the curves of posterior distributions obtained using the sample of P-matrices from the BSFG model from Figure 3.}
+\caption[Matrix statistics confidence intervals]{95\% confidance interval and mean of the curves of posterior distributions obtained using the sample of P-matrices from the \textsc{bsfg} model from Fig.~\ref{fig-stats}.}
 \begin{tabular}{rllccc}
   \hline
 variable & selection & line & ic.min & mean & ic.max \\
@@ -965,21 +975,21 @@ variable & selection & line & ic.min & mean & ic.max \\
    & upwards & s' & 0.43 & 0.48 & 0.53 \\
    & downwards & h & 0.41 & 0.47 & 0.52 \\
    & downwards & s & 0.42 & 0.47 & 0.52 \\
-  
-
    \hline
 \end{tabular}
+\ref{sup:matstatconf}
 \end{table}
 
 \begin{figure}
 \centering
 \includegraphics[width = 12cm]{chapter_ratones/media/SI/figureS9_Fig3Gversion.png}
-\caption[G-matrix evolutionary statistics]{Comparison of covariation patterns between control and selected lines using evolutionary statistics (A) Overall integration measured as mean square correlation between all traits; (B) Proportion of variation associated with the first eigenvector, which is related to size variation; (C) Mean flexibility; (D) Mean evolvability. Curves represent posterior distributions obtained using the sample of G-matrices from the BSFG model.}
+\caption[G-matrix evolutionary statistics]{Comparison of covariation patterns between control and selected lines using evolutionary statistics (A) Overall integration measured as mean square correlation between all traits; (B) Proportion of variation associated with the first eigenvector, which is related to size variation; (C) Mean flexibility; (D) Mean evolvability. Curves represent posterior distributions obtained using the sample of G-matrices from the \textsc{bsfg} model.}
+\label{figsup:matstatG}
 \end{figure}
 
 \begin{table}
 \centering
-\caption[Directional matrix statistics confidence intervals]{95\% confidance interval and mean of the curves of posterior distributions obtained using the sample of P-matrices from the BSFG model from Figure 4.}
+\caption[Directional matrix statistics confidence intervals]{95\% confidance interval and mean of the curves of posterior distributions obtained using the sample of P-matrices from the \textsc{bsfg} model from Fig.~\ref{fig-dzpc1}.}
 \begin{tabular}{rllccc}
   \hline
 variable & selection & line & ic.min & mean & ic.max \\
@@ -1001,12 +1011,14 @@ variable & selection & line & ic.min & mean & ic.max \\
    & upwards & s' & 0.76 & 0.89 & 0.94 \\
    \hline
 \end{tabular}
+\label{sup:directmatstatconf}
 \end{table}
 
 \begin{figure}
 \centering
 \includegraphics[width = 12cm]{chapter_ratones/media/SI/figureS10_Fig4Gversion.png}
-\caption[Directional evolutionary statistics in the G-matrix]{(A) Scaled direction evolvability, the ratio of evolvability in the direction of $\delta z$ and the mean evolvability for each line; (B) Scaled direction conditional evolvability, the ratio of conditional evolvability in the direction of $\delta z$ and the mean conditional evolvability for each line; (C) the vector correlation between $\delta z$ and first eigenvector for each line. Curves represent posterior distributions obtained using the sample of G-matrices from the BSFG model.}
+\caption[Directional evolutionary statistics in the G-matrix]{(A) Scaled direction evolvability, the ratio of evolvability in the direction of $\delta z$ and the mean evolvability for each line; (B) Scaled direction conditional evolvability, the ratio of conditional evolvability in the direction of $\delta z$ and the mean conditional evolvability for each line; (C) the vector correlation between $\delta z$ and first eigenvector for each line. Curves represent posterior distributions obtained using the sample of G-matrices from the \textsc{bsfg} model.}
+\label{figsup:direcmatstatG}
 \end{figure}
 % section supporting_information (end)
 
