@@ -19,13 +19,12 @@ Diogo Melo, Gabriel Marroig, Jason Wolf
 \end{center}
 
 \noindent
-Multivariate quantitative
-genetics provides a powerful framework for understanding patterns and
+Multivariate quantitative genetics provides a powerful framework for studying patterns and
 processes of phenotypic evolution. Quantitative genetics parameters,
 like trait heritability or the G-matrix for sets of traits, can be used
 to predict evolutionary response or to understand the evolutionary
-history of a population. These population level approaches have proven
-to be extremely successful, but the underlying genetics of multivariate
+history of a population. These population-level approaches have proven
+to be largely successful, but the underlying genetics of multivariate
 variation and evolutionary change typically remain a black box.
 Establishing a deeper empirical understanding of how individual genetic
 effects lead to genetic (co)variation is then crucial to our
@@ -36,13 +35,12 @@ multivariate effect of loci and characterize these vectors of effects in
 terms of their magnitude and alignment with the direction of
 evolutionary divergence. Using these estimates, we reconstruct the
 traits in the ancestral populations and quantify how much of the
-divergence is due to genetic effects. Finally, we also use these vectors
-to decompose patterns of genetic covariation and examine the
+divergence is due to the different kinds of genetic and environmental effects. 
+Finally, we also use these vectors to decompose patterns of genetic covariation and examine the
 relationship between these components and the corresponding distribution
 of pleiotropic effects. We find that additive effects are much larger
 than dominance effects and are more closely aligned with the direction
-of selection and divergence, with larger effects being more aligned than
-smaller effects. Pleiotropic effects are highly variable but are, on
+of selection and divergence. Pleiotropic effects are highly variable but are, on
 average, modular. These results are consistent with pleiotropy being
 partly shaped by selection, while reflecting underlying developmental
 constraints on patterns.
@@ -59,18 +57,18 @@ Individuals are composed of a complex array of traits that are
 interconnected through shared genetic, physiological, and developmental
 processes. Consequently, evolution is inherently a `multivariate'
 process, wherein suites of traits interact to determine an individual's
-fitness, which generates selection that cascades to the genomic level
-through the genotype-phenotype relationship to lead to heritable changes
+fitness. Differences in fitness then generate selection that cascades to the genomic level
+through the genotype-phenotype relationship, leading to heritable changes
 across generations \parencite{Lande1983-ez,Klingenberg2008-ll,Melo2016-yw}.
-Therefore, understanding evolutionary change in response to selection requires an understanding
-of relationship between genotypic variation and multivariate traits. The
+Therefore, understanding evolutionary change in response to selection requires deciphering
+the relationship between genotypic variation and multivariate traits. The
 quantitative genetics framework was developed to achieve this goal,
 historically relying on statistical measurement of genetic covariation
 between traits as a summary of their genetic `connectedness'. The
-covariances estimated using this framework can be used to understand how
-sets of traits evolve together, including forward looking predictions
-for the multivariate response to selection \parencite{Lande1979-by} and the
-retrospective analysis of divergence by selective and neutral processes
+covariances estimated using this framework can be used to describe how
+sets of traits evolve together, including either for predicting
+the multivariate response to selection \parencite{Lande1979-by}, or to
+retrospectively analyze divergence by selective and neutral processes
 \parencite{Felsenstein1988-ql}. However,
 this statistical framework treats the link between genotype and
 phenotype underlying patterns of covariation as a `black box', and as a
@@ -88,14 +86,13 @@ study of evolution.
 To understand the patterns of genetic covariation between traits,
 studies have historically taken a population level approach (top-down)
 that relies on pedigree relations to dissect components of phenotypic
-covariation. These studies are generally focused on understanding how
+covariation. These studies are generally focused on how
 variation constrains evolution or how variation itself evolves in
 relation to multivariate selection \parencite{Arnold2008-pc,Futuyma2010-jl}.
 While the effect of covariation in constraining short
 term evolution is well established \parencite{Lande1979-by,Grant1995-er,Schluter1996-gw}
-, we have only recently begun to
-understand the effects of covariation on macroevolution. Comparisons of
-directions of diversifications in several study systems have shown a
+, we have only recently begun to uncover the effects of covariation on macroevolution. Comparisons of
+directions of divergence in several study systems have shown a
 remarkable pattern of alignment between within population covariation
 and macro-evolutionary divergence, with divergence being greater in
 directions of high genetic variation, both in patterns of phenotypic
@@ -112,13 +109,13 @@ G-matrix can quickly evolve in response to selection \parencite{Careau2015-sy,As
 but there are also
 examples of failure to increase multivariate variation via selection \parencite{Sztepanacz2017-ot}.
 Given this rich scenario of experimental and natural observations, a
-qualitative understanding of the sources and causes of genetic
-covariation, and on how these constraints can evolve, is fundamental to
+qualitative exploration of the sources and causes of genetic
+covariation, and on how these constraints evolve, is fundamental to
 furthering our understanding of diversification. Patterns of genetic
 covariation between traits can be due to either pleiotropy (where a
 locus affects more than one trait), or linkage disequilibrium (LD)
 (where alleles at different loci affecting different traits tend to be
-co-inherited), but studies generally assume the primacy of pleiotropy as
+co-inherited). Studies generally assume the primacy of pleiotropy as
 a cause of long term genetic covariation, because even relatively
 closely linked genes are expected to reach linkage equilibrium over
 evolutionary timescales, and hence even when LD is presence, its
@@ -132,14 +129,14 @@ infer how pleiotropy and LD evolve under selection \parencite{Barton1990-uu,Hans
 Quantitative trait locus (QTL) mapping and genome wide association
 studies (GWAS) have begun to overcome this limitation, offering
 preliminary insights into the genetic architecture underlying
-covariation (especially for growth and morphological traits, \parencite{Leamy2002-nh,Wolf2005-nr,Kenney-Hunt2008-bd,Porto2016-qc}.
+covariation (especially for growth and morphological traits \parencite{Leamy2002-nh,Wolf2005-nr,Kenney-Hunt2008-bd,Porto2016-qc}.
 In these studies, the link between pleiotropy and covariation has been
 made in a mostly qualitative manner using mapping locations, with
 effects estimated using `univariate' models. Genomic regions that are
 mapped on to more than one trait are considered pleiotropic, and the
-observed covariation between these traits is related to this common QTL.
+observed covariation between these traits is related to this shared QTL.
 This method, along with trait specific effect estimates for each QTL,
-has proven very powerful for understanding genetic architecture \parencite{Wang2010-da,Wagner2011-kp}.
+has proven very powerful for characterizing genetic architecture \parencite{Wang2010-da,Wagner2011-kp}.
 For example, several studies have pointed to a
 modular genotype-phenotype map, composed of predominantly local genetic
 effects, as the main driver of variational modularity in growth and
@@ -151,7 +148,7 @@ as was suggested in early quantitative genetics analysis \parencite{Cheverud1983
 
 Advances in statistical and computational methods have started to change
 the landscape of mapping approaches, with recent genome prediction and
-regularization methods opting for an approach that simply uses all
+regularization methods opting for using all
 available markers in large prediction models, instead of mapping a small
 number of QTL of sufficiently large effects \parencite{Meuwissen2001-cu,De_Los_Campos2013-gn}.
 In general, genome prediction methods
@@ -177,9 +174,8 @@ detection of QTL with large effects overall but small effects on each
 individual trait under investigation. Multivariate mapping, when
 combined with quantitative genetics theory, also allows for a direct
 quantification of the effects of pleiotropic genetic effects on
-covariation. This has the potential of allowing for a much finer
-understanding of the genetic basis of covariation when compared to
-simple mapping of common QTL.
+covariation, providing a much finer description of the genetic basis 
+of covariation when compared to simple mapping of common QTL.
 
 Here, we develop a multivariate mixed model framework to understand the
 genetic basis to patterns of covariation among growth traits in a mouse
@@ -187,14 +183,14 @@ cross. Growth and size have long been ideal models for the study of
 genetic architecture, for several reasons. First, size is very amenable
 to artificial selection, having standing heritable variation and being
 easy to measure by several proxies, such as weight or length. Second,
-final size is reached through various stages of growth, and these stages
+organismal growth unfolds through various stages, and these stages
 have different mechanisms and timings. For example, early quantitative
 genetics selection experiments showed that changes in cell number and
 cell size were somewhat independent mechanisms for changing the final
 size of the population under selection \parencite{Falconer1978-kq,Cheverud1983-fq,Leamy1984-df,Riska1984-ml}.
 These stages of development can then be considered as several
-related traits interacting to form the final phenotype. Third,
-covariation between the different stages of growth (like early and late
+related traits interacting to form the final phenotype. Third, the 
+covariation that exists between the different stages of growth (like early and late
 growth) provides an ideal system to investigate the relation between
 pleiotropy and covariation. We primarily focus on a QTL mapping model to
 study the distribution of pleiotropic effects in order to link the
@@ -256,16 +252,17 @@ the difference between the means of the phenotypes of the founders. To
 estimate the direction of selection, we used a multiple regression of
 the growth traits in the F\textsubscript{3} with the target of
 selection, week 9 weight, and used the partial regression coefficients
-as the expected direction of the selection gradient. By multiplying this
+as the expected direction of the selection gradient \parencite{Lande1983-ez}. By multiplying this
 selection gradient to the observed G-matrix we also obtained an expected
 phenotypic divergence, which can be compared to the observed divergence.
-We also scale the selection gradient so that the norm of the expected
+We also scaled the selection gradient so that the norm of the expected
 divergence vector is the same as the observed vector. This scaling is
 necessary since the magnitude of selection estimated by the multiple
 regression is too small to account for the many generations of
 selection. Using these multivariate vectors of selection and divergence,
-we measured the alignment of the pleiotropic vectors, phenotypic
-divergence and selection gradients. Alignment between vectors was measured
+we measured the alignment of the estimated genetic effects (see below), phenotypic
+divergence and selection gradients. This allows us to characterize the 
+genetic basis of the phenotypic divergence due to selection. Alignment between vectors was measured
 using vector correlations, that is, the cosine of the angle between the
 vectors being compared. We also investigate the relation between the
 norm of the pleiotropic effect vector and its alignment with the
@@ -367,7 +364,7 @@ used interval mapping models, by including flanking markers at various
 distances on either side of the focal marker (5, 10, 15 and 20 cM).
 Significance was assessed by dropping the focal marker and using a
 likelihood ratio test (LRT) with a Satterwhite correction. Models were
-fit in the R programing language using the lme4 package \parencite{Bates2008-gp}, and
+fit in the R programming language using the lme4 package \parencite{Bates2008-gp}, and
 the LRT was performed in the lmerTest package \parencite{Kuznetsova2017-fq}. We
 calculate chromosome-wise and genome-wise significance using a
 Bonferroni correction with the effective number of markers in each
@@ -565,7 +562,7 @@ effects to zero.
 
 \subsection{Matrix comparisons}
 
-We compare the estimated covariance matrices using three complementary
+To evaluate the quality of the matrix estimates, we compare the estimated covariance matrices using three complementary
 methods, which focus on different aspects of matrix structure. The
 Random Skewers method \parencite{Cheverud2007-yp} summarizes the extent to which matrices are
 similar in the direction of their expected response to selection. This is done by
@@ -1015,7 +1012,7 @@ either increasing or decreasing all phases of growth. Indeed, on
 average, the additive effects are aligned with divergence, and large
 effects more so, but we still maintain a number of pleiotropic vectors
 with antagonistic effects in both phases, either increasing early traits
-and decreasing late traits or vice-versa (markers on the top-left and
+and decreasing late traits or \textit{vice-versa} (markers on the top-left and
 bottom-right quadrant of Fig.~\ref{fig:joh:pleiopart}C). The maintenance of this modular
 variation in pleiotropic effects could be associated with developmental
 or mutational constraints on the additive genetic effects. But, if this
