@@ -458,7 +458,7 @@ traits.
 In both the simulations and the QTL mapping we have pleiotropic effect vectors
 that describe the effect of an allele on a set of traits. The pattern of
 pleiotropy will largely determine the genetic covariation we observe between
-traits (see Chapter 5). Alleles that increase two traits simultaneously will
+traits (see Chapter 4). Alleles that increase two traits simultaneously will
 contribute to the positive correlation between these traits, while alleles
 that affect traits in different direction will contribute to the negative
 correlation between the traits. If two traits don't share genetic effects, the
@@ -479,7 +479,7 @@ effects according to their vector alignment with the directions shown in
 Fig.~\ref{effectclassification}, i.e. a vector is classified according to the
 direction it is most aligned with. In the QTL analysis,  we use these effect
 vectors to estimate the additive genetic  covariance matrix directly from all
-the QTLs using the equations from Chapter 5, and we also estimate the expected
+the QTLs using the equations from Chapter 4, and we also estimate the expected
 covariance matrix from the QTLs classified into a given class.
 
 
@@ -545,7 +545,7 @@ some dominance between strains. Also, in the first two periods, the mean for
 the F$_{\text{6}}$ is above the mean for the founders, suggesting that
 environmental or maternal effects are present. The additive genetic
 correlation matrix in the F$_{\text{6}}$ is organized in the familiar two
-module pattern for early and late growth (as in Chapter 5). We see positive
+module pattern for early and late growth (as in Chapter 4). We see positive
 correlations between two traits in each of the two periods, and negative or
 null correlations between the two phases (Fig.~\ref{growthcurves:t2}). In the
 ancestral strain used in the selection experiment that produced our founder
@@ -705,18 +705,23 @@ covariation alone~\parencite{Mitteroecker2007-xq, Mitteroecker2009-jb}.
 
 In the simulations, both stabilizing and directional selection are efficient
 at creating variational modularity. All simulated populations share a similar
-two-module correlation pattern, but the genetic basis of this modular
-pattern can change depending on the evolutionary history of the population.
-In general, a combination of modular, integrative and antagonistic genetic
+two-module correlation pattern, but the genetic basis of this modular pattern
+can change depending on the evolutionary history of the population. In
+general, a combination of modular, integrative and antagonistic genetic
 effects interact to produce the final modular variational pattern, but
 directional selection can increase the proportion of effects aligned with it,
 altering the GP-map. In particular, the populations under directional
 selection show an enrichment for pleiotropic effects that are in the same
 direction as the directional selection. Divergent directional selection
 produces a population with more antagonistic effects, while corridor selection
-produces and excess of modular effects.
+produces and excess of modular effects. These two genetic architectures
+illustrate some of the possibilities considered in~\textcite{Pavlicev2011-xm},
+with the population under divergent directional selection representing the
+hidden pleiotropy architecture, and the corridor population the modular
+architecture. The genetic architecture of the population under stabilizing
+selection appears to be a mixture of these two extremes.
 
- In the advanced intercross line, the F$_{\text{5}}$F$_{\text{6}}$ generation shows a pattern of covariation in growth that is markedly different from the original mice that underwent divergent directional selection~\parencite{Atchley1997-vn}, with the erosion of a positive correlation between Early and Late growth. This reduction in covariation under directional selection is compatible with what we see in the simulated populations. 
+ In the advanced intercross line, the F$_{\text{5}}$F$_{\text{6}}$ covariance matrix shows a pattern that is markedly different from the original mice that underwent divergent directional selection~\parencite{Atchley1997-vn}. We observe an erosion of the positive correlation between Early and Late growth, and the AIL matrix shows a distinct pattern of positive correlations within each growth periods and negative or null correlations between periods. This reduction in covariation under directional selection is compatible with what we see in the simulated populations.
 
 Using an experimental cross, we see that the modularity pattern created by a divergent selection regime can be more complex, suggesting additional restrictions like development and correlated mutations also play a role in shaping restrictions. This covariation pattern is also created by a combination of several types of genetic effects, showing that simple "modular" or "pleiotropic" patterns are a simplification and that we need to consider complex GP-maps to understand the evolution of genetic restrictions.
 
