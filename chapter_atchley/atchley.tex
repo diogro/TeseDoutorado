@@ -124,7 +124,13 @@ situations. Both of these approximations are valid under different conditions,
 and in general under high mutation rates and small mutational effects, the
 hidden pleiotropy GP map provides higher evolvability, while under small
 mutation rates and large mutational effects, the modular GP map provides
-higher evolvability.
+higher evolvability. In summary, when considering short term evolution, both
+modular and fully pleiotropic GP maps can produce maximally evolvable
+covariation patterns depending on details of the distribution of allelic
+effects and the pattern of selection. Modular genetic architectures seem to be
+more common~\parencite{Wagner2007-cx}, as well as synergistic pleiotropic
+effects in morphological systems~\parencite{Kenney-Hunt2008-bd}, but we still
+don't understand why.
 
 Conditional evolvability measured on standing genetic variation adequately
 describes the short term ability of complex phenotypes to respond to
@@ -175,9 +181,9 @@ functioning individual, and can be stable over macro-evolutionary
 timescales.~\textcite{Mitteroecker2009-jb} argues that variational modularity
 over longer timescales can only be obtained through localized developmental
 factors, because over these time-scales the non-linear aspects of development
-preclude compensatory pleiotropy from being stable. There is very little
+preclude compensatory antagonistic pleiotropy from being stable. There is very little
 empirical evidence on constraints in the structure of pleiotropic effects, but
-see the last chapter and~\textcite{Pavlicev2016-jh} for an example of
+see the previous chapter and~\textcite{Pavlicev2016-jh} for an example of
 development shaping genetic effects.
 
 In this article (chapter?) we use a combination of individual based
@@ -187,7 +193,7 @@ intercross, we use several inbreed mice lines that were derived from the
 directional selection experiment by~\textcite{Atchley1997-vn}. In this
 experiment, an initial positive correlation between growth traits within the
 initial population was eroded by divergent selection between selected strains.
-These selected strains were then inbreed, and using these inbreed lines, we
+These selected strains were kept as inbreed lines, and using these inbreed lines, we
 created an advanced intercross line to investigate the genetic basis of the new
 covariance pattern across lines. We confront the results from this
 experimental cross with results from simulations. Using an individual based
@@ -226,8 +232,8 @@ with mean zero and variance 0.1 and added to the original vector. Mutations in
 direction are drawn from a multivariate normal distribution with zero mean and
 a diagonal covariance matrix with variances set to 0.1. In the case of a
 mutation in direction, after adding the mutation to the original effect
-vector, the resulting vector is scaled to keep the original magnitude. If the
-variance of the added vector is small, this produces a small change in the
+vector, the resulting vector is scaled to keep the original magnitude. Because the
+variance of the added vector is small this produces a small change in the
 pattern of pleiotropy. All loci are unlinked and inherited independently.
 Correlated stabilizing selection is applied using a selection covariance
 matrix with non-zero off-diagonal elements. Directional selection is applied
@@ -524,11 +530,11 @@ selection regimes.
 
 \begin{figure}[htbp]
     \centering
-    \subfloat[Mean phenotypes.]{\label{simulated:t1}\includegraphics[width=200pt]{fsm}}\vspace{20pt}
+    \subfloat[Mean phenotypes.]{\label{simulated:t1}\includegraphics[width=200pt]{chapter_atchley/media/all_traits.png}}\vspace{20pt}
     \subfloat[Genetic correlations.]{\label{simulated:t2}\includegraphics[width=200pt]{chapter_atchley/media/all_matrices.png}}\\
     \vspace{-18pt}
     \subfloat[Mean allelic effects classification.]{\label{simulated:t3}\includegraphics[width=300pt]{chapter_atchley/media/genetic_effect_classes_simulations}}\vspace{11pt}
-    \caption[Simulation results]{Simulation results. a) Changes in the selective surface optimum and corresponding changes in mean phenotypes for the populations under directional selection. b) Genetic correlation matrices for simulated populations. All three matrices for populations under selection show a 2-module covariance pattern. c) Classification of mean allelic effects. Mean allelic effect is calculated over the entire simulated population at each locus, and the direction of the mean effect is classified using vector correlations with the directions in the morphospace.}
+    \caption[Simulation results]{Simulation results. a) Changes in the selective surface optimum and corresponding changes in mean phenotypes for the populations under directional selection. All populations start with 1000 generations of drift, then 1000 generations of stabilizing selection with a fixed optimum, then 1000 generations of the corresponding selection regime. b) Genetic correlation matrices for simulated populations. All three matrices for populations under selection show a 2-module covariance pattern. c) Classification of mean allelic effects. Mean allelic effect is calculated over the entire simulated population at each locus, and the direction of the mean effect is classified using vector correlations with the directions in the morphospace.}
     \label{simulated}
 \end{figure}
 
