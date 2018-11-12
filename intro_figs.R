@@ -33,4 +33,4 @@ p2 = plot_pop(p2, 2.5, 1, 0.1, color = "lightblue", alpha = 0)
 p2 = plot_pop(p2, 5, 1.57, 1.8, color = "blue", alpha = 0) + geom_hline(yintercept = 0)
 p2
 p1p2 = plot_grid(p1, p2, ncol = 1, labels = c("A", "B"))
-save_plot("~/Dropbox/labbio/articles/TeseDoutorado/discrete_gaussian.png", p1p2, base_height = 6, nrow = 2, base_aspect_ratio = 1.2)
+save_plot("~/Dropbox/labbio/articles/TeseDoutorado/discrete_gaussian.png", p1p2, base_height = 5, nrow = 2, base_aspect_ratio = 1.2)

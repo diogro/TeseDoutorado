@@ -197,21 +197,21 @@ naturais.
 Cada um desses componentes pode ser estimado a partir da semelhança entre
 indivíduos relacionado em uma população. Por exemplo, no caso da similaridade
 entre pais e filhos, fundamental na herança de caracteres e para a evolução.
-No caso mais simples, no modelo aditivo, o fenótipo de um indivíduo é dado por
-$P = A + E$, e o componente aditivo pode ser subdividido em duas partes, as
-contribuições do pai e da mãe, então $P = A_1 + A_2 + E$. Já o fenótipo do pai
-pode ser escrito como $P_F = A_1 + A_3 + E_F$, onde $A_1$ representa a porção
+No caso mais simples, no modelo aditivo, o fenótipo de um indivíduo (filho) é dado por
+$P_f = A + E_f$. O componente aditivo pode ser subdividido em duas partes, as
+contribuições do pai e da mãe, então $P_f = A_1 + A_2 + E_f$. Já o fenótipo do pai
+pode ser escrito como $P_p = A_1 + A_3 + E_p$, onde $A_1$ representa a porção
 do valor de acasalamento compartilhada com o filho e $A_3$ a porção
-independente do filho. A covariação entre pai e filho então é $cov(P, P_F) =
-cov(A_1 + A_2 + E, A_1 + A_3 + E_F)$. A covariância da soma de fatores
+independente do filho. A covariação entre pai e filho então é $cov(P_f, P_p) =
+cov(A_1 + A_2 + E_f, A_1 + A_3 + E_p)$. A covariância da soma de fatores
 independentes pode ser escrita como a soma das covariâncias par a par, então
-$cov(P, P_F) = cov(A_1, A_1) + cov(A_1, A_3) + cov(A_2, A_1) + \cdots  +
-cov(E, E_F)$. Como todos os componentes são independentes por construção, o
+$cov(P_f, P_p) = cov(A_1, A_1) + cov(A_1, A_3) + cov(A_2, A_1) + \cdots  +
+cov(E_f, E_p)$. Como todos os componentes são independentes por construção, o
 único termo que contribui para a covariância entre pais e filhos é $cov(A_1,
 A_1) = var(A_1)$. Como a variância aditiva total é a soma das contribuições
 paternas e maternas $V_A = var(A_1) + var(A_2)$, e como as contribuições
 paternas e maternas são equivalentes, a covariância entre pais e filhos é a
-metade da variância aditiva total ($cov(P, P_F) = var(A_1) = \frac{1}{2}V_A$).
+metade da variância aditiva total ($cov(P_f, P_p) = var(A_1) = \frac{1}{2}V_A$).
 A partir de deduções semelhantes, podemos estimar vários dos componentes da
 variação genotípica a partir da covariância entre indivíduos relacionados. Por
 exemplo, a variância de dominância pode ser estimada comparando a covariância
@@ -235,15 +235,20 @@ A herdabilidade é especialmente importante para entender a resposta evolutiva,
 pois é a ela que determina como uma mudança na média dos pais se traduz numa
 mudança evolutiva na média dos filhos. Essa relação é dada pela equação do
 criador, que relaciona a mudança em um fenótipo de uma geração para outra
-($R$) com a mudança dentro de uma geração devido a um episódio de seleção ($S$):
+($R$) com a mudança dentro de uma geração devido a um episódio de seleção (o
+diferencial de seleção, $S$):
 
 \begin{equation}
 R = h^2S = \frac{V_A}{V_P}S	
 \end{equation}
 
-Essa equação revela que a resposta à seleção depende fundamentalmente da
-presença de variação aditiva. Sem variação aditiva, sem herdabilidade, não há
-como a mudança em resposta à seleção natural acontecer.
+A intensidade de seleção é medida pelo diferencial de seleção, e quanto maior
+a mudança na média dentro de geração maior será a mudança entre gerações. Além
+disso, a equação do criador nos mostra que a resposta à seleção depende não só
+da intensidade de seleção, mas também depende fundamentalmente da presença de
+variação aditiva. Sem variação aditiva, sem herdabilidade, não há como a
+mudança em resposta acontecer, e quanto maior a herdabilidade maior será a
+resposta a seleção.
 
 \subsubsection{Resposta à seleção multivariada}
 
@@ -251,25 +256,188 @@ Se estamos interessados em fenótipos complexos, compostos de muitos
 caracteres, além de quantificar a variância individual de cada um, podemos
 também levar em conta a interação entre eles. De forma análoga à variância, a
 covariância mede a variação conjunta de dois caracteres. A matriz de
-covariância genética aditiva (matriz G) resume a covariância entre os valores de
-acasalamento de caracteres diferentes, enquanto a matriz de covariância
-fenotípica (matriz P) reune as variância de covariâncias entre os fenótipos da população. 
+covariância genética aditiva (matriz G) representa na diagonal as variâncias
+genéticas aditivas dos caracteres, e fora da diagonal a covariância entre os
+valores de acasalamento de caracteres diferentes. Já a matriz de covariância
+fenotípica (matriz P) reune as variância e covariâncias entre os fenótipos da
+população.
 
-A partir dessas matrizes, é possível escrever o análogo multivariado da
-equação do criador, a equação de resposta multivariada de~\textcite{Lande1979-by}:
+Usando essas matrizes é possível escrever o análogo multivariado da equação do
+criador, a equação de resposta multivariada de~\textcite{Lande1979-by}, que
+tem essencialmente a mesma forma:
 
 \begin{equation}
-\Delta \mathbf{\overline z} = GP^{-1}\mathbf{S}
+\Delta \mathbf{\overline z} = GP^{-1}\mathbf{S} = G\beta
 \end{equation}
 
-Nesse caso, tanto a resposta à seleção ($\Delta \mathbf{\overline z}$) quando a
-diferença nas médias antes de depois da seleção dentro da geração parental
-($\mathbf{S}$) são representados por vetores, com um componente por caráter
-sendo analisado.
+Nesse caso, tanto a resposta à seleção ($\Delta \mathbf{\overline z}$) quanto
+o diferencial de seleção ($\mathbf{S}$) são representados por vetores, sendo
+que cada componente representa um caráter analisado. Frequentemente, o termo
+$P^{-1}S$ é representado por $\beta$, o gradiente de seleção. O uso do
+gradiente de seleção é conveniente por algumas razões. Primeiro, o vetor
+$\beta$ possui uma interpretação geométrica simples, representando a direção
+fenotípica de maior aumento da aptidão\footnote{Dai o nome gradiente, que é o
+vetor de derivadas que aponta a direção de maior mudança em uma superfície
+multivariada.}; segundo, o gradiente de seleção já desconta as covariâncias
+fenotípicas e permite inferir quais caracteres estão efetivamente sob
+seleção.\footnote{Isso só vale caso todos os caracteres relevantes para a
+aptidão estejam inclusos na análise.}
 
-\subsection{Estrutura da variação}
+Se as matrizes P e G forem diagonais, ou seja, se todas as covariâncias entre
+valores de acasalamento e entre fenótipos forem nulas, a equação de Lande se
+resume a várias instâncias da equação do criador. Porém, caso as covariâncias
+não sejam nulas, a equação de Lande prevê uma resposta indireta à seleção
+mesmo em caracteres que não estão sobre seleção, caso eles sejam
+correlacionados com caracteres que estão sobre seleção. Para entender esse
+efeito indireto, podemos considerar o caso com dois caracteres, em que a
+equação de Lande é:
 
+\begin{equation}
+G\beta  =
+\left (
+\begin{matrix}
+G_{11} & G_{12} \\
+G_{21} & G_{22} \\
+\end{matrix}
+\right )
+\left (
+\begin{matrix}
+\beta_{1}  \\
+\beta_{2}   \\
+\end{matrix}
+\right )
+=
+\left (
+\begin{matrix}
+G_{11}\beta_{1} +  G_{12}\beta_{2} \\
+G_{21}\beta_{1} +  G_{22}\beta_{2} \\
+\end{matrix}
+\right )
+=
+\left (
+\begin{matrix}
+\Delta z_{1}  \\
+\Delta z_{2}   \\
+\end{matrix}
+\right )
+=
+\Delta z
+\end{equation}
 
+Os termos $G_{11}\beta_{1}$ e $G_{22}\beta_{2}$ representam a resposta à
+seleção direta em cada caráter. Mas além dos termos diretos, temos também  os
+termos indiretos $G_{12}\beta_{2}$ na resposta do caráter $z_1$ e
+$G_{21}\beta_{1}$ na resposta do carácter $z_2$, que dependem da seleção no
+outro caráter e na covariância genética entre caracteres. A presença de
+respostas indiretas a um gradiente de seleção faz com a resposta observada
+($\Delta z$) não seja na mesma direção do gradiente de seleção. Esse desvio da
+resposta evolutiva em relação à seleção direcional é considerado um tipo de
+restrição genética, e pode ter consequências importantes na diversificação.
+
+\section{Estrutura da variação genética}
+
+A influência da covariação genética na resposta à seleção implica que conhecer
+o padrão e intensidade da covariância genética é fundamental para o estudo de
+evolução. O padrão de covariância genética se refere à organização da
+covariação, quais caracteres são mais relacionados, quais grupos tem
+covariâncias positivas ou negativas, quais caracteres compõem um grupo de
+covariâncias altas, etc. Já a intensidade se refere à magnitude total das
+covariâncias. Como as covariâncias são medidas na escala dos caracteres, é
+comum utilizar uma medida de associação padronizada, que permita a comparação
+da intensidade de associação entre caracteres de tamanhos e escalas de
+variação diferentes. A medida usual é a correlação entre caracteres, definida
+como a covariância dividida pelo produto dos desvios padrões dos caracteres em
+questão. Tando o padrão quanto a intensidade de correlação genética são temas
+centrais desta tese.
+
+O padrão de correlação genético é principalmente definido pela arquitetura
+genética dos caracteres. Genes pleiotrópicos, que afetam mais de um caractere,
+e desiquilíbrio de ligação, a herança conjunta de alelos específicos,
+contribuem para a covariância genética e provocam respostas correlacionadas.
+Em uma parcela significativa dos sistemas biológicos, da expressão gênica à
+morfologia, a organização da covariação genética se dá de forma modular. Em
+uma organização modular podemos perceber conjuntos de caracteres mais
+correlacionados entre si do que com o restante do organismo. Esses grupos de
+caracteres frequentemente estão envolvidos no desempenho de uma função
+especifica e estão também associados pelo desenvolvimento, compartilhando uma
+origem embriológica ou sendo formados pelas mesmas vias de desenvolvimento. 
+
+A organização modular é essencial para que a evolução possa acontecer, por
+criar uma certa independência entre os caracteres. Em última instância, a
+própria existência de caracteres identificáveis é uma evidencia para a
+importância da organização do organismo em módulos relativamente
+independentes.~\textcite{Wagner1996-ui} foram pioneiros no entendimento da
+modularidade como uma adaptação para permitir que os organismos tivessem a
+capacidade de responder a seleção de forma eficiente. Essa capacidade de
+evoluir, a evolvabilidade, acaba...
+
+\subsection{Evolução da covariação genética}
+
+A evolução da covariação genética é o tema central desta tese.
+
+\section{Perfil da Tese}
+
+Esta tese é apresentada em cinco capítulos relativamente independentes mas
+ligados pelo tema da evolução da covariação genética. Com exceção do Capitulo
+5, que depende do Capítulo 4 em alguns passos técnicos, todos podem ser lidos
+independentemente. 
+
+O Capitulo 2 (\textit{How does modularity in the genotype-phenotype map shape
+development and evolution?}) apresenta uma revisão básica do conceito de
+modularidade e discute as causas e consequências da organização modular da
+arquitetura genética. Este capitulo pode ser visto como uma segunda
+introdução, mais técnica e motivadora dos capítulos experimentais que o seguem.
+
+O Capítulo 3 (\textit{The Evolution of Phenotypic Integration: How directional
+selection reshapes covariation in mice}) aborda o problema da evolução da
+intensidade da correlação fenotípica e genética após um episódio de seleção
+direcional. Utilizando camundongos provenientes de um experimento de seleção
+artificial para alteração do peso corporal, nós medimos o padrão e a
+intensidade de correlação em caracteres cranianos em duas linhagens
+selecionados para aumento de tamanho, duas linhagens selecionadas para
+diminuição de tamanho, e uma linhagem controle. Nossos resultados mostram que
+o padrão de covariação muda com a seleção direcional, aumentando a proporção
+de variação alinhada com a seleção direcional, e portando aumentando a
+evolvabilidade relativa na direção de seleção. Este capítulo foi escrito em
+colaboração e tem Anna Penna como co-primeira autora. Os dados foram derivados
+de um projeto de iniciação científica realizado no laboratório de evolução de
+mamíferos, e os animais utilizados no projeto foram cedidos pela professora
+Maria Inés Oyarzabal da Universidade de Nacional de Rosário, Argentina. O
+capítulo foi publicado na revista \textit{Evolution} (doi:10.1111/evo.13304).
+
+O Capítulo 4 (\textit{Genomic Perspective On Multivariate Variation,
+Pleiotropy, And Evolution}) utiliza uma população intercruzada de camundongos
+provenientes de duas linhagens puras para estudar como o padrão de efeitos
+genéticos se relaciona com o padrão de covariação de um conjunto de caracteres
+da curva de crescimento. As linhagens puras são derivadas de dois experimentos
+independentes de seleção no peso corporal, um para aumento de peso e um para
+diminuição de peso. Utilizando técnicas de mapeamento genético e a teoria de
+genética quantitativa, nós fomos capazes de particionar o efeito dos
+componentes aditivos e de dominância na covariação genética, e mostramos que o
+padrão de covariação genética é o resultado da combinação da influência da
+seleção e de restrições internas que moldam os efeitos pleiotrópicos. Além
+disso, nós também comparamos duas técnicas de mapeamento genético na sua
+capacidade de inferir o fenótipo das linhagens puras utilizando somente os
+efeitos genéticos na população intercruzada. 
+
+O Capítulo 5 (\textit{Genetic Architecture and the Evolution of Variational
+Modularity}) aplica os mesmos métodos desenvolvidos no capítulo anterior para
+relacionar efeitos genéticos com a covariação em uma linhagem intercruzada de
+camundongos formada por seis linhagens puras advindas de um experimento de
+seleção direcional para a alteração da curva de crescimento. Nesse experimento
+de seleção artificial, foi observado uma mudança marcante no padrão de
+covariação genéticas após a seleção, com a eliminação de uma correlação
+positiva entre as fases iniciais e finais do crescimento. Utilizando a
+população intercruzada, nós exploramos a base genética do novo padrão de
+covariação e relacionamos esse padrão e os feitos genéticos com a história
+evolutiva das linhagens selecionadas. Além disso, utilizamos simulações baseadas
+em indivíduos para estabelecer expectativas sobre a distribuição de efeitos
+
+O Capitulo 6 (\textit{Modularity: Genes, Development, and Evolution}) é uma
+revisão abordando tanto as bases genéticas do padrão de covariação quanto sua
+evolução e as consequências macro evolutivas da covariação genética.
 
 \printbibliography
+
+
 \end{refsection}
