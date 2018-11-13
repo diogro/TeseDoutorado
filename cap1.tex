@@ -159,7 +159,7 @@ população e a média do fenótipo da população como um todo. A diferença é
 dobrada pois o individuo contribui com metade do valor genotípico dos seus
 filhos, a outra metade vindo ao acaso da população.
 
-\subsubsection{Componentes da variação fenotípica}
+\subsection{Componentes da variação fenotípica}
 
 Apesar de conceitualmente importantes, são raras as ocasiões em que temos
 condição de medir valores dos componentes genotípicos de um indivíduo. Estimar
@@ -220,23 +220,63 @@ genótipos, enquanto pais não compartilham genótipos com os filhos. Então, na
 presença de dominância, a covariância entre irmãos é maior que a covariância
 entre pais e filhos.
 
-\subsubsection{Herdabilidade e a resposta à seleção}
+\subsection{Herdabilidade e a resposta à seleção}
 
-Como a variância aditiva é a principal responsável pela similaridade entre
-indivíduos aparentados, em especial pais e filhos, a proporção da variação
-fenotípica que é devido a variação aditiva recebe um tratamento especial
-dentro da genética quantitativa, recebendo o nome de herdabilidade. A herdabilidade é
-definida como a razão da variância aditiva pela variância fenotípica total: 
-$h^2 = \frac{V_A}{V_P}$.\footnote{O quadrado faz parte do simbolo, e se refere
-ao fato da herdabilidade ser uma razão de variâncias, e portanto numa escala
-quadrática.} 
+Para entender como se dá a resposta à seleção entre duas gerações, podemos
+utilizar uma regressão linear entre a média dos pais e os filhos e imaginar
+qual seria a resposta na geração dos filhos a um evento de seleção na geração
+dos pais. No caso mais simples, de seleção por truncamento, podemos calcular a
+nova média de pais e filhos após um evento de seleção no qual apenas casais
+com média do fenótipo acima de um limiar de seleção deixam descendentes. Na
+figura~\ref{PoR} podemos ver que a mudança na média na geração dos filhos será
+dada pelo produto entre a inclinação da reta de regressão entre pais e filhos
+e a mudança na média na geração dos pais. A solução de mínimos quadrados para
+a inclinação da reta de regressão é dada pela covariância entre a variável
+preditora e a resposta dividida pela variâncias da reposta. Já vimos que a
+covariância entre pais e filhos é dada pela metade da variância aditiva, e a
+covariância entre a média dos pais e filhos tem o mesmo valor, assumindo que a
+covariância entre pais e filhos e mães e filhos é igual. Já o denominador, a
+variância na média dos pais, pode ser calculada como:
 
-A herdabilidade é especialmente importante para entender a resposta evolutiva,
-pois é a ela que determina como uma mudança na média dos pais se traduz numa
-mudança evolutiva na média dos filhos. Essa relação é dada pela equação do
-criador, que relaciona a mudança em um fenótipo de uma geração para outra
-($R$) com a mudança dentro de uma geração devido a um episódio de seleção (o
-diferencial de seleção, $S$):
+\begin{equation}
+var(\frac{P_{pais} + P_{\text{mães}}}{2}) = \frac{var(P_{pais}) + var(P_{\text{mães}})}{4} = \frac{V_P}{2}
+\end{equation}
+
+onde assumimos que a variância de pais e mães é igual. Então, a inclinação da
+reta de regressão é igual à razão entre a variância aditiva e a variância
+fenotípica total. Essa razão, a proporção da variação fenotípica que é devido
+a variação aditiva, recebe um tratamento especial dentro da genética
+quantitativa, recebendo o nome de herdabilidade ($h^2 =
+\frac{V_A}{V_P}$).\footnote{O quadrado faz parte do simbolo, e se refere ao
+fato da herdabilidade ser uma razão de variâncias, e portanto numa escala
+quadrática.}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=350px]{parent-offspring.png}
+    \caption[Regressão pais e filhos]{Regressão do fenótipo dos filhos na média 
+    do fenótipo dos pais permite prever a resposta à seleção direcional, em
+    que a média da população em uma geração é alterada por um evento de
+    seleção. Neste caso, aplicamos um limiar de seleção na geração parental, e
+    apenas casais com média do fenótipo maior que o limiar (na região
+    sombreada) deixam descendentes, a cruz escura marca a nova média após a
+    seleção. A mudança na média da geração dos pais após o evento de seleção é
+    medida pelo diferencial de seleção $S$. Essa mudança na média causa uma
+    resposta evolutiva ($R$) na média da geração dos filhos que pode ser
+    predita utilizando uma regressão linear. A inclinação da regressão é dada
+    pela covariância entre pais e filhos e a variância fenotípica na geração
+    parental. Em condições bastante gerais, a inclinação da reta de regressão pode ser 
+    estimada como a razão entre a variância aditiva e a variância fenotípica, a
+    herdabilidade ($h^2$).}
+    \label{PoR}
+\end{figure}
+
+Esse tratamento de regressão nos mostra como a herdabilidade é especialmente
+importante para entender a resposta evolutiva, pois é a ela que determina como
+uma mudança na média dos pais se traduz numa mudança evolutiva na média dos
+filhos. Essa relação é dada pela equação do criador, que relaciona a mudança
+em um fenótipo de uma geração para outra ($R$) com a mudança dentro de uma
+geração devido a um episódio de seleção (o diferencial de seleção, $S$):
 
 \begin{equation}
 R = h^2S = \frac{V_A}{V_P}S	
@@ -246,11 +286,11 @@ A intensidade de seleção é medida pelo diferencial de seleção, e quanto mai
 a mudança na média dentro de geração maior será a mudança entre gerações. Além
 disso, a equação do criador nos mostra que a resposta à seleção depende não só
 da intensidade de seleção, mas também depende fundamentalmente da presença de
-variação aditiva. Sem variação aditiva, sem herdabilidade, não há como a
-mudança em resposta acontecer, e quanto maior a herdabilidade maior será a
+variação aditiva. Sem variação aditiva, sem herdabilidade, não há como haver
+resposta na próxima geração, e quanto maior a herdabilidade maior será a
 resposta a seleção.
 
-\subsubsection{Resposta à seleção multivariada}
+\subsection{Resposta à seleção multivariada}
 
 Se estamos interessados em fenótipos complexos, compostos de muitos
 caracteres, além de quantificar a variância individual de cada um, podemos
@@ -276,12 +316,12 @@ que cada componente representa um caráter analisado. Frequentemente, o termo
 $P^{-1}S$ é representado por $\beta$, o gradiente de seleção. O uso do
 gradiente de seleção é conveniente por algumas razões. Primeiro, o vetor
 $\beta$ possui uma interpretação geométrica simples, representando a direção
-fenotípica de maior aumento da aptidão\footnote{Dai o nome gradiente, que é o
-vetor de derivadas que aponta a direção de maior mudança em uma superfície
-multivariada.}; segundo, o gradiente de seleção já desconta as covariâncias
-fenotípicas e permite inferir quais caracteres estão efetivamente sob
-seleção.\footnote{Isso só vale caso todos os caracteres relevantes para a
-aptidão estejam inclusos na análise.}
+fenotípica de maior aumento da aptidão\footnote{Dai o nome \textbf{gradiente},
+que no cálculo diferencial é definido como o vetor de derivadas que aponta a
+direção de maior mudança em uma superfície multivariada.}; segundo, o
+gradiente de seleção já desconta as covariâncias fenotípicas e permite inferir
+quais caracteres estão efetivamente sob seleção.\footnote{Isso só vale caso
+todos os caracteres relevantes para a aptidão estejam inclusos na análise.}
 
 Se as matrizes P e G forem diagonais, ou seja, se todas as covariâncias entre
 valores de acasalamento e entre fenótipos forem nulas, a equação de Lande se
@@ -347,20 +387,21 @@ comum utilizar uma medida de associação padronizada, que permita a comparaçã
 da intensidade de associação entre caracteres de tamanhos e escalas de
 variação diferentes. A medida usual é a correlação entre caracteres, definida
 como a covariância dividida pelo produto dos desvios padrões dos caracteres em
-questão. Tando o padrão quanto a intensidade de correlação genética são temas
+questão. Tanto o padrão quanto a intensidade das correlações genéticas são temas
 centrais desta tese.
 
 O padrão de correlação genético é principalmente definido pela arquitetura
-genética dos caracteres. Genes pleiotrópicos, que afetam mais de um caractere,
-e desiquilíbrio de ligação, a herança conjunta de alelos específicos,
-contribuem para a covariância genética e provocam respostas correlacionadas.
-Em uma parcela significativa dos sistemas biológicos, da expressão gênica à
+genética dos caracteres. Genes pleiotrópicos, que afetam mais de um caráter, e
+desiquilíbrio de ligação, a herança conjunta de alelos específicos, contribuem
+para a covariância genética e provocam respostas correlacionadas. Em uma
+parcela significativa dos sistemas biológicos, da expressão gênica à
 morfologia, a organização da covariação genética se dá de forma modular. Em
 uma organização modular podemos perceber conjuntos de caracteres mais
-correlacionados entre si do que com o restante do organismo. Esses grupos de
-caracteres frequentemente estão envolvidos no desempenho de uma função
-especifica e estão também associados pelo desenvolvimento, compartilhando uma
-origem embriológica ou sendo formados pelas mesmas vias de desenvolvimento. 
+correlacionados entre si do que com o restante do
+organismo.~\textcite{Olson1958-qk} notaram como esses grupos de caracteres
+frequentemente estão envolvidos no desempenho de uma função especifica e estão
+também associados pelo desenvolvimento, compartilhando uma origem embriológica
+ou sendo formados pelas mesmas vias de desenvolvimento.
 
 A organização modular é essencial para que a evolução possa acontecer, por
 criar uma certa independência entre os caracteres. Em última instância, a
@@ -368,14 +409,33 @@ própria existência de caracteres identificáveis é uma evidencia para a
 importância da organização do organismo em módulos relativamente
 independentes.~\textcite{Wagner1996-ui} foram pioneiros no entendimento da
 modularidade como uma adaptação para permitir que os organismos tivessem a
-capacidade de responder a seleção de forma eficiente. Essa capacidade de
-evoluir, a evolvabilidade, acaba...
+capacidade de responder a seleção de forma eficiente, e nesse contexto apresentam
+modularidade como uma solução a uma série de problema que os organismos estão
+sujeitos ao interagir com os processos evolutivos, como a necessidade de
+evolução coordenada de caracteres funcionalmente ligados e a robustez a
+mudanças em outras partes do organismo.
 
 \subsection{Evolução da covariação genética}
 
-A evolução da covariação genética é o tema central desta tese.
+A evolução da covariação genética é o tema central desta tese, e pensar no
+padrão de covariação como uma adaptação exige entender como esse a variação
+genética entre indivíduos contribui para variação pro próprio padrão de
+covariação. Por um lado, é claro que a variância aditiva pode mudar ao longo
+do tempo pela simples mudança na frequência de alelos aditivos. Por exemplo,
+uma população que perde variação genética por endocruzamento pode  perder toda
+a variação genética se novos alelos não forem introduzidos por mutação, e isso
+obviamente mudaria o padrão de covariação genética, pois não haveria
+covariação. Na pratica isso é extremamente raro na natureza, e a grande
+maioria dos caracteres apresentam variação genética suficiente para responder
+à seleção. Além disso, empiricamente podemos observar uma certa constância nos
+padrões de covariação genética em uma escala de tempo evolutivo, mesmo que
+existam flutuações de curto prazo. De alguma forma, não só a variação genética
+é mantida em níveis consideráveis, mas a estrutura dessa variação parece ser
+adaptativa, com padrões modulares associados ao desempenho de funções. Como
+essa variação e padrões são mantidos é um problema fundamental em biologia
+evolutiva.
 
-\section{Perfil da Tese}
+\section{Esquema da Tese}
 
 Esta tese é apresentada em cinco capítulos relativamente independentes mas
 ligados pelo tema da evolução da covariação genética. Com exceção do Capitulo
@@ -435,7 +495,14 @@ em indivíduos para estabelecer expectativas sobre a distribuição de efeitos
 
 O Capitulo 6 (\textit{Modularity: Genes, Development, and Evolution}) é uma
 revisão abordando tanto as bases genéticas do padrão de covariação quanto sua
-evolução e as consequências macro evolutivas da covariação genética.
+evolução e as consequências macro evolutivas da covariação genética. Sendo uma
+revisão bastante geral, o capítulo funciona como uma introdução relativamente
+completa como uma discussão das consequências dos temas abordados nos
+capítulos experimentais mais específicos. Este capítulo foi escrito em
+colaboração e tem Arthur Porto como co-primeiro autor. O capítulo foi
+publicado na revista \textit{Annual Review of Ecology, Evolution, and
+Systematics} (doi:10.1146/annurev-ecolsys-121415-032409).
+
 
 \printbibliography
 
