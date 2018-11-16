@@ -15,14 +15,14 @@
 \begin{refsection}
 
 Esta tese surgiu da vontade de entender como os processos internos ao
-organismo que produzem a variação em uma população interagem com os processos
+organismo que produzem variação em uma população interagem com os processos
 evolutivos para dar origem à diversidade que observamos na natureza.
-Resumidamente, nós procuramos estudar como a covariação genética se estabelece
+Nós procuramos estudar como a covariação genética se estabelece
 e como ela evolui, e situamos essas questões dentro do contexto da
 macroevolução de caracteres quantitativos. Para isso, nos valemos da teoria de
 genética quantitativa na sua encarnação mais moderna, aliada a teoria de
 evolução e das técnicas de mapeamento de loci de caracteres quantitativos.
-Essa combinação permite estudar e prever as consequências das restrições
+Essa combinação permite entender as origens e prever as consequências das restrições
 genéticas na evolução dos caracteres, e esmiuçar a arquitura genética por traz
 dessas restrições. Nesta introdução, vamos revisar rapidamente a teoria de
 genética quantitativa evolutiva e discutir a estrutura geral da tese. Neste
@@ -42,7 +42,7 @@ está disponível para que a evolução aconteça é consequência da variação
 genética da população\footnote{A rigor variação genética não é estritamente
 necessária, apenas variação \textit{herdável}. A herança cultural, por exemplo, pode
 ser estudada com as ferramentas da evolução. Apesar disso, em populações
-naturais, a maior parte da variação herdável é genética}. Essa variação
+naturais, a maior parte da variação herdável é genética.}. Essa variação
 genética se dá no nível do DNA, com variantes discretas que segregam na
 população. A informação genética contida nessas variantes é interpretada pelo
 processo de desenvolvimento, e por meio de um sistema impossivelmente
@@ -50,7 +50,7 @@ complicado de interações, a cada geração um novo individuo é formado a part
 da informação no código genético. Mendel descreveu as leis que regem a herança
 dessas variantes discretas estudando caracteres de herança discreta e simples,
 ervilhas verdes ou amarelas, lisas ou rugosas. Mesmo esses caracteres simples,
-cuja variação é determinada por um único locus do genoma, tem pro traz de si
+cuja variação é determinada por um único locus do genoma, tem por trás de si
 um intrincado processo de desenvolvimento. Se para entender a evolução de
 qualquer caráter, quanto mais caracteres complexos, fosse necessário um modelo
 do processo que leva à sua formação, o estudo de evolução seria um iniciativa
@@ -67,7 +67,7 @@ A grande maioria dos caracteres interessantes do ponto de vista evolutivo tem
 uma base genética complexa. Tamanho corporal, sucesso reprodutivo, coloração,
 forma, são todos caracteres cuja variação é determinada por muitos genes. Por
 um lado, isso torna entender a arquitetura genética da variação desses
-caracteres uma tarefa complicada, por outro lado, essa base complexa garante
+caracteres uma tarefa complicada. Por outro lado, essa base complexa garante
 que esses caracteres irão apresentar um padrão de variação contínuo, e
 portanto pode ser estudados utilizando as ferramentas da genética
 quantitativa. A variação continua que encontramos em caracteres complexos se
@@ -78,27 +78,28 @@ variantes em cada um dos locus acaba por definir tantas classes de fenótipos
 que a variação pode ser tratada como contínua. Além disso, se assumirmos que
 cada gene contribui de forma aditiva ao fenótipo, o teorema do limite central
 diz que a distribuição do caráter na população pode ser aproximado por uma
-distribuição gaussiana. Na prática, a grande maioria dos caracteres de
-interesse evolutivo podem ser aproximados por uma distribuição
-normal\footnote{Interessantemente, a observação de que a distribuição
-Gaussiana era tão ubíqua e útil na biologia evolutiva foi feita inicialmente
-por um primo de Darwin, Francis Galton, em 1969}, ou transformados
-trivialmente para uma distribuição normal\footnote{Caracteres contínuos que
-são restritos a valores positivos, como distancias ou pesos, podem apresentar
-uma distribuição log normal, em que o log das medidas tem distribuição normal.
-Essa transformação implica que os genes tem efeitos multiplicativos no
-fenótipo, e a transformação log transforma essas multiplicações em adições,
-levando à distribuição normal após a transformação.}. Além disso, existe
-diferenças ambientais no desenvolvimento de um caráter. Mesmo uma população de
-indivíduos geneticamente idênticos irá apresentar alguma variação em seus
-caracteres. Essa variação ambiental contribui para o aumento do número de
-fenótipos possíveis e para a possibilidade de descrever a variação como
-contínua (Fig.~\ref{discrete_aleles}).
+distribuição Gaussiana (também chamada de distribuição normal). Na prática, a
+grande maioria dos caracteres de interesse evolutivo podem ser aproximados por
+uma distribuição normal\footnote{Interessantemente, a observação de que a
+distribuição Gaussiana era tão ubíqua e útil na biologia evolutiva foi feita
+inicialmente por um primo de Darwin, Francis Galton, em 1969.}, ou
+transformados trivialmente para uma distribuição normal\footnote{Caracteres
+contínuos que são restritos a valores positivos, como distancias ou pesos,
+podem apresentar uma distribuição log normal, em que o log das medidas tem
+distribuição normal. Essa transformação implica que os genes tem efeitos
+multiplicativos no fenótipo, e a transformação log transforma essas
+multiplicações em adições, levando à distribuição normal após a
+transformação.}. Além disso, existem diferenças ambientais no desenvolvimento
+de um caráter. Mesmo uma população de indivíduos geneticamente idênticos irá
+apresentar alguma variação em seus caracteres. Essa variação ambiental
+contribui para o aumento do número de fenótipos possíveis e para a
+possibilidade de descrever a variação como contínua
+(Fig.~\ref{discrete_aleles}).
 
 \begin{figure}
     \centering
     \includegraphics[width=300px]{discrete_gaussian.png}
-    \caption[Variação contínua]{Mesmo com poucos loci, o modelo aditivo e variação ambiental são capazes de gerar distribuições fenotípicas muito próximas à gaussiana, dado que a diferença entre classes genotípicas seja da mesma escala da variação dentro de cada classe. A) Um loci aditivo com dois alelos de mesma frequência e a variação ambiental dentro de cada genótipo. As linhas finas mostram a variação dentro de cada classe, e a linha grossa a distribuição na população. B) Dois loci com dois alelos cada, com efeitos fenotípicos equivalentes. Adaptado de~\textcite{Barton2007-hq}.}
+    \caption[Variação contínua]{Mesmo com poucos loci, o modelo aditivo e variação ambiental são capazes de gerar distribuições fenotípicas muito próximas à Gaussiana, dado que a diferença entre classes genotípicas seja da mesma escala da variação dentro de cada classe. A) Um loci aditivo com dois alelos de mesma frequência e a variação ambiental dentro de cada genótipo. As linhas finas mostram a variação dentro de cada classe, e a linha grossa a distribuição na população. B) Dois loci com dois alelos cada, com efeitos fenotípicos equivalentes. Adaptado de~\textcite{Barton2007-hq}.}
     \label{discrete_aleles}
 \end{figure}
 
@@ -121,13 +122,13 @@ interação entre $E$ e $G$, ou seja, se a variação ambiental for a mesma para
 todos os genótipos, um genótipo pode ser descrito apenas pelo seu valor
 genotípico $G$ e pela sua variância ambiental $V_E$. Se a população em questão
 é formada de indivíduos sexuados, o valor genotípico de um indivíduo será
-composto pelas contribuições dos gametas parentais. Suponha que para os dois
+composto pela soma das contribuições dos gametas parentais. Suponha que para os dois
 locus que afetam um dado caráter o indivíduo tenha recebido um gameta $A_1B_1$
 do pai e um gameta $A_2B_1$ da mãe. Então, o genótipo do indivíduo é
 $A_1A_2B_1B_1$, heterozigoto no locus A e homozigoto no locus B. Dentro de um
 modelo aditivo, no qual os efeitos de cada alelo são somados, o fenótipo do
 indivíduo seria $P = \alpha_{A_1} + \alpha_{A_2} + 2\alpha_{B_1}$ + E, onde os
-$\alpha$ representam as contribuições aditivas de cada alelo, que junto
+$\alpha$ representam as contribuições aditivas de cada alelo, que juntos
 compõem o valor genotípico do indivíduo. 
 
 Naturalmente, o modelo puramente aditivo é uma simplificação enorme, e, na
@@ -142,7 +143,9 @@ depende do estado de outro locus. Ambas formas de interação são extremamente
 comuns e contribuem de forma decisiva para mudança evolutiva, principalmente
 epistasia, como veremos mais adiante.
 
-Dentro do formalismo da genética quantitativa, as interações entre alelos e locus podem ser incluídas na formação do valor genotípico, também de forma aditiva. Então, a equação para o fenótipo de um indivíduo se torna:
+Dentro do formalismo da genética quantitativa, as interações entre alelos e
+locus podem ser incluídas na formação do valor genotípico, também de forma
+aditiva. Então, a equação para o fenótipo de um indivíduo se torna:
 
 \begin{equation}
 P = G + E = A +D + I + E
@@ -189,7 +192,7 @@ O componente da variância devido a diferenças nos valores de acasalamento
 biologia evolutiva. O componente devido a interações epistáticas, $V_I$,
 também pode ser subdivido em diferentes tipos de interação entre dois loci:
 entre componentes aditivos ($V_{AA}$), entre componentes aditivos e de
-dominância ($V_AD$), entre componentes de dominância ($V_DD$), e mesmo
+dominância ($V_{AD}$), entre componentes de dominância ($V_{DD}$), e mesmo
 componentes de grau mais alto, entre 3 ou mais loci. Essa subdivisão fornece
 uma ferramenta poderosa para o estudo da variação e evolução em populações
 naturais.
@@ -222,12 +225,13 @@ entre pais e filhos.
 
 \subsection{Herdabilidade e a resposta à seleção}
 
-Para entender como se dá a resposta à seleção entre duas gerações, podemos
-utilizar uma regressão linear entre a média dos pais e os filhos e imaginar
-qual seria a resposta na geração dos filhos a um evento de seleção na geração
-dos pais. No caso mais simples, de seleção por truncamento, podemos calcular a
-nova média de pais e filhos após um evento de seleção no qual apenas casais
-com média do fenótipo acima de um limiar de seleção deixam descendentes. Na
+Para entender como a variação genética participa da resposta à seleção entre
+duas gerações, podemos utilizar uma regressão linear entre a média do fenótipo
+dos casais que se reproduziram e o fenótipo filhos e imaginar qual seria a
+resposta na geração dos filhos a um evento de seleção na geração dos pais. No
+caso mais simples, de seleção por truncamento, podemos calcular a nova média
+de pais e filhos após um evento de seleção no qual apenas casais com média do
+fenótipo acima de um limiar de seleção deixam descendentes. Na
 figura~\ref{PoR} podemos ver que a mudança na média na geração dos filhos será
 dada pelo produto entre a inclinação da reta de regressão entre pais e filhos
 e a mudança na média na geração dos pais. A solução de mínimos quadrados para
@@ -275,20 +279,21 @@ Esse tratamento de regressão nos mostra como a herdabilidade é especialmente
 importante para entender a resposta evolutiva, pois é a ela que determina como
 uma mudança na média dos pais se traduz numa mudança evolutiva na média dos
 filhos. Essa relação é dada pela equação do criador, que relaciona a mudança
-em um fenótipo de uma geração para outra ($R$) com a mudança dentro de uma
-geração devido a um episódio de seleção (o diferencial de seleção, $S$):
+em um fenótipo de uma geração para outra (a resposta à seleção, $R$) com a
+mudança dentro de uma geração devido a um episódio de seleção (o diferencial
+de seleção, $S$):
 
 \begin{equation}
 R = h^2S = \frac{V_A}{V_P}S	
 \end{equation}
 
 A intensidade de seleção é medida pelo diferencial de seleção, e quanto maior
-a mudança na média dentro de geração maior será a mudança entre gerações. Além
+a mudança na média dentro de geração, maior será a mudança entre gerações. Além
 disso, a equação do criador nos mostra que a resposta à seleção depende não só
 da intensidade de seleção, mas também depende fundamentalmente da presença de
 variação aditiva. Sem variação aditiva, sem herdabilidade, não há como haver
 resposta na próxima geração, e quanto maior a herdabilidade maior será a
-resposta a seleção.
+resposta à seleção.
 
 \subsection{Resposta à seleção multivariada}
 
@@ -297,13 +302,13 @@ caracteres, além de quantificar a variância individual de cada um, podemos
 também levar em conta a interação entre eles. De forma análoga à variância, a
 covariância mede a variação conjunta de dois caracteres. A matriz de
 covariância genética aditiva (matriz G) representa na diagonal as variâncias
-genéticas aditivas dos caracteres, e fora da diagonal a covariância entre os
-valores de acasalamento de caracteres diferentes. Já a matriz de covariância
-fenotípica (matriz P) reune as variância e covariâncias entre os fenótipos da
-população.
+dos valores de acasalamento de cada caráter, e fora da diagonal a covariância
+entre os valores de acasalamento de caracteres diferentes. Já a matriz de
+covariância fenotípica (matriz P) reune as variância e covariâncias entre os
+fenótipos da população.
 
 Usando essas matrizes é possível escrever o análogo multivariado da equação do
-criador, a equação de resposta multivariada de~\textcite{Lande1979-by}, que
+criador, a equação de resposta à seleção multivariada de~\textcite{Lande1979-by}, que
 tem essencialmente a mesma forma:
 
 \begin{equation}
@@ -373,6 +378,20 @@ respostas indiretas a um gradiente de seleção faz com a resposta observada
 ($\Delta z$) não seja na mesma direção do gradiente de seleção. Esse desvio da
 resposta evolutiva em relação à seleção direcional é considerado um tipo de
 restrição genética, e pode ter consequências importantes na diversificação.
+Por exemplo, a direção de maior variação genética cria uma direção
+preferencial de mudança evolutiva, ao longo da qual a resposta evolutiva é
+mais eficiente. Está direção do espaço fenotípico é chamada de linha genética
+de menor resistência evolutiva~\parencite{Schluter1996-gw}. Seleção ao longo
+dessa linha resulta na maior magnitude de resposta seletiva, e seleção ao
+longo de outras direções é desviada para a direção de menor
+resistência\footnote{Desde que a direção de seleção não seja ortogonal à linha
+de menor resistência.}. A influência dessa restrição causada pela linha de
+menor resistência poder ser observada mesmo na diferença entre
+espécies~\parencite{Marroig2005-ce}. Além disso, grupos de caracteres que
+possuam covariâncias altas entre si podem influenciar a resposta um do outro,
+pois caso um dos caracateres sem encontre sobre seleção direcional, os outros
+irão sofrer respostas indiretas. Por isso, grupos de caracteres ligados por
+covariâncias genéticas tendem a evoluir de forma conjunta.
 
 \section{Estrutura da variação genética}
 
@@ -391,17 +410,22 @@ questão. Tanto o padrão quanto a intensidade das correlações genéticas são
 centrais desta tese.
 
 O padrão de correlação genético é principalmente definido pela arquitetura
-genética dos caracteres. Genes pleiotrópicos, que afetam mais de um caráter, e
-desiquilíbrio de ligação, a herança conjunta de alelos específicos, contribuem
-para a covariância genética e provocam respostas correlacionadas. Em uma
-parcela significativa dos sistemas biológicos, da expressão gênica à
-morfologia, a organização da covariação genética se dá de forma modular. Em
-uma organização modular podemos perceber conjuntos de caracteres mais
-correlacionados entre si do que com o restante do
-organismo.~\textcite{Olson1958-qk} notaram como esses grupos de caracteres
-frequentemente estão envolvidos no desempenho de uma função especifica e estão
-também associados pelo desenvolvimento, compartilhando uma origem embriológica
-ou sendo formados pelas mesmas vias de desenvolvimento.
+genética dos caracteres. Genes pleiotrópicos, que afetam a variação em mais de
+um caráter, e desiquilíbrio de ligação, a herança conjunta de alelos
+específicos, contribuem para a covariância genética e provocam respostas
+correlacionadas. Em uma parcela significativa dos sistemas biológicos, da
+expressão gênica à morfologia, a organização da covariação genética se dá de
+forma modular. Um padrão de correlação é dito modular quando os caracteres se
+encontram organizados em conjuntos de caracteres mais correlacionados entre si
+do que com o restante do organismo. A parcepção da importancia da organização
+modular em sistemas morfológicos se deve em grande parte
+a~\textcite{Olson1958-qk}. Neste livro, os autores nos mostram como esses
+grupos de caracteres altamente correlacionados são um reflexo do seu
+envolvimento no desempenho de uma função especifica e de sua associação via
+desenvolvimento, compartilhando uma origem embriológica ou sendo formados
+pelas mesmas vias de desenvolvimento. A ideia de organização modular permeia
+toda a tese e serve de arcabouço teórico importante para a nossa
+analise.
 
 A organização modular é essencial para que a evolução possa acontecer, por
 criar uma certa independência entre os caracteres. Em última instância, a
@@ -461,10 +485,11 @@ variação de caracteres fenotípicos, mesmo para modelos aditivos simples. A
 inclusão de complicações como epistasia e pleiotropia também não fornece um
 quadro claro do equilíbrio entre mutação e seleção, apesar de que interações
 epistáticas parecem ser uma fonte importante e ainda mau documentada de
-variação aditiva. Em resumo, a maioria dos modelos prevê menos variação
-aditiva do que nós observamos dadas as taxas mutacionais, e é interessante
-como o problema da teoria evolutiva é justamente que a seleção pode ser mais
-efetiva que o previsto pelos modelos.
+variação aditiva. Em resumo, dadas as taxas mutacionais estimadas, a maioria
+dos modelos prevê menos variação aditiva do que nós observamos.
+\textcite{Rice2004-jf} comenta como essa situação é peculiar: o problema da
+teoria evolutiva é justamente que a seleção pode ser mais efetiva que o
+previsto pelos modelos.
 
 A segunda questão, referente a origem e manutenção padrão da variação
 genética, é mais recente, e estamos agora entendendo como os efeitos genéticos
@@ -474,31 +499,31 @@ geração de variação nos padrões de covariação, fornecendo um mecanismo pa
 alterações de padrões pleiotrópicos (para uma revisão recente
 veja~\textcite{Pavlicev2015-up}). A abundância dessa variação epistática
 garante que os padrões podem efetivamente evoluir em populações naturais. Além
-disso, variação epistática pode também afetar o padrão mutacional de um gene,
-e  novas mutações que afetem mais de um caractere tem o potencial de criar ou
-remover correlações entre caracteres. Na presença de seleção estabilizadora,
-existe uma expectativa teórica de que os padrões de correlação mutacional,
-genético e seletivo se alinhem, mantendo o padrão de covariação
-estável~\parencite{Cheverud1984-mi}. Em populações naturais, foi documentada
-tanto a manutenção de padrões de covariação em escala macro
-evolutiva~\parencite{Marroig2001-ne}, quanto a mudanças adaptativas nos
-padrões de covariação~\parencite{Young2005-nk}. Quais os mecanismos seletivos,
-genéticos, mutacionais e de desenvolvimento envolvidos na alteração ou
-manutenção dos padrões de covariação ainda é uma questão em aberto em biologia
-evolutiva.
+disso, variação epistática pode também afetar o padrão de correlação
+mutacional de um gene. O padrão de correlação entre os efeitos mutacionais
+afeta o padrão de covariância, pois novas mutações que afetem mais de um
+caractere tem o potencial de criar ou remover correlações entre caracteres. Na
+presença de seleção estabilizadora, existe uma expectativa teórica de que os
+padrões de correlação mutacional, genético e seletivo se alinhem, mantendo o
+padrão de covariação estável~\parencite{Cheverud1984-mi}. Em populações
+naturais, foi documentada tanto a manutenção de padrões de covariação em
+escala macro evolutiva~\parencite{Marroig2001-ne}, quanto a mudanças
+adaptativas nos padrões de covariação~\parencite{Young2005-nk}. Quais os
+mecanismos seletivos, genéticos, mutacionais e de desenvolvimento envolvidos
+na alteração ou manutenção dos padrões de efeitos pleiotrópicos e de
+covariação ainda é uma questão em aberto em biologia evolutiva.
+
+\section{Esquema da Tese} 
 
 Nesta tese, abordamos a questão da evolução e manutenção dos padrões de
 covariação utilizando diversas populações experimentais submetidas a regimes
 de seleção diferentes, simulações computacionais e técnicas estatísticas
 modernas para ligar os efeitos genéticos à covariação e entender o efeito da
-seleção na covariação genética e nos padrões pleiotrópicos.
-
-\section{Esquema da Tese} 
-
-Esta tese é apresentada em cinco capítulos relativamente independentes mas
-ligados pelo tema da evolução da covariação genética. Com exceção do Capitulo
-5, que depende do Capítulo 4 em alguns passos técnicos, todos podem ser lidos
-independentemente. 
+seleção na covariação genética e nos padrões pleiotrópicos. A tese é
+apresentada em cinco capítulos relativamente independentes mas ligados pelo
+tema da evolução da covariação genética. Com exceção do Capitulo 5, que
+depende do Capítulo 4 em alguns passos técnicos, todos podem ser lidos
+independentemente.
 
 O Capitulo 2 (\textit{How does modularity in the genotype-phenotype map shape
 development and evolution?}) apresenta uma revisão básica do conceito de
