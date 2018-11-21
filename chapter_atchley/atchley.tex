@@ -84,10 +84,14 @@ modularity by canceling out synergistic pleiotropic effects, and in doing so
 reduce genetic correlations, a process known as hidden
 pleiotropy~\parencite{Turelli1985-ne, Pavlicev2011-xm}. While hidden
 pleiotropy can allow traits to be uncorrelated while sharing allelic effects,
-it can still constrain the evolution of uncorrelated
-traits~\parencite{Baatz1997-hh}. If we consider non-linear GP maps, the
-situation is even more complex, as the mean pleiotropic effect also has the
-potential to change the covariance pattern~\parencite{Mitteroecker2009-jb}.
+it can still constrain the evolution of uncorrelated traits. This is possible
+because the change in allele frequency in pleiotropic loci due to directional
+selection in one trait can increase the variance in a second trait that is
+under stabilizing selection, and in doing so increase genetic load, even if
+the mean of the second trait does not change~\parencite{Baatz1997-hh}. If we
+consider non-linear GP maps, the situation is even more complex, as the mean
+pleiotropic effect also has the potential to change the covariance
+pattern~\parencite{Mitteroecker2009-jb}.
 
 When considering the effects of the GP map on
 evolvability,~\textcite{Hansen2003-fh} points out that evolvability can be
@@ -122,8 +126,8 @@ selection on each trait can determine which genetic architecture provides
 higher evolvability~\parencite{Pavlicev2011-xm}. Under the house-of-cards
 approximation~\parencite{Turelli1984-cp} for the distribution of allelic
 effects, any asymmetry in the stabilizing selection strength between traits
-can result a modular genetic architecture, while under the Gaussian
-approximation~\parencite{Lande1980-kn} hidden pleiotropy can evolve in most
+can result a modular genetic architecture. Under the Gaussian
+approximation~\parencite{Lande1980-kn}, hidden pleiotropy can evolve in most
 situations. Both of these approximations are valid under different conditions,
 and in general under high mutation rates and small mutational effects, the
 hidden pleiotropy GP map provides higher evolvability, while under small
@@ -446,22 +450,22 @@ the parent-offspring relations among the individuals to inform the imputation.
 \subsection{QTL mapping}
 
 In order to link genetic and phenotypic variation, QTL mapping was performed
-in the F$_{\text{6}}$ generation of the intercross using a multivariate mixed model
-implemented in GEMMA v0.97~\parencite{Zhou2014-op}. The inclusion of a random
-effect is necessary to take the relatedness of the individuals in the F$_{\text{6}}$ into
-account. We estimate the relatedness matrix using the full set of SNPs in
-GEMMA with a leave-one-chromosome-out approach~\parencite{Yang2014-hl}. In
-this approach, when fitting the model to a given SNP, we exclude the
-chromosome containing the focal SNP from the relatedness calculation. This
-method increases power to detect genotype phenotype associations as the signal
-from the focal SNP is not masked by the relatedness. GEMMA estimates an
-additive effect vector of each SNP on the growth phenotypes, and the
-significance of each of these fixed effects is assessed using a Wald test. As
-the SNP are correlated, we use the GEC software provided
-by~\textcite{Li2012-wl} to calculate the effective number of markers in each
-chromosome, and, using a Bonferroni correction, establish a per-chromosome
-significance threshold corrected for multiple tests. We filter all the
-significant SNPs at the per-chromosome thresholds, and if two or more
+in the F$_{\text{6}}$ generation of the intercross using a multivariate mixed
+model implemented in GEMMA v0.97~\parencite{Zhou2014-op}. The inclusion of a
+random effect is necessary to take the relatedness of the individuals in the
+F$_{\text{6}}$ into account. We estimate the relatedness matrix using the full
+set of SNPs in GEMMA with a leave-one-chromosome-out
+approach~\parencite{Yang2014-hl}. In this approach, when fitting the model to
+a given SNP, we exclude the chromosome containing the focal SNP from the
+relatedness calculation. This method increases power to detect genotype
+phenotype associations as the signal from the focal SNP is not masked by the
+effect of the relatedness term. GEMMA estimates an additive effect vector of each SNP
+on the growth phenotypes, and the significance of each of these fixed effects
+is assessed using a Wald test. As the SNP are correlated, we use the GEC
+software provided by~\textcite{Li2012-wl} to calculate the effective number of
+markers in each chromosome, and, using a Bonferroni correction, establish a
+per-chromosome significance threshold corrected for multiple tests. We filter
+all the significant SNPs at the per-chromosome thresholds, and if two or more
 significant SNPs in the same chromosome are closer than 20cM we select only
 the most significant SNP in that interval. We also calculate a genome-wise
 significance threshold that provides additional confidence to some SNPs, but
@@ -567,7 +571,7 @@ negative or null correlations between the two phases
 (Fig.~\ref{growthcurves:t2}). In the ancestral strain used in the selection
 experiment that produced our founder inbreed strains the correlation between
 Early and Late growth was positive, so the negative and null correlation we
-see across the inbreed lines and in the F$_{\text{6}}$ are a result changes in
+see across the inbreed lines and in the F$_{\text{6}}$ are a result of changes in
 genetic architecture due to divergent directional
 selection. The negative correlation between the
 first late interval and the early intervals is strictly speaking not
@@ -769,7 +773,7 @@ module scheme. All this suggests that our classification scheme is not
 accurate enough to separate the different classes of genetic effects in a way
 that is useful for predicting these different contributions of the genetic
 covariance matrix. Additionally, the phenotypic distribution of the founder
-and the F$_{\text{6}}$ suggests that dominance and epistasis play an important
+and the F$_{\text{6}}$ indicate that dominance and epistasis play an important
 role in shaping growth, as the interval with peak growth differs between these
 two generations. The heavy use of private alleles in the SNP array and the
 balanced contribution of the six founders in every individual in the

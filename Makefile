@@ -15,4 +15,4 @@ draft:
 clean:
 	rm -rf *.aux *.bbl *.toc *.out *.log *.nls *.nlo *.lof *.lot *.blg *.ilg *.run.xml *.bcf
 up:
-	rsync -avz main.pdf lem.ib.usp.br:/usr/share/nginx/www/diogro/static
+	rsync -avz main.pdf fleming.cecm.usp.br:/home/diogro/public_html/pdf/
