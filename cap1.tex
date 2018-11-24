@@ -81,7 +81,7 @@ distribuição Gaussiana (também chamada de distribuição normal). Na prática
 grande maioria dos caracteres de interesse evolutivo podem ser aproximados por
 uma distribuição normal\footnote{Curiosamente, a observação de que a
 distribuição Gaussiana era tão ubíqua e útil na biologia evolutiva foi feita
-inicialmente por um primo de Darwin, Francis Galton, em 1969.}, ou
+inicialmente por um primo de Darwin, Francis Galton, em 1869.}, ou
 transformados trivialmente para uma distribuição normal\footnote{Caracteres
 contínuos que são restritos a valores positivos, como distancias ou pesos,
 podem apresentar uma distribuição log normal, em que o log das medidas tem
@@ -103,7 +103,7 @@ possibilidade de descrever a variação como contínua
 \end{figure}
 
 A ideia que a variação de um fenótipo pode ser expressa como a soma de vários
-efeitos aditivos independentes, proposta por~\textcite{Fisher1930-bp}, é
+efeitos aditivos independentes, proposta por~\textcite{Fisher1918-rm}, é
 central para a genética quantitativa. A primeira distinção é entre os
 componentes devidos a diferenças genéticas entre os indivíduos e os componentes
 devidos a diferenças não genéticas (ambientais) da variação em uma população.
@@ -198,13 +198,14 @@ uma ferramenta poderosa para o estudo da variação e evolução em populações
 naturais.
 
 Cada um desses componentes pode ser estimado a partir da semelhança entre
-indivíduos relacionados em uma população. Por exemplo, no caso da similaridade
-entre pais e filhos, fundamental na herança de caracteres e para a evolução.
-No caso mais simples, no modelo aditivo, o fenótipo de um indivíduo (filho) é dado por
-$P_f = A + E_f$. O componente aditivo pode ser subdividido em duas partes, as
-contribuições do pai e da mãe, então $P_f = A_1 + A_2 + E_f$. Já o fenótipo do pai
-pode ser escrito como $P_p = A_1 + A_3 + E_p$, onde $A_1$ representa a porção
-do valor de acasalamento compartilhada com o filho e $A_3$ a porção
+indivíduos relacionados em uma população. Por exemplo, a similaridade entre
+pais e filhos, fundamental na herança de caracteres e para a evolução, pode
+ser usada para estimar a variância do valores de acasalamento. No caso mais
+simples, no modelo aditivo, o fenótipo de um indivíduo (filho) é dado por $P_f
+= A + E_f$. O componente aditivo pode ser subdividido em duas partes, as
+contribuições do pai e da mãe, então $P_f = A_1 + A_2 + E_f$. Já o fenótipo do
+pai pode ser escrito como $P_p = A_1 + A_3 + E_p$, onde $A_1$ representa a
+porção do valor de acasalamento compartilhada com o filho e $A_3$ a porção
 independente do filho. A covariação entre pai e filho então é $cov(P_f, P_p) =
 cov(A_1 + A_2 + E_f, A_1 + A_3 + E_p)$. A covariância da soma de fatores
 independentes pode ser escrita como a soma das covariâncias par a par, então
@@ -214,14 +215,14 @@ cov(E_f, E_p)$. Como todos os componentes são independentes por construção, o
 A_1) = var(A_1)$. Como a variância aditiva total é a soma das contribuições
 paternas e maternas $V_A = var(A_1) + var(A_2)$, e como as contribuições
 paternas e maternas são equivalentes, a covariância entre pais e filhos é a
-metade da variância aditiva total ($cov(P_f, P_p) = var(A_1) = \frac{1}{2}V_A$).
-A partir de deduções semelhantes, podemos estimar vários dos componentes da
-variação genotípica a partir da covariância entre indivíduos relacionados. Por
-exemplo, a variância de dominância pode ser estimada comparando a covariância
-entre irmãos completos e pais e filhos, pois irmãos podem compartilhar
-genótipos, enquanto pais não compartilham genótipos com os filhos. Então, na
-presença de dominância, a covariância entre irmãos é maior que a covariância
-entre pais e filhos.
+metade da variância aditiva total ($cov(P_f, P_p) = var(A_1) =
+\frac{1}{2}V_A$). A partir de deduções semelhantes, podemos estimar vários dos
+componentes da variação genotípica a partir da covariância entre indivíduos
+relacionados. Por exemplo, a variância de dominância pode ser estimada
+comparando a covariância entre irmãos completos e pais e filhos, pois irmãos
+podem compartilhar genótipos, enquanto pais não compartilham genótipos com os
+filhos. Então, na presença de dominância, a covariância entre irmãos é maior
+que a covariância entre pais e filhos.
 
 \subsection{Herdabilidade e a resposta à seleção}
 
@@ -387,7 +388,7 @@ longo de outras direções é desviada para a direção de menor
 resistência\footnote{Desde que a direção de seleção não seja ortogonal à linha
 de menor resistência.}. A influência dessa restrição causada pela linha de
 menor resistência poder ser observada mesmo na diferença entre
-espécies~\parencite{Marroig2005-ce}. Além disso, grupos de caracteres que
+gêneros~\parencite{Marroig2005-ce}. Além disso, grupos de caracteres que
 possuam covariâncias altas entre si podem influenciar a resposta um do outro,
 pois caso um dos caracteres esteja sob seleção direcional, os outros
 irão sofrer respostas indiretas. Por isso, grupos de caracteres ligados por
@@ -441,8 +442,8 @@ mudanças em outras partes do organismo.
 
 \subsection{Evolução da covariação genética}
 
-A evolução da covariação genética é o tema central desta tese, e para pensar no
-padrão de covariação como uma adaptação é preciso entender como a variação
+A evolução da covariação genética é o tema central desta tese, e para pensar
+no padrão de covariação como uma adaptação é preciso entender como a variação
 genética entre indivíduos contribui para variação do próprio padrão de
 covariação, para que o padrão de variação possa evoluir. Por um lado, é claro
 que a variância aditiva pode mudar ao longo do tempo pela simples mudança na
@@ -457,8 +458,8 @@ genética em uma escala de tempo evolutivo, mesmo que existam flutuações de
 curto prazo. De alguma forma, não só a variação genética é mantida em níveis
 consideráveis, mas a estrutura dessa variação parece ser adaptativa e
 relativamente estável, com padrões modulares associados ao desempenho de
-funções. A maneira como essa variação é mantida e como os padrões são estabelecidos e
-mantidos é um problema fundamental em biologia evolutiva.
+funções. A maneira como essa variação é mantida e como os padrões são
+estabelecidos e mantidos é um problema fundamental em biologia evolutiva.
 
 A manutenção da variação genética aditiva foi um tema absolutamente central em
 biologia evolutiva durante os últimos 30 anos, e continua sendo. Não vamos
@@ -491,12 +492,12 @@ dos modelos prevê menos variação aditiva do que nós observamos.
 teoria evolutiva é justamente que a seleção pode ser mais efetiva que o
 previsto pelos modelos.
 
-A segunda questão, referente à origem e manutenção padrão da variação
-genética, é mais recente, e estamos começando a entender como os efeitos genéticos
-e o processo de desenvolvimento permitem a evolução nos padrões de covariação.
-Em particular, interações epistáticas têm se mostrado fundamentais para a
-geração de variação nos padrões de covariação, fornecendo um mecanismo para a
-alterações de padrões pleiotrópicos (para uma revisão recente
+A segunda questão, referente à origem e manutenção do padrão de covariação
+genética, é mais recente, e estamos começando a entender como os efeitos
+genéticos e o processo de desenvolvimento permitem a evolução nos padrões de
+covariação. Em particular, interações epistáticas têm se mostrado fundamentais
+para a geração de variação nos padrões de covariação, fornecendo um mecanismo
+para a alteração de padrões pleiotrópicos (para uma revisão recente
 veja~\textcite{Pavlicev2015-up}). A abundância dessa variação epistática
 garante que os padrões podem efetivamente evoluir em populações naturais. Além
 disso, a variação epistática pode também afetar o padrão de correlação
@@ -507,11 +508,11 @@ presença de seleção estabilizadora, existe uma expectativa teórica de que os
 padrões de correlação mutacional, genético e seletivo se alinhem, mantendo o
 padrão de covariação estável~\parencite{Cheverud1984-mi}. Em populações
 naturais, foi documentada tanto a manutenção de padrões de covariação em
-escala macro evolutiva~\parencite{Marroig2001-ne}, quanto mudanças
-adaptativas nos padrões de covariação~\parencite{Young2005-nk}. Quais os
-mecanismos seletivos, genéticos, mutacionais e de desenvolvimento envolvidos
-na alteração ou manutenção dos padrões de efeitos pleiotrópicos e de
-covariação ainda é uma questão em aberto em biologia evolutiva.
+escala macro evolutiva~\parencite{Marroig2001-ne}, quanto mudanças adaptativas
+nos padrões de covariação~\parencite{Young2005-nk}. Quais os mecanismos
+seletivos, genéticos, mutacionais e de desenvolvimento envolvidos na alteração
+ou manutenção dos padrões de efeitos pleiotrópicos e de covariação ainda é uma
+questão em aberto em biologia evolutiva.
 
 \section{Esquema da Tese} 
 
@@ -572,7 +573,7 @@ de seleção artificial, foi observada uma mudança marcante no padrão de
 covariação genética após a seleção, com a eliminação de uma correlação
 positiva entre as fases iniciais e finais do crescimento. Utilizando a
 população intercruzada, nós exploramos a base genética do novo padrão de
-covariação e relacionamos esse padrão e os feitos genéticos com a história
+covariação e relacionamos esse padrão e os efeitos genéticos com a história
 evolutiva das linhagens selecionadas. Além disso, utilizamos simulações
 baseadas em indivíduos para estabelecer expectativas sobre a distribuição de
 efeitos pleiotrópicos sob diferentes tipos de seleção.
@@ -586,7 +587,6 @@ temas abordados nos capítulos experimentais anteriores, mais específicos. Este
 capítulo foi escrito em colaboração e tem Arthur Porto como co-primeiro autor.
 O capítulo foi publicado na revista \textit{Annual Review of Ecology,
 Evolution, and Systematics} (doi:10.1146/annurev-ecolsys-121415-032409).
-
 
 
 \printbibliography

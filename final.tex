@@ -4,6 +4,8 @@
 
 \selectlanguage{brazilian}
 
+\pagenumbering{arabic}
+
 \chapter{Considerações Finais}
 
 \begin{refsection}
@@ -155,51 +157,140 @@ de um intercruzamento de camundongos mais complexo. Esse intercruzamento foi
 gerado utilizando fundadores vindos de um experimento de seleção artificial
 para a alteração da curva de crescimento, com seleção divergente sendo
 aplicada nas fases precoce e tardia. O resultado deste regime seletivo é uma
-alteração generalizada na taxa de crescimento ao longo de todo o
-desenvolvimento dos animais. A mistura dessas linhagens com curvas de
-crescimento muito divergentes gerou uma população ultra variável em sua curva
-de crescimento, e que apresenta um padrão de covariação entre as fases do
-crescimento bastante diferente do padrão ancestral, antes da seleção. A
-estrutura familiar mais complexa desses dados cria algumas dificuldades
-metodológicas no mapeamento genético, pois para levar o efeito do parentesco
-entre indivíduos em conta no mapeamento genético é necessário estimar um
-modelo animal para cada marcador. Existem métodos aproximados bastante
-eficientes para a realização desse mapeamento, como o FaST-
-LMM~\parencite{Lippert2011-jn} ou o GEMMA~\parencite{Zhou2012-zl}, mas a
-maioria desses programas se limita a estimativa de efeitos aditivos, ignorando
-os efeitos de dominância. Neste capítulo, por restrições de tempo e por essa
-restrição do programas eficientes de mapeamento, nós nos limitamos a explorar
-a contribuição aditiva dos efeitos pleiotrópicos para a covariação. Além da
-população experimental, nós também desenvolvemos um modelo de simulação
-computacional para a evolução de caracteres quantitativos controlados por
-genes pleiotrópicos, no qual o padrão de pleiotropia pode evoluir de forma
-contínua. A partir deste modelo, nós criamos algumas expectativas qualitativas
-para a distribuição de efeitos pleiotrópicos em diversos cenários de seleção
-estabilizadora e direcional. Essas expectativas são baseadas na classificação
-dos vetores de efeitos pleiotrópicos em categorias de acordo a direção do
-efeito em relação ao um padrão modular pré-definido. As simulações sugerem que
-no cenário de seleção divergente, como foi o caso dos fundadores da população
-intercruzada, haveria um aumento na proporção de alelos que afetam as duas
-fases do crescimento em direções opostas, um padrão pleiotrópico que nós
-chamamos de antagonista. Esses efeitos antagonistas seriam os principais
-responsáveis pelas correlações positivas dentro de cada fase do crescimento e
-pelas correlações negativas entre as fases. De fato, no mapeamento de loci
-quantitativos na geração F$_6$ do intercruzamento nós encontramos uma série de
-efeitos antagonistas, mas, diferente da simulações, não mais do que as outras
-classes de efeitos, modulares, integrativos e intra-modulares. A matriz de
-correlação genética esperada dados todos os efeitos que conseguimos detectar é
-relativamente parecida com a matriz de covariância genética estimada a partir
-de um modelo animal. Apesar disso, as matrizes esperadas para cada classe de
-efeito pleiotrópico não é compatível com a nossa expectativa ao criar a
-classe. Por exemplo, os efeitos modulares em tese deveriam contribuir para a
-correlação dentro de módulos, mas a matriz esperada a partir dos efeitos
-modulares apresenta correlações altas entre módulos. Da mesma forma, os
-efeitos integradores deveriam gerar correlações positivas entre todos os
-caracteres, mas a matriz esperada a partir desses efeitos apresenta
-correlações negativas. A coerência do padrão global e os problemas dos padrões
-dentro de cada classe sugere que nossas estimativas de cada um dos efeitos
-pleiotrópicos é ruidosa demais para que a classificação seja feita de forma
-confiável, mas o padrão global recupera algum sinal biológico.
+mudança generalizada na taxa de crescimento ao longo de todo o desenvolvimento
+dos animais. A mistura dessas linhagens com curvas de crescimento muito
+divergentes gerou uma população ultra variável em sua curva de crescimento, e
+que apresenta um padrão de covariação entre as fases do crescimento bastante
+diferente do padrão ancestral, antes da seleção. A estrutura familiar mais
+complexa desses dados cria algumas dificuldades metodológicas no mapeamento
+genético, pois para levar o efeito do parentesco entre indivíduos em conta no
+mapeamento genético é necessário estimar um modelo animal para cada marcador.
+Existem métodos aproximados bastante eficientes para a realização desse
+mapeamento, como o FaST- LMM~\parencite{Lippert2011-jn} ou o
+GEMMA~\parencite{Zhou2012-zl}, mas a maioria desses programas se limita a
+estimativa de efeitos aditivos, ignorando os efeitos de dominância. Neste
+capítulo, por restrições de tempo e por essa restrição do programas eficientes
+de mapeamento, nós nos limitamos a explorar a contribuição aditiva dos efeitos
+pleiotrópicos para a covariação. Além da população experimental, nós também
+desenvolvemos um modelo de simulação computacional para a evolução de
+caracteres quantitativos controlados por genes pleiotrópicos, no qual o padrão
+de pleiotropia pode evoluir de forma contínua. A partir deste modelo, nós
+criamos algumas expectativas qualitativas para a distribuição de efeitos
+pleiotrópicos em diversos cenários de seleção estabilizadora e direcional.
+Essas expectativas são baseadas na classificação dos vetores de efeitos
+pleiotrópicos em categorias de acordo a direção do efeito em relação ao um
+padrão modular pré-definido. As simulações sugerem que no cenário de seleção
+divergente, como foi o caso dos fundadores da população intercruzada, haveria
+um aumento na proporção de alelos que afetam as duas fases do crescimento em
+direções opostas, um padrão pleiotrópico que nós chamamos de antagonista.
+Esses efeitos antagonistas seriam os principais responsáveis pelas correlações
+positivas dentro de cada fase do crescimento e pelas correlações negativas
+entre as fases. De fato, no mapeamento de loci quantitativos na geração F$_6$
+do intercruzamento nós encontramos uma série de efeitos antagonistas, mas,
+diferente da simulações, não mais do que as outras classes de efeitos,
+modulares, integrativos e intra-modulares. A matriz de correlação genética
+esperada dados todos os efeitos que conseguimos detectar é relativamente
+parecida com a matriz de covariância genética estimada a partir de um modelo
+animal. Apesar disso, as matrizes esperadas para cada classe de efeito
+pleiotrópico não é compatível com a nossa expectativa ao criar a classe. Por
+exemplo, os efeitos modulares em tese deveriam contribuir para a correlação
+dentro de módulos, mas a matriz esperada a partir dos efeitos modulares
+apresenta correlações altas entre módulos. Da mesma forma, os efeitos
+integradores deveriam gerar correlações positivas entre todos os caracteres,
+mas a matriz esperada a partir desses efeitos apresenta correlações negativas.
+A coerência do padrão global e os problemas dos padrões dentro de cada classe
+sugere que nossas estimativas de cada um dos efeitos pleiotrópicos é ruidosa
+demais para que a classificação seja feita de forma confiável, mas o padrão
+global recupera algum sinal biológico. Nossa habilidade de caracterizar as
+origens do padrão de covariação observado também foi prejudicada pela ausência
+do componentes de dominância, que, especialmente nessa população, tem um
+grande potencial de contribuir para a covariância\footnote{Isso porque a
+estrutura dos cruzamentos garante que um alelo presente em um dos fundadores
+vai estar em frequência próxima de 1/6 na geração F$_6$, e quanto mais longe
+da frequência de 1/2, mais o componente dominante contribui para a
+covariação.}. Apesar dessa deficiência, o estudo dos efeitos aditivos ilustra
+como o padrão de covariância é formado por contribuições de diversos tipos de
+efeitos pleiotrópicos que interagem de forma complexa.
+
+\subsubsection{Próximos passos}
+
+As analises dos capítulos 4 e 5 se limitam a caracterizar a distribuição de
+efeitos pleiotrópicos presentes nas populações intercruzadas. Essa
+distribuição é interpretada à luz das nossas expectativas teóricas e
+relacionada à história evolutiva dos fundadores das duas populações. Os
+vetores de efeitos pleiotrópicos são também relacionados ao padrão de
+covariação entre os caracteres. Essa caracterização fina da distribuição de
+efeitos pleiotrópicos nos informa sobre as origens da covariação genética, e
+da pistas sobre a distribuição de efeitos mutacionais e sobre os processos de
+desenvolvimento que dão origem a esses efeitos pleiotrópicos. O que nossa
+analise não fornece é uma quantificação da variação nesses efeitos. Para isso,
+seria necessária a inclusão de efeitos epistáticos nos modelos de mapeamento,
+e essa é uma extensão fundamental de toda nossa análise. Animais vindos do
+mesmo cruzamento de camundongos utilizado do capítulo 4 já foram usados para o
+estudo do efeito de interações gênicas em diversos contextos, como uma
+quantificação da contribuição de interações epistáticas na relação alométrica
+entre ossos longos e peso~\parencite{Pavlicev2008-jy}, para avaliar a
+contribuição de epistasia para a covariância entre caracteres cranianos que se
+desenvolvem em fases diferentes do desenvolvimento ~\parencite{Wolf2005-nr}, e
+para quantificar variação na intensidade das correlações entre caracteres
+mandibulares~\parencite{Cheverud2004-qr}. Esses exemplos ilustram a
+contribuição importante dos efeitos epistáticos para a covariação aditiva, e,
+principalmente, a contribuição dos efeitos epistáticos na variação dos efeitos
+pleiotrópicos. 
+
+Para dar continuidade ao estudo da evolução da covariação,
+pretendemos investigar a relação entre os efeitos epistáticos e a história
+seletiva das linhagens em um conjunto mais diverso de caracteres. Na população
+intercruzada do capítulo 5, que foi criada a partir de seis linhagens
+fundadoras, nós também medimos uma série de fenótipos ligados à composição
+corporal e ao sistema esquelético como um todo, incluindo medidas de alta
+resolução do crânio. Todos esses fenótipos são divergentes entre as linhagens
+fundadoras, e de formas mais complicadas que simplesmente diferenças em
+tamanho corporal\footnote{Os cruzamentos entre as linhagens \textit{Large} e
+\textit{Small}, utilizados no capítulo 4 e por boa parte da literatura em
+efeitos genéticos e covariação, sofrem do problema da simplicidade da
+divergência entre os fundadores. É difícil investigar padrão mais elaborados
+de pleiotropia na morfologia se a maioria dos efeitos está alinhado com a
+divergência em tamanho e a maioria dos efeitos pleiotrópicos é sinergístico.}.
+Uma vantagem de ampliar a analise para outros fenótipos é que estes podem ser
+cada vez mais afastados do alvo de seleção. Aqui nós analisamos a arquitetura
+genética dos caracteres sob seleção, e isso tem consequências para a o padrão
+de efeitos pleiotrópicos, como vimos principalmente no capitulo 4. Quando nos
+afastamos do alvo de seleção, ainda observamos divergência, mas essa
+divergência pode potencialmente ser menos estruturada pela seleção e fornecer
+padrões diferentes de epistasia e pleiotropia. Como a variação de efeitos
+pleiotrópicos depende das interações epistáticas, essas diferenças trazem
+consequências para a evolução da covariância entre caracteres, como foi
+discutido brevemente no capitulo 3. Estudar a variação epistática em conjuntos
+caracteres cada fez mais distantes do alvo de seleção pode potencialmente
+trazer uma gama maior de organizações pleiotrópicas e de padrões de
+covariação. 
+
+O estudo de caracteres cranianos na população do capítulo 5 também fornece um
+sistema controlado para entender como as mudanças no padrão de integração
+observados no crânios do capítulo 3 efetivamente acontecem ao nível de efeitos
+pleiotrópicos. Os resultados em~\textcite{Porto2016-qc} sugere que essas
+mudanças são devido ao número de alelos pleiotrópicos de efeito generalizado,
+e a escala de tempo em que nós observamos as mudanças de integração sugerem
+qualquer mudança nos efeitos pleiotrópicos deve ser baseada em variação
+epistática, pois não haveria tempo de acumular mutações pleiotrópicas
+suficientes para explicar a mudança de integração observada no capítulo 3.
+Além disso, a a população intercruzada do capítulo 5 apresenta uma curva de
+crescimento muito variável, e portanto se presta ao estudo da relação entre
+integração no crânio e taxa de crescimento, dois caracteres relacionados por
+um padrão macroevolutivo claro~\parencite{Porto2013-dc}. Esse padrão
+macroevolutivo associa taxas de crescimento (ou investimento energético no
+crescimento) elevado com taxas de integração elevadas em diversos táxons.
+Nosso banco de dados permite verificar se esse padrão macroevolutivo se mantém
+no nível microevolutivo e tentar entender os processos que levam a essa
+associação.
+
+
+Um resultado consistente ao longo de todos os nossos capítulo é a presença de
+variação no padrão dos efeitos pleiotrópicos e, consequentemente, a habilidade
+do padrão de covariação de mudar em resposta a pressões seletivas. A
+intensidade das covariâncias muda de forma bastante rápida no experimento do
+capítulo 3
 
 
 - Lições:
@@ -211,7 +302,7 @@ confiável, mas o padrão global recupera algum sinal biológico.
 	- Precisamos de estudos em mais sistemas para ter uma visão mais completa
 	- Incluir coisas não aditivas é fundamental
 - Estabilidade de covariação em tempo evolutivo é realmente impressionante. 
-
+- Continuo modelo de Fisher <-> Modelo de Lande. Constância da matriz G em escala evolutiva 
 
 
 
