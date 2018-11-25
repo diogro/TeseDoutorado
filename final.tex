@@ -4,7 +4,7 @@
 
 \selectlanguage{brazilian}
 
-\pagenumbering{arabic}
+%\pagenumbering{arabic}
 
 \chapter{Considerações Finais}
 
@@ -12,21 +12,21 @@
 
 Nesta tese abordamos o problema da evolução e manutenção dos padrões de
 covariância genética aditiva em caracteres complexos. Para isso, utilizamos
-seleção artificial em diversos desenhos experimentais. Todas os regimes de
+seleção artificial em diversos desenhos experimentais. Todos os regimes de
 seleção artificial envolveram crescimento ou tamanho corporal. A complexidade
 da definição do tamanho de um organismo garante que seleção neste caráter irá
-ter influências indiretas em praticamente todos os caracteres morfológicos da
-população, e portanto as consequências da seleção dependem criticamente da
-arquitetura genética e do padrão de covariação. Neste capítulo final, vamos
-discutir brevemente os resultados de cada um dos três capítulos experimentais
-e tecer alguns comentários sobre as limitações e possíveis futuros
-desdobramentos do nosso trabalho.
+ter influências indiretas em praticamente todos os caracteres morfológicos, e
+portanto as consequências da seleção dependem criticamente da arquitetura
+genética e do padrão de covariação. Neste capítulo final, vamos discutir
+brevemente os resultados de cada um dos três capítulos experimentais e tecer
+alguns comentários sobre as limitações e possíveis futuros desdobramentos do
+nosso trabalho.
 
 A influência da seleção para tamanho no resto do organismo é bastante clara no
 capítulo 3. Neste capítulo, mostramos como seleção para alterações no peso,
 tanto para aumento quanto diminuição, causam respostas correlacionadas nos
 caracteres cranianos. A alteração coordenada dos caracteres do crânio leva a
-uma mudança na estrutura da covariação genética e fenotípica. A mudança na
+uma mudança na sua estrutura da covariação genética e fenotípica. A mudança na
 covariação genética tem dois aspectos importantes. Primeiro, a quantidade de
 variação genética total diminui. Esse é o tipo de mudança esperado sob seleção
 de curto prazo em caracteres de base genética aditiva. A seleção provoca
@@ -72,32 +72,33 @@ com essas limitações, esses resultados ilustram bem o tipo de mudança bastant
 não intuitiva que seleção direcional pode ter na covariação genética e
 fenotípica num intervalo de tempo relativamente curto.
 
-O capítulo 4 utiliza um cruzamento clássico~\parencite{Cheverud1996-fm} de
-camundongos selecionados para alterações no tamanho corporal para investigar o
-padrão pleiotrópico e a covariação genética entre fases do crescimento. Este
-capítulo tem dois temas principais: (1) a caracterização dos efeitos
-pleiotrópicos em relação à seleção e a divergência fenotípica entre os
-fundadores; (2) a inferência dos padrões de covariação a partir dos efeitos
-aditivos e de dominância. Cabe aqui um comentário sobre os dados utilizados
-nesse capítulo. Pelos padrões atuais, o número de marcadores genotípicos
-utilizado é bastante pequeno (cerca de 350 marcadores, 3 ordens de grandeza a
-menos que no capítulo 5). Essa baixa densidade aliadada às poucas gerações de
-recombinação a partir dos fundadores limita a resolução dos nossos mapeamentos
-e a nossa habilidade de distinguir pleiotropia em sua definição mais estrita,
-de um locus com efeitos na variação de vários caracteres, de desequilíbrio de
-ligação entre loci não pleiotrópicos\footnote{Que eventualmente seria quebrado
-por recombinação}. Apesar disso, podemos pensar nos efeitos combinados de
-pleiotropia e desequilíbrio de ligação e quantificar como esses efeitos geram
-a covariação, sem tentar diferenciar os dois. Um das vantagens de um banco de
-dados um pouco antigo e que já foi explorado de forma bastante completa na
+O capítulo 4 utiliza um cruzamento clássico~\parencite[descrito
+em][]{Cheverud1996-fm} de camundongos, selecionados para alterações no tamanho
+corporal, para investigar o padrão pleiotrópico e a covariação genética entre
+fases do crescimento. Este capítulo tem dois temas principais: (1) a
+caracterização dos efeitos pleiotrópicos em relação à seleção e a divergência
+fenotípica entre os fundadores; (2) a inferência dos padrões de covariação a
+partir dos efeitos aditivos e de dominância. Cabe aqui um comentário sobre os
+dados utilizados nesse capítulo. Pelos padrões atuais, o número de marcadores
+genotípicos utilizado é bastante pequeno (cerca de 350 marcadores, 3 ordens de
+grandeza a menos que no capítulo 5). Essa baixa densidade, aliadada às poucas
+gerações de recombinação a partir dos fundadores, limita a resolução dos
+nossos mapeamentos e a nossa habilidade de distinguir pleiotropia em sua
+definição mais estrita, de um locus com efeitos na variação de vários
+caracteres, de desequilíbrio de ligação entre loci não
+pleiotrópicos\footnote{Que eventualmente seria quebrado por recombinação}.
+Apesar disso, podemos pensar nos efeitos combinados de pleiotropia e
+desequilíbrio de ligação e quantificar como esses efeitos geram a covariação,
+sem tentar diferenciar os dois. Um das vantagens de um banco de dados um pouco
+antigo e que já foi explorado de forma bastante completa na
 literatura~\parencite{Cheverud1996-fm, Kramer1998-cc, Hager2009-mz,
-Vaughn1999-wt, Leamy2002-nh, Wolf2005-nr, Mitteroecker2016-vq} é
-que nos sentimos mais livres para tentar métodos novos e explorar os dados de
-forma menos ortodoxa. Com isso em mente, nós utilizamos um modelo de
-mapeamento genético multivariado relativamente incomum, ajustando os efeitos
-aditivos e de dominância em todos os caracteres simultaneamente para cada
-marcador. Além disso, exploramos também uma regressão regularizada, que
-permite ajustar o modelo aditivo e de dominância para todos os marcadores
+Vaughn1999-wt, Leamy2002-nh, Wolf2005-nr, Mitteroecker2016-vq} é que nos
+sentimos mais livres para tentar métodos novos e explorar os dados de forma
+menos ortodoxa. Com isso em mente, nós utilizamos um modelo de mapeamento
+genético multivariado relativamente incomum, ajustando os efeitos aditivos e
+de dominância em todos os caracteres simultaneamente para cada marcador. Além
+disso, exploramos também uma regressão regularizada, que permite ajustar o
+modelo aditivo e de dominância para todos os marcadores
 simultaneamente.\footnote{Os resultados são semelhantes entre os dois métodos,
 e destacamos aqui que ajustar esse tipo de modelo sem utilizar programas
 escritos especialmente para o problema em questão seria impensável há alguns
@@ -109,14 +110,15 @@ como a divergência entre os fundadores se deve principalmente a efeitos
 aditivos, e, utilizando somente os vetores aditivos estimados na população
 recombinante, fomos capazes de prever de forma bastante satisfatória o
 fenótipo dos fundadores. Os vetores aditivos carregam o sinal de seleção, e
-vetores maiores são mais alinhados com a direção de seleção e divergência.  Em
-oposição aos efeitos aditivos, os efeitos de dominância não apresentam nenhum
-sinal de alinhamento com a seleção. Essa diferença provavelmente se deve em
-parte aos efeitos aditivos serem um resultado do processo seletivo que levou à
-diferenciação entre as linhagens fundadoras: os efeitos aditivos observados na
-F$_3$ são resultado da seleção, os efeitos de dominância não. Estes últimos
-são um fenômeno emergente do encontro de alelos que evoluíram separados, e o
-efeito de sua interação não foi moldado por seleção.
+vetores maiores são mais alinhados com a direção de seleção e divergência
+fenotípica entre fundadores.  Em oposição aos efeitos aditivos, os efeitos de
+dominância não apresentam nenhum sinal de alinhamento com a seleção. Essa
+diferença provavelmente se deve em parte aos efeitos aditivos serem um
+resultado do processo seletivo que levou à diferenciação entre as linhagens
+fundadoras: os efeitos aditivos observados na F$_3$ são resultado da seleção,
+os efeitos de dominância não. Estes últimos são um fenômeno emergente do
+encontro de alelos que evoluíram separados, e o efeito de sua interação não
+foi moldado por seleção.
 
 Além da diferença no alinhamento com seleção, os efeitos aditivos e de
 dominância também diferem na sua relação com o padrão modular. Como os efeitos
@@ -125,7 +127,7 @@ de efeito aditivos tivesse o primeiro componente de variação entre efeitos
 alinhado com a seleção. Apesar disso, a distribuição de efeitos aditivos
 recupera o padrão modular entre as fases precoce e tardia do crescimento, com
 as duas principais direções de variação dos efeitos aditivos alinhadas com as
-duas fases do crescimento. Um hipotese que poderíamos levantar para explicar
+duas fases do crescimento. Uma hipótese que poderíamos levantar para explicar
 esse padrão modular é uma influência do desenvolvimento na expressão dos
 efeitos aditivos, que de alguma forma poderia restringir o padrão de
 pleiotropia. Mas, se esse fosse o caso, a mesma restrição também se aplicaria
@@ -141,24 +143,24 @@ dominância são expressos pelo desenvolvimento, mas de forma emergente e menos
 relacionada com a história evolutiva da população.
 
 A relação entre os efeitos pleiotrópicos e a modularidade é explorada de forma
-direta no capítulo 4, e nós estimamos diretamente a matriz de covariância
-esperada dados os efeitos pleiotrópicos que nós estimamos usando o mapeamento
-genético. Essa matriz esperada é bastante similar com a matriz genética
-estimada pela similaridade entre irmãos completos, e nós mostramos como as
-matrizes devido aos efeitos aditivos e de dominância tem padrões modulares
-diferentes, reforçando o efeito na população das diferenças exploradas acima.
-A combinação desses efeitos distintos forma a covariância observada na F$_3$.
+direta no capítulo 4, e nós estimamos a matriz de covariância esperada dados
+os efeitos pleiotrópicos detectados pelo mapeamento genético. Essa
+matriz esperada é bastante similar à matriz genética estimada pela
+similaridade entre irmãos completos, e nós mostramos como as matrizes devido
+aos efeitos aditivos e de dominância tem padrões modulares diferentes,
+reforçando o efeito na população das diferenças exploradas acima. A combinação
+desses efeitos distintos forma a covariância observada na F$_3$.
 
 O estudo da ligação entre efeitos pleiotrópicos e covariação é continuada no
 capítulo 5, que funciona como uma extensão do capítulo 4, mas que procura
 abordar o mesmo problema de outra perspectiva. Esse capítulo utiliza um banco
-de dados muito mais moderno, de 33300 marcadores e uma geração mais avançada
+de dados mais moderno, de 33300 marcadores e uma geração mais avançada
 de um intercruzamento de camundongos mais complexo. Esse intercruzamento foi
 gerado utilizando fundadores vindos de um experimento de seleção artificial
 para a alteração da curva de crescimento, com seleção divergente sendo
 aplicada nas fases precoce e tardia. O resultado deste regime seletivo é uma
 mudança generalizada na taxa de crescimento ao longo de todo o desenvolvimento
-dos animais. A mistura dessas linhagens com curvas de crescimento muito
+dos animais. A mistura de seis linhagens com curvas de crescimento muito
 divergentes gerou uma população ultra variável em sua curva de crescimento, e
 que apresenta um padrão de covariação entre as fases do crescimento bastante
 diferente do padrão ancestral, antes da seleção. A estrutura familiar mais
@@ -166,7 +168,7 @@ complexa desses dados cria algumas dificuldades metodológicas no mapeamento
 genético, pois para levar o efeito do parentesco entre indivíduos em conta no
 mapeamento genético é necessário estimar um modelo animal para cada marcador.
 Existem métodos aproximados bastante eficientes para a realização desse
-mapeamento, como o FaST- LMM~\parencite{Lippert2011-jn} ou o
+mapeamento, como o FaST-LMM~\parencite{Lippert2011-jn} ou o
 GEMMA~\parencite{Zhou2012-zl}, mas a maioria desses programas se limita a
 estimativa de efeitos aditivos, ignorando os efeitos de dominância. Neste
 capítulo, por restrições de tempo e por essa restrição do programas eficientes
@@ -193,7 +195,7 @@ esperada dados todos os efeitos que conseguimos detectar é relativamente
 parecida com a matriz de covariância genética estimada a partir de um modelo
 animal. Apesar disso, as matrizes esperadas para cada classe de efeito
 pleiotrópico não é compatível com a nossa expectativa ao criar a classe. Por
-exemplo, os efeitos modulares em tese deveriam contribuir para a correlação
+exemplo, os efeitos modulares, em tese, deveriam contribuir para a correlação
 dentro de módulos, mas a matriz esperada a partir dos efeitos modulares
 apresenta correlações altas entre módulos. Da mesma forma, os efeitos
 integradores deveriam gerar correlações positivas entre todos os caracteres,
