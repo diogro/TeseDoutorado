@@ -4,7 +4,7 @@
 
 \selectlanguage{brazilian}
 
-%\pagenumbering{arabic}
+\pagenumbering{arabic}
 
 \chapter{Considerações Finais}
 
@@ -91,7 +91,7 @@ pleiotropia e desequilíbrio de ligação e quantificar como esses efeitos geram
 a covariação, sem tentar diferenciar os dois. Um das vantagens de um banco de
 dados um pouco antigo e que já foi explorado de forma bastante completa na
 literatura~\parencite{Cheverud1996-fm, Kramer1998-cc, Hager2009-mz,
-Vaughn1999-wt, Leamy2002-nh, Wolf2006-xt, Wolf2005-nr, Mitteroecker2016-vq} é
+Vaughn1999-wt, Leamy2002-nh, Wolf2005-nr, Mitteroecker2016-vq} é
 que nos sentimos mais livres para tentar métodos novos e explorar os dados de
 forma menos ortodoxa. Com isso em mente, nós utilizamos um modelo de
 mapeamento genético multivariado relativamente incomum, ajustando os efeitos
@@ -285,25 +285,67 @@ Nosso banco de dados permite verificar se esse padrão macroevolutivo se mantém
 no nível microevolutivo e tentar entender os processos que levam a essa
 associação.
 
-
 Um resultado consistente ao longo de todos os nossos capítulo é a presença de
 variação no padrão dos efeitos pleiotrópicos e, consequentemente, a habilidade
 do padrão de covariação de mudar em resposta a pressões seletivas. A
-intensidade das covariâncias muda de forma bastante rápida no experimento do
-capítulo 3
-
-
-- Lições:
-
-	- seleção altera covariação
-	- o mecanismo dessa alteração é complexo
-		- padrões modulares podem ou não ser mantidos
-		- Padrão de seleção importa na manutenção do padrão pleiotrópico
-	- Precisamos de estudos em mais sistemas para ter uma visão mais completa
-	- Incluir coisas não aditivas é fundamental
-- Estabilidade de covariação em tempo evolutivo é realmente impressionante. 
-- Continuo modelo de Fisher <-> Modelo de Lande. Constância da matriz G em escala evolutiva 
-
+intensidade das covariâncias muda de forma bastante rápida sob seleção no
+experimento do capítulo 3, e o padrão de correlação foi alterado por seleção
+nos fundadores do capítulo 5. Os efeitos pleiotrópicos detectados nos
+capítulos 4 e 5 podem potencialmente gerar padrões de covariância diferentes
+somente com alterações das frequências alélicas, mesmo quando ignoramos as
+interações epistáticas. Essa maleabilidade dos padrões de covariância era
+sugerida por modelos teóricos~\parencite{Barton1989-ag, Arnold2008-pc}, e
+realmente nós temos uma literatura considerável documentando mudanças
+significativas no padrão de covariância de diversos tipos de caracteres
+medidos populações naturais, numa escala de tempo
+ecológica~\parencite{Merila1996-rw, Doroszuk2008-qe, Bjorklund2013-io,
+Pfrender2000-if, Eroukhmanoff2011-ph}, e até em escala de tempo
+macroevolutivo, associadas a mudanças de hábito
+locomotor~\parencite{Young2005-nk, Young2010-rm}. Exitem alguns problemas
+metodológicos com esse tipo de estudo em populações naturais, principalmente
+devido à dificuldade em se obter amostras grandes o suficiente aliada à
+dificuldade inerente em se estimar uma matriz de covariância genética de forma
+suficientemente precisa~\parencite{Marroig2012-jd}. Devido a esses problemas
+de estimativa, é bastante difícil diferenciar mudanças biologicamente
+relevantes de mudanças significativas mas irrelevantes, principalmente porque
+a maioria dos métodos de estimativa da matriz de covariância genética aditiva
+não fornecem boas estimativas do intervalo de confiança para as
+covariâncias\footnote{As aproximações envolvidas em calcular o erro padrão de
+um parâmetro de variância num modelo animal ajustado por máxima
+verossimilhança são bastante duvidosas, como por exemplo a simetria da
+distribuição do parâmetro. Principalmente no caso relativamente comum de um
+parâmetro ser estimado na borda do seu intervalo de suporte, em que a
+distribuição do parâmetro é completamente assimétrica.} e métodos eficientes
+para estimar esses intervalos são relativamente
+incipientes~\parencite{Houle2015-jb, Runcie2013-nr}. De qualquer forma, todos
+esses resultados apontam para um quadro de mudanças rápidas de covariação e de
+variação abundante para o padrão e intensidade de covariâncias. Por outro
+lado, varias estimativas de padrões de covariância estimados em populações
+naturais apresentam uma notável estabilidade numa escala macroevolutiva
+~\parencite{Porto2009-pi, Marroig2001-ne, McGlothlin2018-hm, Steppan1997-oa,
+Garant2008-wv} mesmo com a facilidade observada em se modificar o padrão de
+covariância em curto prazo. A questão da estabilidade macroevolutiva da matriz
+de covariância genética é fundamental para o estudo de diversificação, pois
+uma matriz G estável permite reconstruir o padrão de seleção
+ancestral~\parencite{Jones2004-be} e implica uma possível restrição
+macroevolutiva à resposta seletiva, principalmente em superfícies adaptativas
+com muitos picos, como discutimos no capítulo 6. Essa inconsistência entre
+resultados de curto e longo prazo sugere que existem forças evolutivas
+mantendo o padrão de covariância estável em escalas de tempo longas, e algumas
+propostas foram feitas nesse sentido, como estabilidade dos padrões gerais de
+alocação de recursos~\parencite{Bjorklund2004-tp}, ou processos de seleção
+estabilizadora interna~\parencite{Cheverud1984-mi}, relacionados à
+compatibilidade entre caracteres dentro do mesmo organismo. Outro mecanismo
+possível para a manutenção da matriz G em longas escalas de tempo é a
+constância da matriz de covariância mutacional, pois mesmo que flutuações de
+curto prazo alterem a matriz G, novas mutações podem reestabelecer o padrão
+variacional. Existe alguma evidência para um alinhamento entre matrizes
+mutacionais e genéticas~\parencite{Houle2017-ph}, mas ainda não sabemos como
+esse mecanismo para a manutenção da covariações se comporta sob seleção e como
+ele se manifesta no padrão de efeitos pleiotrópicos. Esperamos dar
+continuidade no estudo da evolução das covariações genéticas nesse contexto
+macroevolutivo, e entender os mecanismos que regem a interação entre
+restrições genéticas e os processos evolutivos.
 
 
 \printbibliography
