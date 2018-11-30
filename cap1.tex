@@ -197,6 +197,7 @@ componentes de grau mais alto, entre 3 ou mais loci. Essa subdivisão fornece
 uma ferramenta poderosa para o estudo da variação e evolução em populações
 naturais.
 
+\enlargethispage{\baselineskip}
 Cada um desses componentes pode ser estimado a partir da semelhança entre
 indivíduos relacionados em uma população. Por exemplo, a similaridade entre
 pais e filhos, fundamental na herança de caracteres e para a evolução, pode
@@ -276,6 +277,7 @@ quadrática.}
     \label{PoR}
 \end{figure}
 
+\enlargethispage{\baselineskip}
 Esse tratamento de regressão nos mostra como a herdabilidade é especialmente
 importante para entender a resposta evolutiva, pois é a ela que determina como
 uma mudança na média dos pais se traduz numa mudança evolutiva na média dos
@@ -464,10 +466,10 @@ estabelecidos e mantidos é um problema fundamental em biologia evolutiva.
 A manutenção da variação genética aditiva foi um tema absolutamente central em
 biologia evolutiva durante os últimos 30 anos, e continua sendo. Não vamos
 abordar este tema diretamente, mas cabe fazer um breve comentário sobre os
-processos que mantém a variação genética. A genética quantitativa assume que
+processos que mantêm a variação genética. A genética quantitativa assume que
 exista variação aditiva suficiente para responder à seleção, e no geral essa
 hipótese é bastante razoável. A imensa maioria dos caracteres e combinações de
-caracteres apresentam variação genética apreciável, mesmo em sistemas
+caracteres apresenta variação genética apreciável, mesmo em sistemas
 multivariados e sujeitos à seleção natural. Um exemplo interessante de teste
 empírico da capacidade de um sistema multivariado de responder à seleção em
 qualquer direção foi feito por~\textcite{Hine2014-ps}, e os resultados foram
@@ -475,22 +477,45 @@ típicos: todas as direções do espaço fenotípico têm variação suficiente 
 responder à seleção. Vários processos contribuem para essa manutenção de
 variação, como migração, sobre-dominância na aptidão, efeitos antagonistas de
 alelos na aptidão ao longo da vida, variação espacial na superfície de
-seleção. Todos esses processos são importantes, mas o processo mais importante
-para a manutenção da variação, e que, em última instância, da origem a toda
-variação, é a mutação. De alguma maneira, o influxo de novas variantes por
-mutação equilibra a remoção de variação por mutação e seleção. A forma exata
-desse equilíbrio não é bem entendida, e diferentes aproximações levam a
-expectativas diferentes para a taxa de mutação necessária para a manutenção da
-variação em níveis razoáveis e para o número de loci envolvidos na produção da
-variação de caracteres fenotípicos, mesmo para modelos aditivos simples. A
+seleção. Todos esses processos são importantes, mas o mais importante para a
+manutenção da variação, e que, em última instância, dá origem a toda variação,
+é a mutação. De alguma maneira, o influxo de novas variantes por mutação
+equilibra a remoção de variação por deriva e seleção. A forma exata desse
+equilíbrio mutação-seleção-deriva não é bem entendida, e diferentes
+aproximações levam a expectativas diferentes variação aditiva no equilíbrio.
+Existem duas aproximações comuns para o estudo analítico do equilíbrio
+mutação-seleção-deriva, e essas aproximações diferem principalmente no seu
+tratamento do comportamento de novas mutações. Na aproximação Gaussiana, ou
+aproximação do contínuo de alelos, utilizada por~\textcite{Kimura1965-ax}
+e~\textcite{Lande1975-me} , novas mutações são representadas por pequenas
+mudanças nos efeitos anteriores dos alelos, e portanto o efeito do novo alelo
+depende do efeito antigo. Nessa aproximação, a variância esperada no
+equilíbrio se deve a um grande número de alelos segregando em cada locus, e
+portanto cada locus contribui muito para a variância aditiva. Como a variância
+é mantida por muitos alelos,~\textcite{Turelli1984-cp} apontou que essa
+aproximação depende de uma taxa de mutação muito alta para ser realista. No
+outro extremo, temos a aproximação de \textit{House-of-cards} defendida
+por~\textcite{Turelli1984-cp}, na qual novas mutações geram alelos com efeitos
+completamente independentes dos efeitos anteriores\footnote{Daí o nome da
+aproximação: cada nova mutação muda completamente a distribuição de alelos,
+destruindo a distribuição anterior como um castelo de cartas.}. Nessa
+aproximação, a maior parte da variação se deve principalmente a alelos raros,
+e isso implica que essa aproximação é aplicável mesmo com taxas mutacionais
+mais baixas. Apesar disso, o numero de loci necessários para explicar a
+variação encontrada em população naturais é bastante alto, e nosso
+entendimento da arquitetura genética de caracteres complexos ainda não permite
+dizer se essa aproximação é mesmo realista. Então, das duas aproximações
+apresentadas para explicar a variação encontrada em populações naturais como
+um equilíbrio entre mutação e seleção, uma depende de taxas mutacionais
+elevadas e a outra, de um número de loci elevado controlando cada caráter. A
 inclusão de complicações como epistasia e pleiotropia também não fornece um
-quadro claro do equilíbrio entre mutação e seleção, apesar de interações
-epistáticas parecerem ser uma fonte importante e ainda mal documentada de
-variação aditiva. Em resumo, dadas as taxas mutacionais estimadas, a maioria
-dos modelos prevê menos variação aditiva do que nós observamos.
-\textcite{Rice2004-jf} comenta como essa situação é peculiar: o problema da
-teoria evolutiva é justamente que a seleção pode ser mais efetiva que o
-previsto pelos modelos.
+quadro claro do equilíbrio entre mutação e seleção~\parencite{Turelli1985-ne},
+apesar de interações epistáticas parecerem ser uma fonte importante e ainda
+mal documentada de variação aditiva. Em resumo, dadas as taxas mutacionais
+estimadas, a maioria dos modelos prevê menos variação aditiva do que nós
+observamos. \textcite{Rice2004-jf} comenta como essa situação é peculiar: o
+problema da teoria evolutiva é justamente que a seleção pode ser mais efetiva
+que o previsto pelos modelos.
 
 A segunda questão, referente à origem e manutenção do padrão de covariação
 genética, é mais recente, e estamos começando a entender como os efeitos
