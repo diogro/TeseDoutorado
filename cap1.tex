@@ -83,7 +83,7 @@ uma distribuição normal\footnote{Curiosamente, a observação de que a
 distribuição Gaussiana era tão ubíqua e útil na biologia evolutiva foi feita
 inicialmente por um primo de Darwin, Francis Galton, em 1869.}, ou
 transformados trivialmente para uma distribuição normal\footnote{Caracteres
-contínuos que são restritos a valores positivos, como distancias ou pesos,
+contínuos que são restritos a valores positivos, como distâncias ou pesos,
 podem apresentar uma distribuição log normal, em que o log das medidas tem
 distribuição normal. Essa transformação implica que os genes tem efeitos
 multiplicativos no fenótipo, e a transformação log transforma essas
@@ -98,7 +98,7 @@ possibilidade de descrever a variação como contínua
 \begin{figure}
     \centering
     \includegraphics[width=300px]{discrete_gaussian.png}
-    \caption[Variação contínua]{Mesmo com poucos loci, o modelo aditivo e variação ambiental são capazes de gerar distribuições fenotípicas muito próximas à Gaussiana, dado que a diferença entre classes genotípicas seja da mesma escala da variação dentro de cada classe. A) Um loci aditivo com dois alelos de mesma frequência e a variação ambiental dentro de cada genótipo. As linhas finas mostram a variação dentro de cada classe, e a linha grossa, a distribuição na população. B) Dois loci com dois alelos cada, com efeitos fenotípicos equivalentes. Adaptado de~\textcite{Barton2007-hq}.}
+    \caption[Variação contínua]{Mesmo com poucos loci, o modelo aditivo e variação ambiental são capazes de gerar distribuições fenotípicas muito próximas à Gaussiana, desde que a diferença entre classes genotípicas seja da mesma escala da variação dentro de cada classe. A) Um loci aditivo com dois alelos de mesma frequência e a variação ambiental dentro de cada genótipo. As linhas finas mostram a variação dentro de cada classe, e a linha grossa, a distribuição na população. B) Dois loci com dois alelos cada, com efeitos fenotípicos equivalentes. Adaptado de~\textcite{Barton2007-hq}.}
     \label{discrete_aleles}
 \end{figure}
 
@@ -154,20 +154,20 @@ na qual nós decompomos o valor genotípico em seus termos devidos aos efeitos
 aditivos ($A$), de dominância ($D$) e epistáticos ($I$, interação). O termo
 $A$ também é chamado de valor de acasalamento, e, além de ser a soma das
 contribuições aditivas de cada alelo, este termo tem uma interpretação simples
-que não faz referência à base genética do fenótipo. O valor de acasalamento de
-um indivíduo para um fenótipo pode ser definido como duas vezes a diferença
-entre a média do fenótipo da sua prole com parceiros escolhidos ao acaso na
-população e a média do fenótipo da população como um todo. A diferença é
-dobrada pois o individuo contribui com metade do valor genotípico dos seus
-filhos, a outra metade vindo ao acaso da população.
+que não faz referência à base genética do fenótipo. Para um dado fenótipo, o
+valor de acasalamento de um indivíduo pode ser definido como duas vezes a
+diferença entre a média do fenótipo da sua prole com parceiros escolhidos ao
+acaso na população e a média do fenótipo da população como um todo. A
+diferença é dobrada pois o individuo contribui com metade do valor genotípico
+dos seus filhos, a outra metade vindo ao acaso da população.
 
 \subsection{Componentes da variação fenotípica}
 
 Apesar de conceitualmente importantes, são raras as ocasiões em que temos
 condição de medir os valores dos componentes genotípicos de um indivíduo. Estimar
 esses valores envolveria conhecer o genótipo de todos os indivíduos de uma
-população em todos os locus que fossem de alguma forma envolvidos na formação
-do fenótipo do indivíduo, uma tarefa praticamente impossível. A importância
+população em todos os locus que fossem de alguma forma envolvidos na variação
+do fenótipo, uma tarefa praticamente impossível. A importância
 prática desse esquema de decomposição fica mais clara quando consideramos a
 variação na população como um todo. A decomposição da variância da população nos
 seus componentes devido a efeitos aditivos, de dominância e todos os outros
@@ -197,37 +197,37 @@ componentes de grau mais alto, entre 3 ou mais loci. Essa subdivisão fornece
 uma ferramenta poderosa para o estudo da variação e evolução em populações
 naturais.
 
-\enlargethispage{\baselineskip}
-Cada um desses componentes pode ser estimado a partir da semelhança entre
-indivíduos relacionados em uma população. Por exemplo, a similaridade entre
-pais e filhos, fundamental na herança de caracteres e para a evolução, pode
-ser usada para estimar a variância do valores de acasalamento. No caso mais
-simples, no modelo aditivo, o fenótipo de um indivíduo (filho) é dado por $P_f
-= A + E_f$. O componente aditivo pode ser subdividido em duas partes, as
-contribuições do pai e da mãe, então $P_f = A_1 + A_2 + E_f$. Já o fenótipo do
-pai pode ser escrito como $P_p = A_1 + A_3 + E_p$, onde $A_1$ representa a
-porção do valor de acasalamento compartilhada com o filho e $A_3$ a porção
-independente do filho. A covariação entre pai e filho então é $cov(P_f, P_p) =
-cov(A_1 + A_2 + E_f, A_1 + A_3 + E_p)$. A covariância da soma de fatores
-independentes pode ser escrita como a soma das covariâncias par a par, então
-$cov(P_f, P_p) = cov(A_1, A_1) + cov(A_1, A_3) + cov(A_2, A_1) + \cdots  +
-cov(E_f, E_p)$. Como todos os componentes são independentes por construção, o
-único termo que contribui para a covariância entre pais e filhos é $cov(A_1,
-A_1) = var(A_1)$. Como a variância aditiva total é a soma das contribuições
-paternas e maternas $V_A = var(A_1) + var(A_2)$, e como as contribuições
-paternas e maternas são equivalentes, a covariância entre pais e filhos é a
-metade da variância aditiva total ($cov(P_f, P_p) = var(A_1) =
-\frac{1}{2}V_A$). A partir de deduções semelhantes, podemos estimar vários dos
-componentes da variação genotípica a partir da covariância entre indivíduos
-relacionados. Por exemplo, a variância de dominância pode ser estimada
-comparando a covariância entre irmãos completos e pais e filhos, pois irmãos
-podem compartilhar genótipos, enquanto pais não compartilham genótipos com os
-filhos. Então, na presença de dominância, a covariância entre irmãos é maior
-que a covariância entre pais e filhos.
+\enlargethispage{\baselineskip} Cada um desses componentes pode ser estimado a
+partir da semelhança entre indivíduos relacionados em uma população. Por
+exemplo, a similaridade entre pais e filhos, fundamental na herança de
+caracteres e para a evolução, pode ser usada para estimar a variância do
+valores de acasalamento. No caso mais simples, no modelo aditivo, o fenótipo
+de um indivíduo (filho) é dado por $P_f = A + E_f$. O componente aditivo pode
+ser subdividido em duas partes, as contribuições do pai e da mãe, então $P_f =
+A_1 + A_2 + E_f$. Já o fenótipo do pai pode ser escrito como $P_p = A_1 + A_3
++ E_p$, onde $A_1$ representa a porção do valor de acasalamento compartilhada
+com o filho e $A_3$ a porção independente do filho. A covariação entre pai e
+filho então é $cov(P_f, P_p) = cov(A_1 + A_2 + E_f, A_1 + A_3 + E_p)$. A
+covariância da soma de fatores independentes pode ser escrita como a soma das
+covariâncias par a par, então $cov(P_f, P_p) = cov(A_1, A_1) + cov(A_1, A_3) +
+cov(A_2, A_1) + \cdots  + cov(E_f, E_p)$. Como todos os componentes são
+independentes por construção, o único termo que contribui para a covariância
+entre pais e filhos é $cov(A_1, A_1) = var(A_1)$. Como a variância aditiva
+total é a soma das contribuições paternas e maternas $V_A = var(A_1) +
+var(A_2)$, e como as contribuições paternas e maternas são equivalentes, a
+covariância entre pais e filhos é a metade da variância aditiva total
+($cov(P_f, P_p) = var(A_1) = \frac{1}{2}V_A$). A partir de deduções
+semelhantes, podemos estimar vários dos componentes da variação genotípica a
+partir da covariância entre indivíduos relacionados. Por exemplo, a variância
+de dominância pode ser estimada comparando a covariância entre irmãos
+completos e pais e filhos, pois irmãos podem compartilhar genótipos, enquanto
+pais, em geral, não compartilham genótipos com os filhos. Então, na presença
+de dominância, a covariância entre irmãos é maior que a covariância entre pais
+e filhos.
 
 \subsection{Herdabilidade e a resposta à seleção}
 
-Para entender como a variação genética participa da resposta à seleção entre
+Para entender como a variação genética influencia a resposta à seleção entre
 duas gerações, podemos utilizar uma regressão linear entre a média do fenótipo
 dos casais que se reproduziram e o fenótipo dos filhos e imaginar qual seria a
 resposta na geração dos filhos a um evento de seleção na geração dos pais. No
@@ -241,14 +241,14 @@ a inclinação da reta de regressão é dada pela covariância entre a variável
 preditora e a resposta dividida pela variância da preditora. Já vimos que a
 covariância entre pais e filhos é dada pela metade da variância aditiva, e a
 covariância entre a média dos pais e filhos tem o mesmo valor, assumindo que a
-covariância entre pais e filhos e mães e filhos é igual. Já o denominador, a
+covariância entre pais e filhos e entre mães e filhos é igual. Já o denominador, a
 variância na média dos pais, pode ser calculado como:
 
 \begin{equation}
 var(\frac{P_{pais} + P_{\text{mães}}}{2}) = \frac{var(P_{pais}) + var(P_{\text{mães}})}{4} = \frac{V_P}{2}
 \end{equation}
 
-em que assumimos que a variância de pais e mães é igual. Então, a inclinação da
+onde assumimos que a variância de pais e mães é igual. Então, a inclinação da
 reta de regressão é igual à razão entre a variância aditiva e a variância
 fenotípica total. Essa razão, a proporção da variação fenotípica que é devido
 à variação aditiva, recebe um tratamento especial dentro da genética
@@ -267,7 +267,7 @@ quadrática.}
     apenas casais com média do fenótipo maior que o limiar (na região
     sombreada) deixam descendentes, a cruz escura marca a nova média após a
     seleção. A mudança na média da geração dos pais após o evento de seleção é
-    medida pelo diferencial de seleção $S$. Essa mudança na média causa uma
+    dada pelo diferencial de seleção $S$. Essa mudança na média causa uma
     resposta evolutiva ($R$) na média da geração dos filhos que pode ser
     predita utilizando uma regressão linear. A inclinação da regressão é dada
     pela covariância entre pais e filhos e a variância fenotípica na geração
@@ -279,7 +279,7 @@ quadrática.}
 
 \enlargethispage{\baselineskip}
 Esse tratamento de regressão nos mostra como a herdabilidade é especialmente
-importante para entender a resposta evolutiva, pois é a ela que determina como
+importante para entender a resposta evolutiva, pois é ela que determina como
 uma mudança na média dos pais se traduz numa mudança evolutiva na média dos
 filhos. Essa relação é dada pela equação do criador, que relaciona a mudança
 em um fenótipo de uma geração para outra (a resposta à seleção, $R$) com a
@@ -336,7 +336,7 @@ valores de acasalamento e entre fenótipos forem nulas, a equação de Lande se
 resume a várias instâncias da equação do criador. Porém, caso as covariâncias
 não sejam nulas, a equação de Lande prevê uma resposta indireta à seleção
 mesmo em caracteres que não estão sob seleção, caso eles sejam
-correlacionados com caracteres que estão sobre seleção. Para entender esse
+correlacionados com caracteres que estão sob seleção. Para entender esse
 efeito indireto, podemos considerar o caso com dois caracteres, em que a
 equação de Lande é:
 
@@ -379,7 +379,7 @@ $G_{21}\beta_{1}$ na resposta do carácter $z_2$, que dependem da seleção no
 outro caráter e da covariância genética entre caracteres. A presença de
 respostas indiretas a um gradiente de seleção faz com que a resposta observada
 ($\Delta z$) não tenha a mesma direção do gradiente de seleção. Esse desvio da
-resposta evolutiva em relação à seleção direcional é considerado um tipo de
+resposta evolutiva em relação à seleção direcional é um tipo de
 restrição genética, e pode ter consequências importantes na diversificação.
 Por exemplo, a direção de maior variação genética cria uma direção
 preferencial de mudança evolutiva, ao longo da qual a resposta evolutiva é
@@ -501,21 +501,21 @@ aproximação: cada nova mutação muda completamente a distribuição de alelos
 destruindo a distribuição anterior como um castelo de cartas.}. Nessa
 aproximação, a maior parte da variação se deve principalmente a alelos raros,
 e isso implica que essa aproximação é aplicável mesmo com taxas mutacionais
-mais baixas. Apesar disso, o numero de loci necessários para explicar a
-variação encontrada em população naturais é bastante alto, e nosso
-entendimento da arquitetura genética de caracteres complexos ainda não permite
-dizer se essa aproximação é mesmo realista. Então, das duas aproximações
-apresentadas para explicar a variação encontrada em populações naturais como
-um equilíbrio entre mutação e seleção, uma depende de taxas mutacionais
-elevadas e a outra, de um número de loci elevado controlando cada caráter. A
-inclusão de complicações como epistasia e pleiotropia também não fornece um
-quadro claro do equilíbrio entre mutação e seleção~\parencite{Turelli1985-ne},
-apesar de interações epistáticas parecerem ser uma fonte importante e ainda
-mal documentada de variação aditiva. Em resumo, dadas as taxas mutacionais
-estimadas, a maioria dos modelos prevê menos variação aditiva do que nós
-observamos. \textcite{Rice2004-jf} comenta como essa situação é peculiar: o
-problema da teoria evolutiva é justamente que a seleção pode ser mais efetiva
-que o previsto pelos modelos.
+mais baixas. Apesar disso, na aproximação de \textit{House-of-cards}, o numero
+de loci necessários para explicar a variação encontrada em população naturais
+é bastante alto, e nosso entendimento da arquitetura genética de caracteres
+complexos ainda não permite dizer se essa aproximação é mesmo realista. Então,
+das duas aproximações apresentadas para explicar a variação encontrada em
+populações naturais como um equilíbrio entre mutação e seleção, uma depende de
+taxas mutacionais elevadas e a outra, de um número de loci elevado controlando
+cada caráter. A inclusão de complicações como epistasia e pleiotropia também
+não fornece um quadro claro do equilíbrio entre mutação e
+seleção~\parencite{Turelli1985-ne}, apesar de interações epistáticas parecerem
+ser uma fonte importante e ainda mal documentada de variação aditiva. Em
+resumo, dadas as taxas mutacionais estimadas, a maioria dos modelos prevê
+menos variação aditiva do que nós observamos. \textcite{Rice2004-jf} comenta
+como essa situação é peculiar: o problema da teoria evolutiva é justamente que
+a seleção pode ser mais efetiva que o previsto pelos modelos.
 
 A segunda questão, referente à origem e manutenção do padrão de covariação
 genética, é mais recente, e estamos começando a entender como os efeitos
@@ -587,7 +587,7 @@ padrão de covariação genética é o resultado da combinação da influência 
 seleção e de restrições internas que moldam os efeitos pleiotrópicos. Além
 disso, também comparamos duas técnicas de mapeamento genético na sua
 capacidade de inferir o fenótipo das linhagens puras utilizando somente os
-efeitos genéticos na população intercruzada. 
+efeitos genéticos estimados na população intercruzada. 
 
 O Capítulo 5 (\textit{Genetic Architecture and the Evolution of Variational
 Modularity}) aplica os mesmos métodos desenvolvidos no capítulo anterior para

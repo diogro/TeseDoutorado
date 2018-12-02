@@ -19,7 +19,6 @@ Diogo Melo, Gabriel Marroig, Jason Wolf
 \end{center}
 
 \noindent  
-
 Multivariate quantitative genetics provides a powerful framework
 for studying patterns and processes of phenotypic evolution. Quantitative
 genetics parameters, like trait heritability or the G-matrix for sets of
@@ -196,7 +195,7 @@ of individual loci to the covariation between traits and to evolutionary
 change. We also adapt our mapping approach to fit a genome prediction model,
 allowing us to examine the differences and advantages of these alternative
 approaches. We apply these models to a population of mice derived from an
-inter-cross of mouse strains that diverged in size by univariate directional
+intercross of mouse strains that diverged in size by univariate directional
 selection. By focusing on traits related to population divergence, we are able
 to place our genetic analyses in an evolutionary context. By using this
 explicit bottom-up approach to relate pleiotropy, selection and covariation,
@@ -370,33 +369,33 @@ between markers (LD) into account when setting the overall significance
 threshold \parencite{Nyholt2004-zm,Li2005-yu}. A list of markers and code for performing the mapping
 is available in the supporting information (SI).
 
-Using the list of candidate markers, we then estimated the effects of
-each marker in all of the traits using a Bayesian multiple multivariate
-regression, again with family as a random effect. We used unit normal
-priors on the regression coefficients, centered Cauchy priors with unit
-scale on the variances and LKJ priors with scale 4 on the genetic and
-residual correlations between traits. This produces two vectors of
-effects for each marker on each trait, one for additive effects and one
-for dominance effects. We call these effect vectors pleiotropic vectors,
-as they measure the full pleiotropic effects of all the significant
-markers on the observed traits. This multiple regression was done in
-Stan \parencite{Carpenter2017-pn} using custom code, also available in the SI.
+Using the list of candidate markers, we then estimated the effects of each
+marker in all of the traits using a Bayesian multiple multivariate regression,
+again with family as a random effect. We used unit normal priors on the
+regression coefficients, centered Cauchy priors with unit scale on the
+variances and LKJ priors with scale 4 on the genetic and residual correlations
+between traits. This produces two vectors of effects for each marker on each
+trait, one for additive effects and one for dominance effects. We call these
+effect vectors pleiotropic vectors, as they measure the full pleiotropic
+effects of all the significant markers on the observed traits. This multiple
+regression was done in Stan \parencite{Carpenter2017-pn} using custom code,
+also available in the SI\footnote{Code for fitting the models is available in
+\url{https://github.com/diogro/mouseGrowthQTLs}.}.
 
 \subsection{Genome prediction}
 
-For the genome prediction, instead of running single marker models to
-select candidate markers, we ran one full model with all of the markers
-and used hierarchical shrinkage priors to produce per-marker
-coefficients that were either heavily shrunken towards zero, indicating
+For the genome prediction, instead of running single marker models to select
+candidate markers, we ran one full model with all of the markers and used
+hierarchical shrinkage priors to produce regularized per-marker coefficients.
+Regularized coefficients are either heavily shrunken towards zero, indicating
 that the marker has no effect on a particular trait, or not shrunken,
 estimating the putative effect of that marker on a trait. This produces
-pleiotropic vectors for each marker in our model, but most of the
-coefficients in these pleiotropic vectors were close to zero. We
-implemented a custom version of the regularized horseshoe prior in Stan
-using the recommendations in \textcite{Piironen2017-ih}.
-This allowed us to include the family level random effect that accounts
-for relatedness and to partition the marker effect into an additive and
-a dominance components.
+pleiotropic vectors for each marker in our model, but most of the coefficients
+in these pleiotropic vectors were close to zero. We implemented a custom
+version of the regularized horseshoe prior in Stan using the recommendations
+in \textcite{Piironen2017-ih}. This allowed us to include the family level
+random effect that accounts for relatedness and to partition the marker effect
+into an additive and a dominance components.
 
 \subsection{Estimation of quantitative genetic parameters}
 
@@ -404,7 +403,7 @@ The genetic variance-covariance matrix was estimated from the null QTL
 mapping model (see above), where the same model was fitted without any
 marker information included. This provides a family-level estimate of
 the genetic covariance matrix based on the covariance of full siblings. Because it is
-based on full-siblings, it does not provide a direct estimate of the
+based on full siblings, it does not provide a direct estimate of the
 additive genetic variance-covariance matrix (i.e., the G-matrix).
 Rather, it is composed of one half of the additive genetic covariance
 matrix plus one quarter of the dominance genetic covariance matrix, plus
@@ -724,7 +723,7 @@ are often clustered and similar, suggesting that the regularization
 shrinkage prior was unable to pick a single marker as the best position
 for the effect, spreading the putative QTL over several neighboring
 markers (this is a known limitation of this type of sparse regression,
-see \textcite{Piironen2017-ih}. We can also see the pattern that larger additive effect vectors
+see \textcite{Piironen2017-ih}). We can also see the pattern that larger additive effect vectors
 are more aligned with phenotypic divergence. Small effects, which where
 shrunken toward zero by the horseshoe prior, are essentially pointing in
 random directions, while larger additive vectors are more aligned with
@@ -826,7 +825,7 @@ correlation matrices from QTL mapping marker effects. (A) additive, \textbf{G}, 
 dominance, \textbf{D} (C) Genetic, ½ \textbf{G} + ¼ \textbf{D}. (D) Regression of
 genetic variances and covariances estimated from full-sib mixed model
 and estimated from markers. Error bars represent 95\% posterior
-credibility intervals. Marker covariances are about half of observed
+credibility intervals. Marker-estimated covariances are about half of observed
 covariances.}
 \label{fig:joh:cov}
 \end{figure}
@@ -918,7 +917,7 @@ the prediction model. The genome prediction analysis using sparse regression,
 on the other hand, is potentially including a number of small effects that do
 not meet a significance threshold, and so are excluded from the QTL mapping
 analysis. The inclusion of these many small effects have been proposed as a
-solution to the missing heritability problem \parencite{Bloom2013-xc}, and
+solution to the missing heritability problem \parencite{Bloom2013-xc, Boyle2017-re}, and
 modern sparse regression and genomic prediction methods provide a promising
 framework for working with high density marker data sets \parencite{Pong-Wong2014-vj}. 
 Indeed, the sparse regression produces very good out-of-sample
@@ -1006,8 +1005,8 @@ this modular variation in pleiotropic effects could be associated with
 developmental or mutational constraints on the additive genetic effects. But,
 if this were the case, we might expect the dominance effects, which are not
 shaped by selective history of the founders, to have a similar modular
-pattern. While the dominance effects PCA does not show the same clear early-
-late separation in orthogonal directions that we see in the additive effects,
+pattern. While the dominance effects PCA does not show the same clear early-late 
+separation in orthogonal directions that we see in the additive effects,
 the dominance genetic matrix has a different distinction between early and
 late, with positive correlations within each phase and negative correlations
 between. So perhaps the modular aspect of the genetic effects can manifest in
