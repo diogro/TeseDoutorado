@@ -50,6 +50,19 @@
 \setlength{\marginparwidth}{90pt}
 %\usepackage{layout}
 
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\let\tmp\oddsidemargin
+\let\oddsidemargin\evensidemargin
+\let\evensidemargin\tmp
+\reversemarginpar
+
 % Para definir espaçamento entre as linhas
 \usepackage{setspace}
 
