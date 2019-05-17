@@ -18,7 +18,7 @@ Diogo Melo, Gabriel Marroig, Jason Wolf
 \vspace{2pt}
 \end{center}
 
-\noindent  
+\noindent
 Multivariate quantitative genetics provides a powerful framework
 for studying patterns and processes of phenotypic evolution. Quantitative
 genetics parameters, like trait heritability or the G-matrix for sets of
@@ -128,7 +128,7 @@ evolve under selection
 Quantitative trait locus (QTL) mapping and genome wide association studies
 (GWAS) have begun to overcome this limitation, offering preliminary insights
 into the genetic architecture underlying covariation (especially for growth
-and morphological traits \parencite{Leamy2002-nh,Wolf2005-nr,Kenney-Hunt2008-bd,Porto2016-qc}. 
+and morphological traits \parencite{Leamy2002-nh,Wolf2005-nr,Kenney-Hunt2008-bd,Porto2016-qc}.
 In these studies, the link between pleiotropy and
 covariation has been made in a mostly qualitative manner using mapping
 locations, with effects estimated using `univariate' models. Genomic regions
@@ -213,7 +213,7 @@ evolutionary processes.
 
 Our focal population is comprised of 1548 animals from the
 F\textsubscript{3} generations of an intercross between the inbred LG/J
-and SM/J strains if mice (for details see \textcite{Cheverud1996-fm,Wolf2008-cq}.
+and SM/J strains of mice (for details see \textcite{Cheverud1996-fm,Wolf2008-cq}.
 These strains were derived independently by
 artificial selection for large (LG/J strain derived by \textcite{Goodale1938-an} or small
 (SM/J strain derived by \textcite{MacArthur1944-ew} body weight
@@ -257,7 +257,7 @@ necessary because the magnitude of selection estimated by the multiple
 regression is too small to account for the many generations of
 selection. Using these multivariate vectors of selection and divergence,
 we measured the alignment of the estimated genetic effects (see below), phenotypic
-divergence and selection gradients. This allows us to characterize the 
+divergence and selection gradients. This allows us to characterize the
 genetic basis of the phenotypic divergence due to selection. Alignment between vectors was measured
 using vector correlations, that is, the cosine of the angle between the
 vectors being compared. We also investigate the relation between the
@@ -377,8 +377,8 @@ variances and LKJ priors with scale 4 on the genetic and residual correlations
 between traits. This produces two vectors of effects for each marker on each
 trait, one for additive effects and one for dominance effects. We call these
 effect vectors pleiotropic vectors, as they measure the full pleiotropic
-effects of all the significant markers on the observed traits. This multiple
-regression was done in Stan \parencite{Carpenter2017-pn} using custom code,
+effects of all the significant markers on the observed traits.
+This multiple regression was done in Stan \parencite{Carpenter2017-pn} using custom code,
 also available in the SI\footnote{Code for fitting the models is available in
 \url{https://github.com/diogro/mouseGrowthQTLs}.}.
 
@@ -787,36 +787,37 @@ estimates.}
 
 \subsection{Covariance matrix predictions}
 
-Genetic correlation matrices estimated from the pleiotropic effects from the
-mapped markers are broadly similar to the family level full-sib genetic matrix
-estimated from the mixed model fit. We can see the same strong correlation
-between late growth, and the positive correlation between weeks 2 and 3. The
-negative correlation between weeks 2 and 4 is present, but much smaller in
-magnitude in the QTL estimated matrix. The smallest correlations are between
-the early and late traits. Regressing the full-sib genetic matrix onto the
-genetic covariances predicted from the mapped markers (given by the sum of
-half the additive genetic matrix with one quarter of the dominance genetic
-matrix) reveals that the observed covariances are in general much larger than
-the predicted ones, but the pattern of covariances is similar (intercept =
--0.01, slope = 2.43, \emph{p} \textless{} 0.001). The outliers in the
-regression are the negative covariance between weeks 2 and 4 and the much
-larger observed variance in week 4. This is not surprising, since the full-sib
-genetic includes other sources of covariation, like maternal and common
-environmental effects. The genome prediction fared much worse, predicting
-variances and covariances close to zero for almost all traits (see
-Fig.~\ref{fig:joh:covGP}). Matrix comparisons can be seen in
-Table~\ref{joh:matcompare}. The most similar matrices are the QTL mapping
-maker genetic matrix, followed by the QTL mapping marker additive genetic
-matrix. Both show high similarities in Random Skewers, Mantel matrix
-correlation, and a high proportion of shared subspace. The dominance matrix
-shows a relatively low matrix correlation and the lowest Krzanowski shared
-sub-space correlation, suggesting it is different in structure to the full-sib
-genetic matrix. Genome prediction matrices have very low, non-significant
-Mantel correlation values, reflecting the poor estimate of the G-matrix
-correlations. Random Skewers comparisons are all relatively high and
-significant, with the exception of the genome prediction dominance matrix.
-This can be due to a relatively similar first principal component in all
-matrices.
+Genetic correlation matrices estimated from the pleiotropic effects from
+the mapped markers are broadly similar to the family level full-sib
+genetic matrix estimated from the mixed model fit. We can see the same
+strong correlation between late growth, and the positive correlation
+between weeks 2 and 3. The negative correlation between weeks 2 and 4
+is present, but much smaller in magnitude in the QTL estimated matrix.
+The smallest correlations are between the early and late traits.
+Regressing the full-sib genetic matrix onto the genetic covariances
+predicted from the mapped markers (given by the sum of half the additive
+genetic matrix with one quarter of the dominance genetic matrix) reveals
+that the observed covariances are in general much larger than the
+predicted ones, but the pattern of covariances is similar (intercept
+= -0.01, slope = 2.43, \emph{p} \textless{} 0.001). The outliers in
+the regression are the negative covariance between weeks 2 and 4 and
+the much larger observed variance in week 4. This is not surprising,
+since the full-sib genetic includes other sources of covariation, like
+maternal and common environmental effects. The genome prediction fared
+much worse, predicting variances and covariances close to zero for
+almost all traits (see Fig.~\ref{fig:joh:covGP}). Matrix comparisons
+can be seen in Table~\ref{joh:matcompare}. The most similar matrices
+are the QTL mapping maker genetic matrix, followed by the QTL mapping
+marker additive genetic matrix. Both show high similarities in Random
+Skewers, Mantel matrix correlation, and a high proportion of shared
+subspace. The dominance matrix shows a relatively low matrix correlation
+and the lowest Krzanowski shared sub-space correlation, suggesting it is
+different in structure to the full-sib genetic matrix. Genome prediction
+matrices have very low, non-significant Mantel correlation values,
+reflecting the poor estimate of the G-matrix correlations. Random
+Skewers comparisons are all relatively high and significant, with the
+exception of the genome prediction dominance matrix. This can be due to
+a relatively similar first principal component in all matrices.
 
 \begin{figure}
 \includegraphics[width=\linewidth]{chapter_JoH-Melo_etal/media/growth_cov_prediction_composite.png}
@@ -869,46 +870,49 @@ genetic matrix (½ G + ¼ D)  & & & \\
 
 \section{Discussion}
 
-The interaction between selection and multivariate covariation is a central
-part of our understanding of evolution. Even simple selection regimes can
-produce complex multivariate responses due to cascading developmental effects
-and genetic constraints. Here, we use a cross between two artificially
-selected lines of mice to investigate the genetic architecture of the
-multivariate response due to artificial selection. The target of selection in
-both lines was individual final weight, in opposite directions, and we use the
-various phases of growth as a model of a multivariate trait altered by
-selection. Using multivariate QTL mapping and genomic regression, we were able
-to map loci involved in the variation of growth and to simultaneously estimate
-vectors of genetic effects responsible for the variation in growth. Combining
-these effect vectors with quantitative genetics theory, we were able to
-directly link the pattern of pleiotropy and the genetic covariation of these
-traits.
+The interaction between selection and multivariate covariation is a
+central part of our understanding of evolution. Even simple selection
+regimes can produce complex multivariate responses due to cascading
+developmental effects and genetic constraints. Here, we use a cross
+between two artificially selected lines of mice to investigate the
+genetic architecture of the multivariate response due to artificial
+selection. The target of selection in both lines was individual final
+weight, in opposite directions, and we use the various phases of
+growth as a model of a multivariate trait altered by selection. Using
+multivariate QTL mapping and genomic regression, we were able to map
+loci involved in the variation of growth and to simultaneously estimate
+vectors of genetic effects responsible for the variation in growth.
+Combining these effect vectors with quantitative genetics theory, we
+were able to directly link the pattern of pleiotropy and the genetic
+covariation of these traits.
 
 As expected by the behavior of the phenotypes in the cross
-\parencite{Cheverud1996-fm}, most of the divergence between Large and Small is
-due to additive effects. The mean additive effect vector is practically
-collinear with the direction of divergence between lines, and we see a
-relation between the total size of the additive effects and the alignment with
-selection and divergence. This relation between alignment and size reflects
-the effect of selection removing large effects in other directions, that is,
-the larger the pleiotropic effect the more it must conform to the direction of
-selection in order to be maintained, while smaller effects can be less aligned
-with selection and still contribute to the divergence between lines. This
-clear alignment is absent from the dominance effect vectors, as the mean
-dominance vector has low correlation with the phenotypic divergence and the
-direction of selection, and the size of the individual marker effects also has
-no bearing on their alignment to divergence and selection. Dominance vectors
-are not expected to contribute to the phenotypic divergence, since they are an
-interaction effect between alleles from the two founder lines, and so are only
-present in the crosses. These relations between effect size and alignment are
-present in both QTL mapping and genome prediction estimates of the additive
-and dominance effect vectors, but in the genome prediction the relations are
-much less clear when we look at the very small vectors. These small effect
-vectors are distributed in all directions but have very small norms (which is
-a measure of the overall effect of the locus across traits). Presumably, this
-is indicative that they have negligible effect on the phenotype and are being
-shrunk to zero by the sparse regression priors, and so the individual vector
-directions are essentially random.
+\parencite{Cheverud1996-fm}, most of the divergence between Large and
+Small is due to additive effects. The mean additive effect vector is
+practically collinear with the direction of divergence between lines,
+and we see a relation between the total size of the additive effects
+and the alignment with selection and divergence. This relation between
+alignment and size reflects the effect of selection removing large
+effects in other directions, that is, the larger the pleiotropic effect
+the more it must conform to the direction of selection in order to be
+maintained, while smaller effects can be less aligned with selection and
+still contribute to the divergence between lines. This clear alignment
+is absent from the dominance effect vectors, as the mean dominance
+vector has low correlation with the phenotypic divergence and the
+direction of selection, and the size of the individual marker effects
+also has no bearing on their alignment to divergence and selection.
+Dominance vectors are not expected to contribute to the phenotypic
+divergence, since they are an interaction effect between alleles from
+the two founder lines, and so are only present in the crosses. These
+relations between effect size and alignment are present in both QTL
+mapping and genome prediction estimates of the additive and dominance
+effect vectors, but in the genome prediction the relations are much less
+clear when we look at the very small vectors. These small effect vectors
+are distributed in all directions but have very small norms (which is a
+measure of the overall effect of the locus across traits). Presumably,
+this is indicative that they have negligible effect on the phenotype and
+are being shrunk to zero by the sparse regression priors, and so the
+individual vector directions are essentially random.
 
 Ancestral predictions using QTL mapping is surprisingly accurate, and most of
 the ancestral traits are within the posterior distribution of ancestral
@@ -919,7 +923,7 @@ not meet a significance threshold, and so are excluded from the QTL mapping
 analysis. The inclusion of these many small effects have been proposed as a
 solution to the missing heritability problem \parencite{Bloom2013-xc, Boyle2017-re}, and
 modern sparse regression and genomic prediction methods provide a promising
-framework for working with high density marker data sets \parencite{Pong-Wong2014-vj}. 
+framework for working with high density marker data sets \parencite{Pong-Wong2014-vj}.
 Indeed, the sparse regression produces very good out-of-sample
 predictive performance when used to predict the phenotypes of the founder
 lines (Fig.~\ref{fig:joh:ancestral}). Mapping could also be done in this
@@ -1005,7 +1009,7 @@ this modular variation in pleiotropic effects could be associated with
 developmental or mutational constraints on the additive genetic effects. But,
 if this were the case, we might expect the dominance effects, which are not
 shaped by selective history of the founders, to have a similar modular
-pattern. While the dominance effects PCA does not show the same clear early-late 
+pattern. While the dominance effects PCA does not show the same clear early-late
 separation in orthogonal directions that we see in the additive effects,
 the dominance genetic matrix has a different distinction between early and
 late, with positive correlations within each phase and negative correlations
